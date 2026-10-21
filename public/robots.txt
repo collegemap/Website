@@ -1,0 +1,19 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Block login/auth and protected routes from indexing
+Disallow: /MobileLogin
+Disallow: /login
+Disallow: /EnhancedQuestions
+Disallow: /exams/test/
+Disallow: /exams/dashboard
+Disallow: /exams/custom
+Disallow: /results
+
+# Sitemap location
+Sitemap: https://collegemap.in/sitemap.xml
+
+# LLMs.txt — structured site info for AI crawlers
+# https://llmstxt.org
+llms.txt: https://collegemap.in/llms.txt

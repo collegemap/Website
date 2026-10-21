@@ -1,0 +1,105 @@
+@import '../../components/colortheme.scss';
+
+.footer {
+    background-color: $footer-bg;
+    color: $text-light;
+    padding: 2rem 1rem;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $davys-gray;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+
+        &.logo-section {
+            align-items: flex-start;
+        }
+
+        &.social-section {
+            align-items: flex-start;
+
+            @media (max-width: 576px) {
+                align-items: center;
+            }
+        }
+    }
+
+    &__logo {
+        max-height: 80px;
+        width: auto;
+        padding-top: 10px;
+    }
+
+    &__heading {
+        color: $text-light;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__list-item {
+        margin-bottom: 0.5rem;
+    }
+
+    &__link {
+        color: $text-muted;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    &__social-icons {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.5rem;
+
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
+    }
+
+    &__social-link {
+        color: $text-muted;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    &__bottom {
+        padding: 1rem;
+        text-align: center;
+        color: $text-muted;
+    }
+
+    &__copyright {
+        font-size: 0.9rem;
+    }
+}

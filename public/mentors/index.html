@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CollegeMap Mentorship Tracker</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f3;color:#1a1a1a;min-height:100vh}
+a{color:#1D9E75;text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{background:#fff;border-bottom:1px solid #e8e8e5;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:10}
+.logo{font-size:16px;font-weight:600;color:#1a1a1a}.logo span{color:#1D9E75}
+.nav{display:flex;gap:4px}
+.nav-btn{padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;border:none;background:transparent;color:#666;font-weight:500;transition:all 0.15s}
+.nav-btn.active,.nav-btn:hover{background:#f0f0ee;color:#1a1a1a}
+.nav-btn.active{font-weight:600;color:#1D9E75}
+.main{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+.page{display:none}.page.active{display:block}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:10px}
+.page-title{font-size:22px;font-weight:600}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:2rem}
+.stat-card{background:#fff;border:1px solid #e8e8e5;border-radius:12px;padding:1.2rem;text-align:center}
+.stat-num{font-size:32px;font-weight:600;color:#1D9E75}
+.stat-label{font-size:13px;color:#666;margin-top:4px}
+.section-title{font-size:13px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;margin-top:2rem}
+.card{background:#fff;border:1px solid #e8e8e5;border-radius:12px;padding:1.25rem;margin-bottom:12px}
+.avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;flex-shrink:0}
+.av-teal{background:#E1F5EE;color:#085041}
+.av-purple{background:#EEEDFE;color:#3C3489}
+.av-coral{background:#FAECE7;color:#712B13}
+.av-blue{background:#E6F1FB;color:#0C447C}
+.av-amber{background:#FAEEDA;color:#633806}
+.doc-link{display:inline-flex;align-items:center;gap:6px;background:#f0faf5;border:1px solid #9FE1CB;border-radius:8px;padding:5px 12px;font-size:13px;color:#085041;font-weight:500;margin-top:6px}
+.doc-link:hover{background:#E1F5EE;text-decoration:none}
+.students-under{margin-top:12px;padding-top:12px;border-top:1px solid #f0f0ee}
+.student-pill{display:inline-flex;align-items:center;gap:6px;background:#f5f5f3;border:1px solid #e8e8e5;border-radius:8px;padding:4px 10px;font-size:13px;margin:3px;cursor:pointer;transition:background 0.15s}
+.student-pill:hover{background:#E1F5EE;border-color:#9FE1CB}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;white-space:nowrap}
+.badge-teal{background:#E1F5EE;color:#085041}
+.badge-purple{background:#EEEDFE;color:#3C3489}
+.badge-gray{background:#f0f0ee;color:#444}
+.badge-green{background:#EAF3DE;color:#27500A}
+.badge-red{background:#FCEBEB;color:#A32D2D}
+.badge-amber{background:#FAEEDA;color:#633806}
+.wa-badge{display:inline-flex;align-items:center;gap:5px;background:#dcf8c6;border:1px solid #b7e4a0;border-radius:6px;padding:2px 8px;font-size:12px;color:#1a5c1a;font-weight:500}
+button{cursor:pointer;font-family:inherit}
+.btn{background:#fff;border:1px solid #d0d0cc;border-radius:8px;padding:7px 14px;font-size:13px;color:#1a1a1a;transition:all 0.15s}
+.btn:hover{background:#f5f5f3;border-color:#aaa}
+.btn-primary{background:#1D9E75;color:#fff;border-color:#1D9E75}
+.btn-primary:hover{background:#0F6E56;border-color:#0F6E56}
+.btn-sm{padding:4px 10px;font-size:12px}
+.btn-danger{background:#fff;border-color:#E24B4A;color:#A32D2D}
+.btn-danger:hover{background:#FCEBEB}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:100;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px;padding:1.5rem;width:100%;max-width:480px;max-height:90vh;overflow-y:auto}
+.modal-title{font-size:18px;font-weight:600;margin-bottom:1.25rem}
+.modal-footer{display:flex;gap:8px;justify-content:flex-end;margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e8e8e5}
+.form-group{margin-bottom:14px}
+label{display:block;font-size:13px;font-weight:500;color:#444;margin-bottom:5px}
+input[type=text],input[type=url],input[type=number],input[type=password],select,textarea{width:100%;padding:9px 12px;border:1px solid #d0d0cc;border-radius:8px;font-size:14px;font-family:inherit;background:#fff;color:#1a1a1a;transition:border 0.15s;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#1D9E75;box-shadow:0 0 0 3px rgba(29,158,117,0.1)}
+textarea{resize:vertical;min-height:80px}
+.empty-state{text-align:center;padding:3rem 1rem;color:#999}
+.search-bar{margin-bottom:1.5rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.detail-row{display:flex;gap:6px;align-items:center;font-size:13px;color:#555;margin-top:4px;flex-wrap:wrap}
+.meeting-card{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#fff;border:1px solid #e8e8e5;border-radius:10px;margin-bottom:8px}
+.meeting-date-box{text-align:center;min-width:48px;flex-shrink:0}
+.meeting-day{font-size:24px;font-weight:700;color:#1D9E75;line-height:1}
+.meeting-month{font-size:11px;color:#888;text-transform:uppercase;margin-top:2px}
+.meeting-info{flex:1}
+.meeting-title{font-size:14px;font-weight:600}
+.meeting-sub{font-size:13px;color:#666;margin-top:2px}
+.fees-wrap{overflow-x:auto}
+.fees-grid{width:100%;border-collapse:collapse;font-size:13px;min-width:900px}
+.fees-grid th{text-align:left;padding:8px 10px;font-weight:600;color:#888;font-size:11px;text-transform:uppercase;border-bottom:1px solid #e8e8e5;white-space:nowrap}
+.fees-grid td{padding:8px 10px;border-bottom:1px solid #f0f0ee;vertical-align:middle;white-space:nowrap}
+.fees-grid tr:last-child td{border-bottom:none}
+.month-dot{width:26px;height:26px;border-radius:50%;border:1.5px solid #d0d0cc;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#aaa;transition:all 0.15s;background:#fff}
+.month-dot.paid{background:#1D9E75;border-color:#1D9E75;color:#fff}
+.month-dot:hover{border-color:#1D9E75;color:#1D9E75}
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;background:#1a1a1a;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;z-index:200;opacity:0;transition:opacity 0.2s;pointer-events:none}
+.toast.show{opacity:1}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid #e8e8e5;border-top-color:#1D9E75;border-radius:50%;animation:spin 0.6s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* LOGIN */
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f5f5f3}
+.login-box{background:#fff;border:1px solid #e8e8e5;border-radius:20px;padding:2.5rem;width:100%;max-width:400px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.login-logo{font-size:22px;font-weight:700;margin-bottom:6px}.login-logo span{color:#1D9E75}
+.login-sub{font-size:14px;color:#888;margin-bottom:2rem}
+.role-toggle{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:1.5rem;background:#f5f5f3;border-radius:10px;padding:4px}
+.role-btn{padding:8px;border-radius:8px;border:none;background:transparent;font-size:14px;font-weight:500;color:#888;cursor:pointer;transition:all 0.15s}
+.role-btn.active{background:#fff;color:#1a1a1a;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+.login-error{font-size:13px;color:#A32D2D;background:#FCEBEB;border-radius:8px;padding:8px 12px;margin-top:8px;display:none}
+.conflict-warning{background:#FAEEDA;border:1px solid #FAC775;border-radius:8px;padding:10px 14px;font-size:13px;color:#633806;margin-bottom:12px}
+
+/* NOTES */
+.notes-modal{max-width:780px}
+.notes-tabs{display:flex;gap:0;border-bottom:1px solid #e8e8e5;margin-bottom:0;overflow-x:auto}
+.notes-tab{padding:8px 16px;font-size:13px;font-weight:500;color:#888;cursor:pointer;border:none;background:transparent;border-bottom:2px solid transparent;white-space:nowrap;transition:all 0.15s}
+.notes-tab.active{color:#1D9E75;border-bottom-color:#1D9E75}
+.notes-tab:hover{color:#1a1a1a}
+.notes-tab-add{padding:8px 12px;font-size:13px;color:#aaa;cursor:pointer;border:none;background:transparent;border-bottom:2px solid transparent}
+.notes-tab-add:hover{color:#1D9E75}
+.notes-tab-del{font-size:11px;color:#ccc;margin-left:4px;cursor:pointer;padding:0 2px}
+.notes-tab-del:hover{color:#E24B4A}
+.notes-editor{width:100%;min-height:320px;padding:14px;border:none;border-top:1px solid #f0f0ee;font-size:14px;font-family:inherit;resize:vertical;outline:none;background:#fafaf9;color:#1a1a1a;border-radius:0 0 8px 8px}
+.notes-editor:focus{background:#fff}
+.notes-save-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0 0;margin-top:8px}
+.notes-saved{font-size:12px;color:#1D9E75;opacity:0;transition:opacity 0.3s}
+.notes-saved.show{opacity:1}
+
+@media(max-width:600px){.main{padding:1rem}.grid2{grid-template-columns:1fr}.topbar{padding:0 1rem}.nav-btn{padding:6px 10px;font-size:12px}}
+</style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">College<span>Map</span></div>
+    <div class="login-sub">Mentorship portal — sign in to continue</div>
+    <div class="role-toggle">
+      <button class="role-btn active" id="role-admin-btn" onclick="setRole('admin')">Admin</button>
+      <button class="role-btn" id="role-mentor-btn" onclick="setRole('mentor')">Mentor</button>
+    </div>
+    <div class="form-group"><label>Username</label><input type="text" id="login-username" placeholder="Enter username" onkeydown="if(event.key==='Enter')doLogin()"/></div>
+    <div class="form-group"><label>Password</label><input type="password" id="login-password" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"/></div>
+    <div class="login-error" id="login-error">Incorrect username or password.</div>
+    <button class="btn btn-primary" style="width:100%;margin-top:8px;padding:10px" onclick="doLogin()" id="login-btn">Sign in</button>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" style="display:none">
+  <div class="topbar">
+    <div class="logo">College<span>Map</span> <span style="color:#ccc;margin:0 6px">·</span><span style="color:#888;font-weight:400;font-size:14px">Mentorship</span></div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="nav" id="main-nav">
+        <button class="nav-btn active" onclick="showPage('home',this)">Home</button>
+        <button class="nav-btn" id="nav-mentors" onclick="showPage('mentors',this)">Mentors</button>
+        <button class="nav-btn" id="nav-students" onclick="showPage('students',this)">Students</button>
+        <button class="nav-btn" onclick="showPage('meetings',this)">Meetings</button>
+        <button class="nav-btn" id="nav-notes" onclick="showPage('notes',this)">My Notes</button>
+      </div>
+      <div style="font-size:13px;color:#888" id="user-label"></div>
+      <button class="btn btn-sm" onclick="doLogout()">Sign out</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- HOME -->
+    <div id="page-home" class="page active">
+      <div class="page-header">
+        <div class="page-title" id="home-title">Overview</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap" id="home-actions">
+          <button class="btn btn-primary" onclick="openModal('add-mentor-modal')">+ Mentor</button>
+          <button class="btn btn-primary" onclick="openModal('add-student-modal')">+ Student</button>
+          <button class="btn" onclick="loadAll(true)">↻ Refresh</button>
+        </div>
+      </div>
+      <div class="stats-row" id="stats-row"></div>
+      <div class="section-title">Upcoming meetings</div>
+      <div id="meetings-list"><p style="color:#aaa;font-size:14px"><span class="spinner"></span>Loading...</p></div>
+      <div class="section-title" style="margin-top:2rem" id="fees-section-title">Monthly fees tracker <span style="font-weight:400;font-size:12px;color:#aaa;text-transform:none;letter-spacing:0">(click dot to toggle)</span></div>
+      <div class="card fees-wrap" id="fees-section"><div id="fees-table"><span class="spinner"></span></div></div>
+    </div>
+
+    <!-- MENTORS -->
+    <div id="page-mentors" class="page">
+      <div class="page-header">
+        <div class="page-title">Mentors</div>
+        <button class="btn btn-primary" onclick="openModal('add-mentor-modal')">+ Add mentor</button>
+      </div>
+      <div class="grid2" id="mentors-list"></div>
+    </div>
+
+    <!-- STUDENTS -->
+    <div id="page-students" class="page">
+      <div class="page-header">
+        <div class="page-title">Students</div>
+        <button class="btn btn-primary" id="add-student-btn" onclick="openModal('add-student-modal')">+ Add student</button>
+      </div>
+      <div class="search-bar"><input type="text" placeholder="Search by name or WhatsApp group..." id="student-search" oninput="renderStudents()"/></div>
+      <div id="students-list"></div>
+    </div>
+
+    <!-- MEETINGS -->
+    <div id="page-meetings" class="page">
+      <div class="page-header"><div class="page-title">Meetings</div></div>
+      <div style="display:grid;grid-template-columns:340px 1fr;gap:1.5rem;align-items:start">
+        <div class="card">
+          <div style="font-size:15px;font-weight:600;margin-bottom:1rem">Schedule a meeting</div>
+          <div id="conflict-warning" class="conflict-warning" style="display:none"></div>
+          <div class="form-group"><label>Mentor *</label><select id="mt-mentor" onchange="filterMtStudents();checkConflicts()"><option value="">Select mentor</option></select></div>
+          <div class="form-group"><label>Student *</label><select id="mt-student"><option value="">Select student</option></select></div>
+          <div class="form-group"><label>Date *</label><input type="date" id="mt-date" onchange="checkConflicts()"/></div>
+          <div class="form-group"><label>Time *</label><input type="time" id="mt-time" onchange="checkConflicts()"/></div>
+          <div class="form-group"><label>Topic</label><input type="text" id="mt-topic" placeholder="e.g. Mechanics doubt session"/></div>
+          <button class="btn btn-primary" style="width:100%" onclick="saveMeeting()">Schedule meeting</button>
+        </div>
+        <div>
+          <div class="section-title" style="margin-top:0">All meetings</div>
+          <div id="all-meetings-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTES -->
+    <div id="page-notes" class="page">
+      <div class="page-header">
+        <div class="page-title" id="notes-page-title">My Notes</div>
+        <div style="font-size:13px;color:#aaa">Auto-saves when you click Save</div>
+      </div>
+      <!-- Admin: select which mentor's notes to view -->
+      <div id="notes-mentor-selector" style="display:none;margin-bottom:1.5rem">
+        <div class="form-group" style="max-width:300px;margin:0">
+          <label>Viewing notes for</label>
+          <select id="notes-mentor-select" onchange="loadNotesForMentor(this.value)">
+            <option value="">Select mentor</option>
+          </select>
+        </div>
+      </div>
+      <div id="notes-container" class="card" style="padding:0;overflow:hidden">
+        <div style="display:flex;align-items:center;border-bottom:1px solid #e8e8e5">
+          <div class="notes-tabs" id="notes-tabs"></div>
+          <button class="notes-tab-add" onclick="addNoteTab()" title="New tab">＋</button>
+        </div>
+        <textarea class="notes-editor" id="notes-editor" placeholder="Start typing your notes here..." oninput="notesChanged()"></textarea>
+        <div class="notes-save-row" style="padding:10px 14px;border-top:1px solid #f0f0ee">
+          <span class="notes-saved" id="notes-saved-label">Saved ✓</span>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-sm btn-danger" onclick="deleteCurrentTab()">Delete tab</button>
+            <button class="btn btn-sm btn-primary" onclick="saveNotes()">Save notes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ADD MENTOR -->
+<div class="modal-overlay" id="add-mentor-modal">
+  <div class="modal">
+    <div class="modal-title">Add mentor</div>
+    <div class="form-group"><label>Full name *</label><input type="text" id="m-name" placeholder="e.g. Rahul Sharma"/></div>
+    <div class="form-group"><label>Batch coaching</label><input type="text" id="m-coaching" placeholder="e.g. Allen, Aakash"/></div>
+    <div class="form-group"><label>Phone number</label><input type="text" id="m-phone" placeholder="e.g. 9876543210"/></div>
+    <div class="form-group"><label>Google Doc / Notion link</label><input type="url" id="m-doc" placeholder="https://docs.google.com/..."/></div>
+    <div class="form-group"><label>Additional notes</label><textarea id="m-notes" placeholder="Any notes..."></textarea></div>
+    <div style="border-top:1px solid #e8e8e5;padding-top:1rem;margin-top:1rem">
+      <div style="font-size:13px;font-weight:600;color:#444;margin-bottom:10px">Login credentials</div>
+      <div class="form-group"><label>Username *</label><input type="text" id="m-username" placeholder="e.g. rahul"/></div>
+      <div class="form-group"><label>Password *</label><input type="text" id="m-password" placeholder="e.g. cm2026"/></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('add-mentor-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveMentor()">Add mentor</button>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT MENTOR -->
+<div class="modal-overlay" id="edit-mentor-modal">
+  <div class="modal">
+    <div class="modal-title">Edit mentor</div>
+    <input type="hidden" id="em-id"/>
+    <div class="form-group"><label>Full name *</label><input type="text" id="em-name"/></div>
+    <div class="form-group"><label>Batch coaching</label><input type="text" id="em-coaching"/></div>
+    <div class="form-group"><label>Phone number</label><input type="text" id="em-phone"/></div>
+    <div class="form-group"><label>Google Doc / Notion link</label><input type="url" id="em-doc"/></div>
+    <div class="form-group"><label>Additional notes</label><textarea id="em-notes"></textarea></div>
+    <div style="border-top:1px solid #e8e8e5;padding-top:1rem;margin-top:1rem">
+      <div style="font-size:13px;font-weight:600;color:#444;margin-bottom:10px">Login credentials</div>
+      <div class="form-group"><label>Username</label><input type="text" id="em-username"/></div>
+      <div class="form-group"><label>Password <span style="font-weight:400;color:#aaa">(leave blank to keep current)</span></label><input type="text" id="em-password" placeholder="New password..."/></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('edit-mentor-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="updateMentor()">Save changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD STUDENT -->
+<div class="modal-overlay" id="add-student-modal">
+  <div class="modal">
+    <div class="modal-title">Add student</div>
+    <div class="form-group"><label>Full name *</label><input type="text" id="s-name" placeholder="e.g. Arjun Mehta"/></div>
+    <div class="form-group"><label>Phone number</label><input type="text" id="s-phone" placeholder="e.g. 9876543210"/></div>
+    <div class="form-group"><label>Assign mentor</label><select id="s-mentor"><option value="">— No mentor yet —</option></select></div>
+    <div class="form-group"><label>WhatsApp group name</label><input type="text" id="s-wagroup" placeholder="e.g. CollegeMap Batch 1"/></div>
+    <div class="form-group"><label>JEE year</label><input type="text" id="s-jeeyear" placeholder="e.g. JEE 2026"/></div>
+    <div class="form-group"><label>Monthly fees (₹)</label><input type="number" id="s-fees" placeholder="e.g. 2000"/></div>
+    <div class="form-group"><label>Notes</label><textarea id="s-notes" placeholder="Any notes..."></textarea></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('add-student-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveStudent()">Add student</button>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT STUDENT -->
+<div class="modal-overlay" id="edit-student-modal">
+  <div class="modal">
+    <div class="modal-title">Edit student</div>
+    <input type="hidden" id="es-id"/>
+    <div class="form-group"><label>Full name *</label><input type="text" id="es-name"/></div>
+    <div class="form-group"><label>Phone number</label><input type="text" id="es-phone"/></div>
+    <div class="form-group"><label>Assign mentor</label><select id="es-mentor"><option value="">— No mentor yet —</option></select></div>
+    <div class="form-group"><label>WhatsApp group name</label><input type="text" id="es-wagroup"/></div>
+    <div class="form-group"><label>JEE year</label><input type="text" id="es-jeeyear"/></div>
+    <div class="form-group"><label>Monthly fees (₹)</label><input type="number" id="es-fees"/></div>
+    <div class="form-group"><label>Notes</label><textarea id="es-notes"></textarea></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('edit-student-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="updateStudent()">Save changes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwqlx7pk-YzhaD_OHJIP39Plh841c-Jq5shFQcoEnYt90MvyqMwruayiC1qcRhnViDZ/exec';
+const ADMIN_USERNAME='admin';
+const ADMIN_PASSWORD='collegemap2026';
+const AVATAR_COLORS=['av-teal','av-purple','av-coral','av-blue','av-amber'];
+const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+let state={mentors:[],students:[],meetings:[],fees:{}};
+let currentUser={role:null,mentorId:null,username:null};
+let loginRole='admin';
+
+// notes state: { mentorId: { tabs:[{id,name,content}], activeTab:id } }
+let notesState={};
+let currentNotesMentorId=null;
+let notesUnsaved=false;
+
+// ─── LOGIN ───────────────────────────────────────────────
+function setRole(role){
+  loginRole=role;
+  document.getElementById('role-admin-btn').classList.toggle('active',role==='admin');
+  document.getElementById('role-mentor-btn').classList.toggle('active',role==='mentor');
+}
+
+async function doLogin(){
+  const username=document.getElementById('login-username').value.trim().toLowerCase();
+  const password=document.getElementById('login-password').value.trim();
+  const btn=document.getElementById('login-btn');
+  const err=document.getElementById('login-error');
+  err.style.display='none';
+  btn.textContent='Signing in...';btn.disabled=true;
+  if(loginRole==='admin'){
+    if(username===ADMIN_USERNAME&&password===ADMIN_PASSWORD){
+      currentUser={role:'admin',mentorId:null,username:'admin'};
+      await loadAll();
+      showApp();
+    } else {err.style.display='block';}
+    btn.textContent='Sign in';btn.disabled=false;
+    return;
+  }
+  await loadAll();
+  const mentor=state.mentors.find(m=>m.username&&m.username.toLowerCase()===username&&m.password===password);
+  if(mentor){
+    currentUser={role:'mentor',mentorId:mentor.id,username:mentor.name};
+    showApp();
+  } else {err.style.display='block';}
+  btn.textContent='Sign in';btn.disabled=false;
+}
+
+function showApp(){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='block';
+  document.getElementById('user-label').textContent=currentUser.username+(currentUser.role==='admin'?' (admin)':'');
+  applyRoleUI();
+  showPage('home',document.querySelector('.nav-btn'));
+}
+
+function doLogout(){
+  currentUser={role:null,mentorId:null,username:null};
+  notesState={};currentNotesMentorId=null;
+  document.getElementById('login-screen').style.display='flex';
+  document.getElementById('app').style.display='none';
+  document.getElementById('login-username').value='';
+  document.getElementById('login-password').value='';
+  document.getElementById('login-error').style.display='none';
+}
+
+function applyRoleUI(){
+  const isAdmin=currentUser.role==='admin';
+  document.getElementById('nav-mentors').style.display=isAdmin?'':'none';
+  document.getElementById('home-actions').style.display=isAdmin?'flex':'none';
+  document.getElementById('fees-section-title').style.display=isAdmin?'block':'none';
+  document.getElementById('fees-section').style.display=isAdmin?'block':'none';
+  document.getElementById('nav-notes').style.display='';
+  if(!isAdmin){
+    document.getElementById('home-title').textContent='My Dashboard';
+    document.getElementById('nav-notes').textContent='My Notes';
+  } else {
+    document.getElementById('nav-notes').textContent='Notes';
+  }
+}
+
+// ─── SHEET I/O ───────────────────────────────────────────
+function toast(msg,dur=2500){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
+
+async function sheetGet(sheetName){
+  try{const res=await fetch(`${SCRIPT_URL}?sheet=${encodeURIComponent(sheetName)}`);const data=await res.json();return data.rows||[];}catch(e){return[]}
+}
+async function sheetWrite(sheetName,rows){
+  try{await fetch(SCRIPT_URL,{method:'POST',body:JSON.stringify({sheet:sheetName,action:'write_all',rows}),headers:{'Content-Type':'text/plain'}});}
+  catch(e){toast('Save failed — check connection')}
+}
+
+// ─── SERIALIZERS ─────────────────────────────────────────
+function mentorsToRows(arr){
+  return[['id','name','coaching','phone','doc','notes','color','username','password'],...arr.map(m=>[m.id,m.name,m.coaching||'',m.phone||'',m.doc||'',m.notes||'',m.color,m.username||'',m.password||''])];
+}
+function rowsToMentors(rows){
+  if(rows.length<2)return[];
+  return rows.slice(1).filter(r=>r[0]).map(r=>({id:''+r[0],name:''+r[1],coaching:''+r[2],phone:''+r[3],doc:''+r[4],notes:''+r[5],color:r[6]||'av-teal',username:''+r[7],password:''+r[8]}));
+}
+function studentsToRows(arr){
+  return[['id','name','phone','mentorId','waGroup','jeeYear','fees','notes','color'],...arr.map(s=>[s.id,s.name,s.phone||'',s.mentorId||'',s.waGroup||'',s.jeeYear||'',s.fees||'',s.notes||'',s.color])];
+}
+function rowsToStudents(rows){
+  if(rows.length<2)return[];
+  return rows.slice(1).filter(r=>r[0]).map(r=>({id:''+r[0],name:''+r[1],phone:''+r[2],mentorId:''+r[3],waGroup:''+r[4],jeeYear:''+r[5],fees:''+r[6],notes:''+r[7],color:r[8]||'av-teal'}));
+}
+function feesToRows(fees){
+  const rows=[['studentId','month']];
+  Object.entries(fees).forEach(([sid,months])=>Object.entries(months).forEach(([m,paid])=>{if(paid)rows.push([sid,m])}));
+  return rows;
+}
+function rowsToFees(rows){
+  const fees={};
+  if(!rows||rows.length<2)return fees;
+  rows.slice(1).filter(r=>r&&r[0]&&r[1]).forEach(r=>{const sid=''+r[0];const month=''+r[1];if(!fees[sid])fees[sid]={};fees[sid][month]=true;});
+  return fees;
+}
+function meetingsToRows(arr){
+  return[['id','date','time','mentorId','studentId','topic'],...arr.map(m=>[m.id,m.date,m.time,m.mentorId,m.studentId,m.topic||''])];
+}
+function rowsToMeetings(rows){
+  if(rows.length<2)return[];
+  return rows.slice(1).filter(r=>r[0]).map(r=>{
+    let date=r[1];
+    if(date instanceof Date)date=date.toISOString().split('T')[0];
+    else if(typeof date==='number'){const d=new Date(Math.round((date-25569)*86400*1000));date=d.toISOString().split('T')[0];}
+    else date=''+date;
+    let time=r[2];
+    if(time instanceof Date)time=time.toTimeString().slice(0,5);
+    else time=''+time;
+    return{id:''+r[0],date,time,mentorId:''+r[3],studentId:''+r[4],topic:''+r[5]};
+  });
+}
+
+// Notes serializers — stored as: mentorId | tabId | tabName | content
+function notesToRows(notesState){
+  const rows=[['mentorId','tabId','tabName','content']];
+  Object.entries(notesState).forEach(([mentorId,data])=>{
+    (data.tabs||[]).forEach(tab=>{
+      rows.push([mentorId,tab.id,tab.name,tab.content||'']);
+    });
+  });
+  return rows;
+}
+function rowsToNotes(rows){
+  const result={};
+  if(!rows||rows.length<2)return result;
+  rows.slice(1).filter(r=>r[0]&&r[1]).forEach(r=>{
+    const mid=''+r[0],tid=''+r[1],tname=''+r[2],tcontent=''+r[3];
+    if(!result[mid])result[mid]={tabs:[],activeTab:null};
+    result[mid].tabs.push({id:tid,name:tname,content:tcontent});
+  });
+  Object.values(result).forEach(d=>{if(d.tabs.length)d.activeTab=d.tabs[0].id;});
+  return result;
+}
+
+async function loadAll(showToast=false){
+  const[mR,sR,fR,mtR,nR]=await Promise.all([sheetGet('Mentors'),sheetGet('Students'),sheetGet('Fees'),sheetGet('Meetings'),sheetGet('Notes')]);
+  state.mentors=rowsToMentors(mR);
+  state.students=rowsToStudents(sR);
+  state.fees=rowsToFees(fR);
+  state.meetings=rowsToMeetings(mtR);
+  notesState=rowsToNotes(nR);
+  if(showToast)toast('Data refreshed ✓');
+  renderAll();
+}
+
+// ─── UTILS ───────────────────────────────────────────────
+function initials(name){return name.trim().split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)}
+function avatarColor(idx){return AVATAR_COLORS[idx%AVATAR_COLORS.length]}
+function timeToMins(t){const[h,m]=(t||'00:00').split(':').map(Number);return h*60+m}
+function hasConflict(mentorId,date,time,excludeId=null){
+  const newMins=timeToMins(time);
+  return state.meetings.filter(m=>m.date===date&&m.id!==excludeId).some(m=>Math.abs(timeToMins(m.time)-newMins)<30);
+}
+
+// ─── NAVIGATION ──────────────────────────────────────────
+function showPage(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  renderAll();
+}
+
+function openModal(id){
+  if(id.includes('student'))populateMentorSelects();
+  document.getElementById(id).classList.add('open');
+}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open')}));
+
+function populateMentorSelects(){
+  ['s-mentor','es-mentor'].forEach(id=>{
+    const sel=document.getElementById(id);if(!sel)return;
+    const cur=sel.value;
+    sel.innerHTML='<option value="">— No mentor yet —</option>'+state.mentors.map(m=>`<option value="${m.id}">${m.name}</option>`).join('');
+    sel.value=cur;
+  });
+}
+
+// ─── MENTORS CRUD ────────────────────────────────────────
+async function saveMentor(){
+  const name=document.getElementById('m-name').value.trim();
+  const username=document.getElementById('m-username').value.trim().toLowerCase();
+  const password=document.getElementById('m-password').value.trim();
+  if(!name)return alert('Name is required');
+  if(!username||!password)return alert('Username and password are required');
+  if(state.mentors.find(m=>m.username===username))return alert('Username already taken');
+  const id='m_'+Date.now();
+  state.mentors.push({id,name,coaching:document.getElementById('m-coaching').value.trim(),phone:document.getElementById('m-phone').value.trim(),doc:document.getElementById('m-doc').value.trim(),notes:document.getElementById('m-notes').value.trim(),color:avatarColor(state.mentors.length),username,password});
+  closeModal('add-mentor-modal');
+  ['m-name','m-coaching','m-phone','m-doc','m-notes','m-username','m-password'].forEach(f=>document.getElementById(f).value='');
+  toast('Saving...');await sheetWrite('Mentors',mentorsToRows(state.mentors));toast('Mentor added ✓');renderAll();
+}
+
+function editMentor(id){
+  const m=state.mentors.find(x=>x.id===id);if(!m)return;
+  document.getElementById('em-id').value=m.id;
+  document.getElementById('em-name').value=m.name;
+  document.getElementById('em-coaching').value=m.coaching||'';
+  document.getElementById('em-phone').value=m.phone||'';
+  document.getElementById('em-doc').value=m.doc||'';
+  document.getElementById('em-notes').value=m.notes||'';
+  document.getElementById('em-username').value=m.username||'';
+  document.getElementById('em-password').value='';
+  openModal('edit-mentor-modal');
+}
+
+async function updateMentor(){
+  const id=document.getElementById('em-id').value;
+  const name=document.getElementById('em-name').value.trim();
+  if(!name)return alert('Name is required');
+  const idx=state.mentors.findIndex(m=>m.id===id);if(idx<0)return;
+  const newUsername=document.getElementById('em-username').value.trim().toLowerCase();
+  const newPassword=document.getElementById('em-password').value.trim();
+  const duplicate=state.mentors.find(m=>m.username===newUsername&&m.id!==id);
+  if(duplicate)return alert('Username already taken by another mentor');
+  state.mentors[idx]={...state.mentors[idx],name,coaching:document.getElementById('em-coaching').value.trim(),phone:document.getElementById('em-phone').value.trim(),doc:document.getElementById('em-doc').value.trim(),notes:document.getElementById('em-notes').value.trim(),username:newUsername||state.mentors[idx].username,password:newPassword||state.mentors[idx].password};
+  closeModal('edit-mentor-modal');
+  toast('Saving...');await sheetWrite('Mentors',mentorsToRows(state.mentors));toast('Mentor updated ✓');renderAll();
+}
+
+async function removeMentor(id){
+  if(!confirm('Remove this mentor? Their students will become unassigned.'))return;
+  state.mentors=state.mentors.filter(m=>m.id!==id);
+  state.students=state.students.map(s=>s.mentorId===id?{...s,mentorId:''}:s);
+  toast('Saving...');
+  await Promise.all([sheetWrite('Mentors',mentorsToRows(state.mentors)),sheetWrite('Students',studentsToRows(state.students))]);
+  toast('Mentor removed ✓');renderAll();
+}
+
+// ─── STUDENTS CRUD ───────────────────────────────────────
+async function saveStudent(){
+  const name=document.getElementById('s-name').value.trim();
+  if(!name)return alert('Name is required');
+  const id='s_'+Date.now();
+  state.students.push({id,name,phone:document.getElementById('s-phone').value.trim(),mentorId:document.getElementById('s-mentor').value,waGroup:document.getElementById('s-wagroup').value.trim(),jeeYear:document.getElementById('s-jeeyear').value.trim(),fees:document.getElementById('s-fees').value.trim(),notes:document.getElementById('s-notes').value.trim(),color:avatarColor(state.students.length)});
+  closeModal('add-student-modal');
+  ['s-name','s-phone','s-wagroup','s-jeeyear','s-fees','s-notes'].forEach(f=>document.getElementById(f).value='');
+  document.getElementById('s-mentor').value='';
+  toast('Saving...');await sheetWrite('Students',studentsToRows(state.students));toast('Student added ✓');renderAll();
+}
+
+function editStudent(id){
+  const s=state.students.find(x=>x.id===id);if(!s)return;
+  populateMentorSelects();
+  document.getElementById('es-id').value=s.id;
+  document.getElementById('es-name').value=s.name;
+  document.getElementById('es-phone').value=s.phone||'';
+  document.getElementById('es-mentor').value=s.mentorId||'';
+  document.getElementById('es-wagroup').value=s.waGroup||'';
+  document.getElementById('es-jeeyear').value=s.jeeYear||'';
+  document.getElementById('es-fees').value=s.fees||'';
+  document.getElementById('es-notes').value=s.notes||'';
+  openModal('edit-student-modal');
+}
+
+async function updateStudent(){
+  const id=document.getElementById('es-id').value;
+  const name=document.getElementById('es-name').value.trim();
+  if(!name)return alert('Name is required');
+  const idx=state.students.findIndex(s=>s.id===id);if(idx<0)return;
+  state.students[idx]={...state.students[idx],name,phone:document.getElementById('es-phone').value.trim(),mentorId:document.getElementById('es-mentor').value,waGroup:document.getElementById('es-wagroup').value.trim(),jeeYear:document.getElementById('es-jeeyear').value.trim(),fees:document.getElementById('es-fees').value.trim(),notes:document.getElementById('es-notes').value.trim()};
+  closeModal('edit-student-modal');
+  toast('Saving...');await sheetWrite('Students',studentsToRows(state.students));toast('Student updated ✓');renderAll();
+}
+
+async function removeStudent(id){
+  if(!confirm('Remove this student?'))return;
+  state.students=state.students.filter(s=>s.id!==id);
+  toast('Saving...');await sheetWrite('Students',studentsToRows(state.students));toast('Student removed ✓');renderAll();
+}
+
+// ─── FEES ────────────────────────────────────────────────
+async function toggleFee(studentId,monthKey){
+  if(!state.fees[studentId])state.fees[studentId]={};
+  state.fees[studentId][monthKey]=!state.fees[studentId][monthKey];
+  await sheetWrite('Fees',feesToRows(state.fees));
+  renderFeesTable();renderStats();
+}
+
+// ─── MEETINGS ────────────────────────────────────────────
+function checkConflicts(){
+  const mentorId=document.getElementById('mt-mentor').value;
+  const date=document.getElementById('mt-date').value;
+  const time=document.getElementById('mt-time').value;
+  const warn=document.getElementById('conflict-warning');
+  if(!mentorId||!date||!time){warn.style.display='none';return}
+  const conflicts=state.meetings.filter(m=>m.date===date&&Math.abs(timeToMins(m.time)-timeToMins(time))<30);
+  if(conflicts.length){
+    const msgs=conflicts.map(c=>{const s=state.students.find(x=>x.id===c.studentId);const mn=state.mentors.find(x=>x.id===c.mentorId);return`${c.time}${mn?' ('+mn.name+')':''} with ${s?s.name:'a student'}`});
+    warn.style.display='block';
+    warn.innerHTML=`⚠️ Conflict within 30 mins: ${msgs.join(', ')}`;
+  } else {warn.style.display='none';}
+}
+
+function filterMtStudents(){
+  const mentorId=document.getElementById('mt-mentor').value;
+  const sel=document.getElementById('mt-student');
+  const isAdmin=currentUser.role==='admin';
+  let students=isAdmin?(mentorId?state.students.filter(s=>s.mentorId===mentorId):state.students):state.students.filter(s=>s.mentorId===currentUser.mentorId);
+  sel.innerHTML='<option value="">Select student</option>'+students.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+}
+
+function populateMeetingSelects(){
+  const sel=document.getElementById('mt-mentor');
+  const isAdmin=currentUser.role==='admin';
+  if(isAdmin){sel.innerHTML='<option value="">Select mentor</option>'+state.mentors.map(m=>`<option value="${m.id}">${m.name}</option>`).join('');sel.disabled=false;}
+  else{const m=state.mentors.find(x=>x.id===currentUser.mentorId);sel.innerHTML=m?`<option value="${m.id}">${m.name}</option>`:'<option value="">—</option>';sel.value=currentUser.mentorId;sel.disabled=true;}
+  filterMtStudents();
+  document.getElementById('mt-date').value=new Date().toISOString().split('T')[0];
+}
+
+async function saveMeeting(){
+  const mentorId=document.getElementById('mt-mentor').value;
+  const studentId=document.getElementById('mt-student').value;
+  const date=document.getElementById('mt-date').value;
+  const time=document.getElementById('mt-time').value;
+  const topic=document.getElementById('mt-topic').value.trim();
+  if(!mentorId||!studentId||!date||!time)return alert('Please fill mentor, student, date and time');
+  const exact=state.meetings.find(m=>m.mentorId===mentorId&&m.date===date&&m.time===time);
+  if(exact)return alert('This mentor already has a meeting at this exact time');
+  if(hasConflict(mentorId,date,time)){if(!confirm('This meeting is within 30 minutes of another. Schedule anyway?'))return;}
+  const id='mt_'+Date.now();
+  state.meetings.push({id,date,time,mentorId,studentId,topic});
+  document.getElementById('mt-topic').value='';
+  document.getElementById('conflict-warning').style.display='none';
+  toast('Saving...');
+  await sheetWrite('Meetings',meetingsToRows(state.meetings));
+  toast('Meeting scheduled ✓');
+  renderAllMeetings();renderMeetings();
+}
+
+async function removeMeeting(id){
+  if(!confirm('Remove this meeting?'))return;
+  state.meetings=state.meetings.filter(m=>m.id!==id);
+  toast('Saving...');
+  await sheetWrite('Meetings',meetingsToRows(state.meetings));
+  toast('Meeting removed ✓');
+  renderAllMeetings();renderMeetings();
+}
+
+// ─── NOTES ───────────────────────────────────────────────
+function getNotesData(mentorId){
+  if(!notesState[mentorId]){
+    const defaultTab={id:'tab_'+Date.now(),name:'General',content:''};
+    notesState[mentorId]={tabs:[defaultTab],activeTab:defaultTab.id};
+  }
+  return notesState[mentorId];
+}
+
+function loadNotesForMentor(mentorId){
+  if(!mentorId){document.getElementById('notes-tabs').innerHTML='';document.getElementById('notes-editor').value='';return;}
+  currentNotesMentorId=mentorId;
+  renderNotesTabs();
+}
+
+function renderNotesTabs(){
+  const mid=currentNotesMentorId;
+  if(!mid)return;
+  const data=getNotesData(mid);
+  const tabsEl=document.getElementById('notes-tabs');
+  tabsEl.innerHTML=data.tabs.map(tab=>`
+    <button class="notes-tab${tab.id===data.activeTab?' active':''}" onclick="switchNoteTab('${tab.id}')">
+      <span ondblclick="renameTab('${tab.id}')" title="Double-click to rename">${tab.name}</span>
+      ${data.tabs.length>1?`<span class="notes-tab-del" onclick="event.stopPropagation();deleteTab('${tab.id}')" title="Delete tab">✕</span>`:''}
+    </button>`).join('');
+  const activeTab=data.tabs.find(t=>t.id===data.activeTab);
+  document.getElementById('notes-editor').value=activeTab?activeTab.content:'';
+}
+
+function switchNoteTab(tabId){
+  const data=getNotesData(currentNotesMentorId);
+  // save current content first
+  const cur=data.tabs.find(t=>t.id===data.activeTab);
+  if(cur)cur.content=document.getElementById('notes-editor').value;
+  data.activeTab=tabId;
+  renderNotesTabs();
+}
+
+function addNoteTab(){
+  const mid=currentNotesMentorId;
+  if(!mid)return;
+  const name=prompt('Tab name:','New tab');
+  if(!name)return;
+  const data=getNotesData(mid);
+  const cur=data.tabs.find(t=>t.id===data.activeTab);
+  if(cur)cur.content=document.getElementById('notes-editor').value;
+  const newTab={id:'tab_'+Date.now(),name:name.trim(),content:''};
+  data.tabs.push(newTab);
+  data.activeTab=newTab.id;
+  renderNotesTabs();
+  notesUnsaved=true;
+}
+
+function deleteTab(tabId){
+  const data=getNotesData(currentNotesMentorId);
+  if(data.tabs.length<=1)return alert('Cannot delete the only tab');
+  if(!confirm('Delete this tab and its content?'))return;
+  data.tabs=data.tabs.filter(t=>t.id!==tabId);
+  if(data.activeTab===tabId)data.activeTab=data.tabs[0].id;
+  renderNotesTabs();
+  notesUnsaved=true;
+}
+
+function deleteCurrentTab(){
+  const data=getNotesData(currentNotesMentorId);
+  deleteTab(data.activeTab);
+}
+
+function renameTab(tabId){
+  const data=getNotesData(currentNotesMentorId);
+  const tab=data.tabs.find(t=>t.id===tabId);
+  if(!tab)return;
+  const name=prompt('Rename tab:',tab.name);
+  if(!name)return;
+  tab.name=name.trim();
+  renderNotesTabs();
+  notesUnsaved=true;
+}
+
+function notesChanged(){
+  notesUnsaved=true;
+  const data=getNotesData(currentNotesMentorId);
+  const cur=data.tabs.find(t=>t.id===data.activeTab);
+  if(cur)cur.content=document.getElementById('notes-editor').value;
+}
+
+async function saveNotes(){
+  const data=getNotesData(currentNotesMentorId);
+  const cur=data.tabs.find(t=>t.id===data.activeTab);
+  if(cur)cur.content=document.getElementById('notes-editor').value;
+  await sheetWrite('Notes',notesToRows(notesState));
+  notesUnsaved=false;
+  const lbl=document.getElementById('notes-saved-label');
+  lbl.classList.add('show');
+  setTimeout(()=>lbl.classList.remove('show'),2000);
+}
+
+function renderNotesPage(){
+  const isAdmin=currentUser.role==='admin';
+  const selectorEl=document.getElementById('notes-mentor-selector');
+  if(isAdmin){
+    selectorEl.style.display='block';
+    const sel=document.getElementById('notes-mentor-select');
+    const cur=sel.value;
+    sel.innerHTML='<option value="">Select mentor</option>'+state.mentors.map(m=>`<option value="${m.id}">${m.name}</option>`).join('');
+    sel.value=cur;
+    if(!currentNotesMentorId&&state.mentors.length){
+      // auto-select first
+      sel.value=state.mentors[0].id;
+      currentNotesMentorId=state.mentors[0].id;
+    }
+    document.getElementById('notes-page-title').textContent='Notes';
+  } else {
+    selectorEl.style.display='none';
+    currentNotesMentorId=currentUser.mentorId;
+    document.getElementById('notes-page-title').textContent='My Notes';
+  }
+  if(currentNotesMentorId)loadNotesForMentor(currentNotesMentorId);
+}
+
+// ─── RENDER ──────────────────────────────────────────────
+function renderAll(){
+  const active=document.querySelector('#app .page.active');
+  if(!active)return;
+  const id=active.id.replace('page-','');
+  if(id==='home'){renderStats();renderMeetings();if(currentUser.role==='admin')renderFeesTable();}
+  if(id==='mentors')renderMentors();
+  if(id==='students')renderStudents();
+  if(id==='meetings'){populateMeetingSelects();renderAllMeetings();}
+  if(id==='notes')renderNotesPage();
+}
+
+function renderStats(){
+  const isAdmin=currentUser.role==='admin';
+  const curMonth=new Date().toISOString().slice(0,7);
+  if(isAdmin){
+    const unassigned=state.students.filter(s=>!s.mentorId).length;
+    const paid=state.students.filter(s=>state.fees[s.id]&&state.fees[s.id][curMonth]).length;
+    document.getElementById('stats-row').innerHTML=`
+      <div class="stat-card"><div class="stat-num">${state.mentors.length}</div><div class="stat-label">Mentors</div></div>
+      <div class="stat-card"><div class="stat-num">${state.students.length}</div><div class="stat-label">Students</div></div>
+      <div class="stat-card"><div class="stat-num">${unassigned}</div><div class="stat-label">Unassigned</div></div>
+      <div class="stat-card"><div class="stat-num">${paid}/${state.students.length}</div><div class="stat-label">Paid this month</div></div>`;
+  } else {
+    const myStudents=state.students.filter(s=>s.mentorId===currentUser.mentorId);
+    const myMeetings=state.meetings.filter(m=>m.mentorId===currentUser.mentorId&&m.date>=new Date().toISOString().split('T')[0]);
+    document.getElementById('stats-row').innerHTML=`
+      <div class="stat-card"><div class="stat-num">${myStudents.length}</div><div class="stat-label">My students</div></div>
+      <div class="stat-card"><div class="stat-num">${myMeetings.length}</div><div class="stat-label">Upcoming sessions</div></div>`;
+  }
+}
+
+function renderMeetings(){
+  const el=document.getElementById('meetings-list');
+  const isAdmin=currentUser.role==='admin';
+  const today=new Date().toISOString().split('T')[0];
+  const nowMins=new Date().getHours()*60+new Date().getMinutes();
+  let upcoming=[...state.meetings].filter(m=>m.date>today||(m.date===today&&timeToMins(m.time)>nowMins));
+  if(!isAdmin)upcoming=upcoming.filter(m=>m.mentorId===currentUser.mentorId);
+  upcoming=upcoming.sort((a,b)=>a.date+a.time>b.date+b.time?1:-1).slice(0,8);
+  if(!upcoming.length){el.innerHTML='<p style="color:#aaa;font-size:14px">No upcoming meetings.</p>';return}
+  el.innerHTML=upcoming.map(m=>{
+    const mentor=state.mentors.find(x=>x.id===m.mentorId);
+    const student=state.students.find(x=>x.id===m.studentId);
+    const d=new Date(m.date+'T00:00:00');
+    return`<div class="meeting-card">
+      <div class="meeting-date-box"><div class="meeting-day">${d.getDate()}</div><div class="meeting-month">${MONTHS[d.getMonth()]}</div></div>
+      <div class="meeting-info"><div class="meeting-title">${m.topic||'Session'}</div><div class="meeting-sub">${mentor?mentor.name:'?'} → ${student?student.name:'?'}${m.time?' · '+m.time:''}</div></div>
+      <span class="badge badge-teal">Upcoming</span>
+    </div>`;
+  }).join('');
+}
+
+function renderFeesTable(){
+  const el=document.getElementById('fees-table');
+  if(!state.students.length){el.innerHTML='<p style="color:#aaa;font-size:14px;padding:0.5rem 0">No students yet.</p>';return}
+  const year=new Date().getFullYear();
+  el.innerHTML=`<table class="fees-grid">
+    <thead><tr><th>Student</th><th>Mentor</th><th>Fees/mo</th>${MONTHS.map(m=>`<th>${m}</th>`).join('')}</tr></thead>
+    <tbody>${state.students.map(s=>{
+      const mentor=state.mentors.find(m=>m.id===s.mentorId);
+      const dots=MONTHS.map((mon,i)=>{const key=`${year}-${String(i+1).padStart(2,'0')}`;const paid=state.fees[s.id]&&state.fees[s.id][key];return`<td><div class="month-dot${paid?' paid':''}" onclick="toggleFee('${s.id}','${key}')">${paid?'✓':''}</div></td>`;}).join('');
+      return`<tr><td><strong>${s.name}</strong></td><td style="color:#666">${mentor?mentor.name:'—'}</td><td style="color:#666">${s.fees?'₹'+s.fees:'—'}</td>${dots}</tr>`;
+    }).join('')}</tbody>
+  </table>`;
+}
+
+function renderMentors(){
+  const el=document.getElementById('mentors-list');
+  if(!state.mentors.length){el.innerHTML='<div class="empty-state"><p>No mentors yet</p></div>';return}
+  el.innerHTML=state.mentors.map(m=>{
+    const students=state.students.filter(s=>s.mentorId===m.id);
+    const docBtn=m.doc?`<a href="${m.doc}" target="_blank" class="doc-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>External doc</a>`:'';
+    return`<div class="card">
+      <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px">
+        <div class="avatar ${m.color}">${initials(m.name)}</div>
+        <div style="flex:1">
+          <div style="font-size:16px;font-weight:600">${m.name}</div>
+          <div style="font-size:13px;color:#666;margin-top:2px">${m.coaching||''}${m.coaching&&m.phone?' · ':''}${m.phone||''}</div>
+          <div style="font-size:12px;color:#aaa;margin-top:2px">Login: ${m.username||'not set'}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+            ${docBtn}
+            <button class="doc-link" style="cursor:pointer;border:none" onclick="viewMentorNotes('${m.id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>View notes</button>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-shrink:0">
+          <button class="btn btn-sm" onclick="editMentor('${m.id}')">Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="removeMentor('${m.id}')">Remove</button>
+        </div>
+      </div>
+      ${m.notes?`<div style="font-size:13px;color:#666;background:#f9f9f7;border-radius:8px;padding:8px 10px;margin-bottom:12px">${m.notes}</div>`:''}
+      <div class="students-under">
+        <div style="font-size:12px;color:#888;margin-bottom:6px;font-weight:500">${students.length} student${students.length!==1?'s':''}</div>
+        <div>${students.length?students.map(s=>`<span class="student-pill" onclick="editStudent('${s.id}')"><span class="avatar ${s.color}" style="width:20px;height:20px;font-size:10px">${initials(s.name)}</span>${s.name}</span>`).join(''):'<span style="font-size:13px;color:#aaa">No students yet</span>'}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function viewMentorNotes(mentorId){
+  currentNotesMentorId=mentorId;
+  showPage('notes',document.getElementById('nav-notes'));
+}
+
+function renderStudents(){
+  const q=(document.getElementById('student-search')||{}).value||'';
+  const isAdmin=currentUser.role==='admin';
+  let students=isAdmin?state.students:state.students.filter(s=>s.mentorId===currentUser.mentorId);
+  if(q)students=students.filter(s=>s.name.toLowerCase().includes(q.toLowerCase())||(s.waGroup||'').toLowerCase().includes(q.toLowerCase()));
+  const el=document.getElementById('students-list');
+  if(!students.length){el.innerHTML='<div class="empty-state"><p>No students found</p></div>';return}
+  const curMonth=new Date().toISOString().slice(0,7);
+  el.innerHTML=students.map(s=>{
+    const mentor=state.mentors.find(m=>m.id===s.mentorId);
+    const paid=state.fees[s.id]&&state.fees[s.id][curMonth];
+    return`<div class="card" style="display:flex;align-items:flex-start;gap:12px">
+      <div class="avatar ${s.color}">${initials(s.name)}</div>
+      <div style="flex:1">
+        <div style="font-size:15px;font-weight:600">${s.name}</div>
+        <div class="detail-row">
+          ${mentor?`<span class="badge badge-teal">Mentor: ${mentor.name}</span>`:'<span class="badge badge-gray">Unassigned</span>'}
+          ${s.jeeYear?`<span class="badge badge-purple">${s.jeeYear}</span>`:''}
+          ${isAdmin?(paid?`<span class="badge badge-green">Paid ✓</span>`:`<span class="badge badge-red">Unpaid</span>`):''}
+        </div>
+        ${s.waGroup?`<div class="detail-row"><span class="wa-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>${s.waGroup}</span></div>`:''}
+        ${(s.phone||(isAdmin&&s.fees))?`<div class="detail-row" style="color:#666">${s.phone||''}${s.phone&&s.fees&&isAdmin?' · ':''}${isAdmin&&s.fees?'₹'+s.fees+'/mo':''}</div>`:''}
+        ${s.notes?`<div style="font-size:13px;color:#888;margin-top:6px;background:#f9f9f7;border-radius:6px;padding:6px 8px">${s.notes}</div>`:''}
+      </div>
+      ${isAdmin?`<div style="display:flex;gap:6px;flex-shrink:0">
+        <button class="btn btn-sm" onclick="editStudent('${s.id}')">Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="removeStudent('${s.id}')">Remove</button>
+      </div>`:''}
+    </div>`;
+  }).join('');
+}
+
+function renderAllMeetings(){
+  const el=document.getElementById('all-meetings-list');
+  if(!el)return;
+  const isAdmin=currentUser.role==='admin';
+  if(!state.meetings.length){el.innerHTML='<p style="color:#aaa;font-size:14px">No meetings yet.</p>';return}
+  const sorted=[...state.meetings].sort((a,b)=>a.date+a.time>b.date+b.time?1:-1);
+  const today=new Date().toISOString().split('T')[0];
+  el.innerHTML=sorted.map(m=>{
+    const mentor=state.mentors.find(x=>x.id===m.mentorId);
+    const student=state.students.find(x=>x.id===m.studentId);
+    const nowMins2=new Date().getHours()*60+new Date().getMinutes();
+    const past=m.date<today||(m.date===today&&timeToMins(m.time)<=nowMins2);
+    const d=new Date(m.date+'T00:00:00');
+    const isMyMeeting=m.mentorId===currentUser.mentorId;
+    const canDelete=isAdmin||isMyMeeting;
+    return`<div class="meeting-card" style="${past?'opacity:0.5':''}${!isMyMeeting&&!isAdmin?';border-left:3px solid #e8e8e5':''}">
+      <div class="meeting-date-box"><div class="meeting-day">${d.getDate()}</div><div class="meeting-month">${MONTHS[d.getMonth()]}</div></div>
+      <div class="meeting-info">
+        <div class="meeting-title">${m.topic||'Session'} ${!isMyMeeting&&!isAdmin?'<span class="badge badge-gray">Other mentor</span>':''}</div>
+        <div class="meeting-sub">${mentor?mentor.name:'?'} → ${student?student.name:'?'} · ${m.time}</div>
+      </div>
+      <span class="badge ${past?'badge-gray':'badge-teal'}">${past?'Past':'Upcoming'}</span>
+      ${canDelete?`<button class="btn btn-sm btn-danger" onclick="removeMeeting('${m.id}')">Remove</button>`:''}
+    </div>`;
+  }).join('');
+}
+</script>
+</body>
+</html>

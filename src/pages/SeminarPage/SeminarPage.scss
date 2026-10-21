@@ -1,0 +1,792 @@
+/* --- Variable Definitions --- */
+$primary-color: #00bfa5; // A vibrant teal
+$secondary-color: #ffc107; // A contrasting yellow/gold for CTAs
+$bg-color: #121212; // Very dark grey, almost black
+$surface-color: #1e1e1e; // Dark grey for cards and sections
+$text-color: #e0e0e0; // Light grey for primary text
+$text-secondary-color: #a0a0a0; // Dimmer text
+$font-family: 'Inter', sans-serif; // A clean, modern font
+
+/* --- General Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.seminar-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px; /* Space for sticky footer */
+
+    h1, h2, h3 {
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center;}
+    h3 { font-size: 1.5rem; }
+
+    section {
+        padding: 40px 20px;
+        border-bottom: 1px solid #333;
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: $secondary-color;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 15px rgba($secondary-color, 0.2);
+
+    &:hover {
+        transform: translateY(-3px);
+        background-color: lighten($secondary-color, 5%);
+    }
+}
+
+.icon-check {
+    color: $primary-color;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.highlight-text {
+    color: $primary-color;
+    font-weight: 700;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 30px 20px;
+
+    .subtitle {
+        color: $primary-color;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        max-width: 800px;
+        margin: 0 auto 1rem;
+    }
+
+    .urgency {
+        color: $text-secondary-color;
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        text-align: left;
+        align-items: center;
+        background-color: $surface-color;
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    .mentor-intro {
+        flex: 1;
+        min-width: 280px;
+        text-align: center;
+    }
+
+    .mentor-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid $primary-color;
+        margin-bottom: 1rem;
+    }
+    
+    .social-proof {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: $text-secondary-color;
+    }
+
+    .workshop-info {
+        flex: 2;
+        min-width: 300px;
+        
+        ul {
+            list-style: none;
+            margin: 1rem 0 2rem;
+            li {
+                margin-bottom: 0.8rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    
+    .cta-box {
+        background-color: darken($bg-color, 2%);
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+
+        .offer-ends {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .price {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            color: #ff4d4d;
+        }
+    }
+}
+
+/* --- Target Audience Section --- */
+.target-audience {
+    .audience-columns {
+        display: flex;
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .audience-yes, .audience-no {
+        flex: 1;
+        background: $surface-color;
+        padding: 1.5rem;
+        border-radius: 8px;
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-position: inside;
+            padding-left: 0;
+            li {
+                margin-bottom: 0.5rem;
+                color: $text-secondary-color;
+            }
+        }
+    }
+    .audience-yes {
+        border-left: 4px solid $primary-color;
+    }
+    .audience-no {
+        border-left: 4px solid #ff4d4d;
+    }
+}
+
+
+/* --- Testimonials Section --- */
+.testimonials {
+    .testimonial-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background: $surface-color;
+        padding: 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            font-style: italic;
+            color: $text-secondary-color;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            h4 {
+                color: $text-color;
+                margin: 0;
+                text-align: center;
+            }
+            p {
+                color: $primary-color;
+                font-style: normal;
+                font-size: 0.9rem;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/* --- Bonuses Section --- */
+.bonuses-section {
+    text-align: center;
+    background-color: $surface-color;
+
+    .bonuses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bonus-card {
+        background: $bg-color;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid #333;
+        
+        h4 { color: $secondary-color; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; font-size: 1.1rem;}
+        span { color: $primary-color; font-weight: bold;}
+    }
+
+    .cta-box-final {
+        background-color: $bg-color;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 700px;
+        margin: 0 auto;
+
+        h3 {
+            margin-bottom: 1rem;
+            .value-strikethrough {
+                text-decoration: line-through;
+                color: $text-secondary-color;
+                font-weight: normal;
+                margin-right: 1rem;
+            }
+        }
+        .timer-final { margin-bottom: 1.5rem; font-size: 1.2rem;}
+        .price-final { margin-top: 1rem; color: #ff4d4d; font-size: 1.2rem;}
+        
+        .cta-button-large {
+            @extend .cta-button;
+            font-size: 1.3rem;
+            width: 100%;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        
+        a {
+            color: $text-color;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            
+            &:hover {
+                color: $primary-color;
+                background-color: rgba(0, 191, 165, 0.2);
+            }
+            
+            .social-icon {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+/* --- Guarantee Section --- */
+.guarantee-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .guarantee-badge {
+        flex-shrink: 0;
+        width: 180px;
+        animation: pulse 2s infinite;
+    }
+    
+    .guarantee-text {
+        h2, h3 { text-align: left; }
+        h3 { color: $primary-color; margin: 0.5rem 0; }
+        p { margin: 1rem 0 1.5rem; color: $text-secondary-color; line-height: 1.6;}
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+/* --- FAQ Section --- */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .faq-item {
+        background: $surface-color;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        border-left: 3px solid transparent;
+        transition: border-left 0.3s;
+    }
+
+    .faq-question {
+        padding: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+        color: $text-secondary-color;
+        line-height: 1.6;
+        animation: fadeIn 0.5s ease;
+    }
+    
+    .icon-plus {
+        font-size: 1.5rem;
+        color: $primary-color;
+        transition: transform 0.3s ease;
+    }
+    
+    .faq-item:has(.faq-answer) {
+      border-left: 3px solid $primary-color;
+      .icon-plus {
+        transform: rotate(45deg);
+      }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Contact Us Section --- */
+.contact-section {
+    background-color: $surface-color;
+
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .contact-info, .contact-form-container {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .contact-info {
+        h2 {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: $text-secondary-color;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        h4 {
+            color: $primary-color;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+        
+        p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+    }
+    
+    .contact-form {
+        background: $bg-color;
+        padding: 2rem;
+        border-radius: 12px;
+        
+        h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: $text-secondary-color;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: $surface-color;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: $text-color;
+            font-size: 1rem;
+            font-family: $font-family;
+            transition: border-color 0.3s;
+
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+    }
+
+    .submit-button {
+        @extend .cta-button;
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .success-message {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background-color: rgba($primary-color, 0.1);
+        border: 1px solid $primary-color;
+        border-radius: 8px;
+        text-align: center;
+        color: $text-color;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .form-notes {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px dashed #444;
+        border-radius: 8px;
+        background-color: rgba($surface-color, 0.5);
+        
+        p {
+            color: $text-secondary-color;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* --- Footer --- */
+.page-footer {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: $surface-color;
+    margin-top: 40px;
+    h3 { color: $primary-color; }
+    .footer-links {
+        margin: 1rem 0;
+        a {
+            color: $text-secondary-color;
+            margin: 0 10px;
+            text-decoration: none;
+            &:hover { color: $primary-color; }
+        }
+    }
+    .copyright { font-size: 0.9rem; color: #666; }
+}
+
+/* --- Sticky Footer --- */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    // backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.sticky-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sticky-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $secondary-color;
+    s {
+        color: #ff4d4d;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
+
+.sticky-timer {
+    font-size: 1.1rem;
+    b {
+        color: $secondary-color;
+    }
+}
+
+.social-links-footer {
+    display: flex;
+    gap: 1rem;
+    
+    a {
+        color: $text-secondary-color;
+        text-decoration: none;
+        font-size: 0.9rem;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .seminar-page {
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.8rem; }
+    }
+    .hero-details {
+        flex-direction: column;
+    }
+    .guarantee-section {
+        flex-direction: column;
+        text-align: center;
+        .guarantee-text {
+            h2, h3 { text-align: center; }
+        }
+    }
+    .sticky-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sticky-info {
+        gap: 1rem;
+    }
+}
+
+/* --- Additional Responsive Adjustments --- */
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .seminar-page {
+        h1 { 
+            font-size: 1.8rem; 
+            padding: 0 10px;
+        }
+        h2 { 
+            font-size: 1.5rem; 
+            padding: 0 10px;
+        }
+        h3 { font-size: 1.3rem; }
+    }
+    
+    .hero-section {
+        padding: 20px 15px;
+        
+        .mentor-photo {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .workshop-info ul li {
+            font-size: 0.95rem;
+        }
+    }
+    
+    .testimonial-cards {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .target-audience {
+        .audience-columns {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    
+    section {
+        padding: 40px 15px;
+    }
+    
+    .contact-section {
+        .contact-form {
+            padding: 1.5rem;
+        }
+        
+        .contact-info h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 1.2rem !important;
+    }
+    
+    .social-links {
+        gap: 1.5rem !important;
+        
+        a {
+            width: 36px;
+            height: 36px;
+            
+            .social-icon {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 481px) and (max-width: 767px) {
+    .testimonial-cards {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .contact-section {
+        .contact-info h2 {
+            text-align: center;
+        }
+    }
+}
+
+/* Large Desktop Screens */
+@media (min-width: 1200px) {
+    .seminar-page {
+        max-width: 1400px;
+        
+        h1 { font-size: 3.2rem; }
+        h2 { font-size: 2.5rem; }
+    }
+    
+    .hero-section {
+        padding: 50px 30px;
+        
+        .hero-details {
+            gap: 3rem;
+            padding: 3rem;
+        }
+        
+        .workshop-info ul li {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    .testimonials .testimonial-cards {
+        gap: 2rem;
+    }
+    
+    section {
+        padding: 40px 20px;
+    }
+    
+    .contact-section .contact-container {
+        gap: 5rem;
+    }
+    
+    .guarantee-section {
+        gap: 4rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .seminar-page {
+        background: white;
+        color: black;
+        
+        section {
+            page-break-inside: avoid;
+            border-bottom: none;
+        }
+        
+        .sticky-footer {
+            display: none;
+        }
+    }
+}

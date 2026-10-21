@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CollegeMap Team Tracker</title>
+<style>
+:root{
+--bg:#f0fafa;--surface:#fafdfd;--border:#d4f0ef;--dark:#002d2d;
+--accent:#41d9d0;--accent-light:#e0faf9;--accent-dim:#b2eeeb;
+--text:#002d2d;--text-secondary:#4a7575;--text-muted:#8aabab;
+--danger:#e05555;--danger-light:#fdeaea;--gold:#e0a830;--gold-light:#fdf5e0;
+--radius:10px;--radius-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--dark);min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.topbar{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:54px;position:sticky;top:0;z-index:50}
+.logo{font-size:15px;font-weight:700;color:#fff;letter-spacing:-0.3px}.logo span{color:var(--accent)}
+.nav{display:flex;gap:2px}
+.nav-btn{padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,0.55);font-weight:500;transition:all 0.15s}
+.nav-btn:hover{background:rgba(255,255,255,0.08);color:#fff}
+.nav-btn.active{background:var(--accent);color:var(--dark);font-weight:600}
+.main{max-width:1200px;margin:0 auto;padding:2rem 1.5rem}
+.page{display:none}.page.active{display:block}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:10px}
+.page-title{font-size:21px;font-weight:700;color:var(--dark)}
+.section-label{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:10px;margin-top:2rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:2rem}
+.stat-card{background:var(--dark);border-radius:var(--radius-lg);padding:1.1rem;text-align:center}
+.stat-num{font-size:26px;font-weight:700;color:var(--accent)}
+.stat-label{font-size:11px;color:rgba(255,255,255,0.5);margin-top:3px;text-transform:uppercase;letter-spacing:0.5px}
+.avatar{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.av-1{background:#002d2d;color:#41d9d0}.av-2{background:#1a4040;color:#7de8e2}
+.av-3{background:#0d3535;color:#a8efec}.av-4{background:#003030;color:#5fe0d8}
+.av-5{background:#004040;color:#41d9d0}.av-6{background:#002525;color:#8eeae6}
+.badge{font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;white-space:nowrap;display:inline-block}
+.badge-green{background:#d4f5e9;color:#0a5c3a}.badge-amber{background:#fdefd4;color:#7a4a00}
+.badge-red{background:var(--danger-light);color:#a32d2d}.badge-teal{background:var(--accent-light);color:var(--dark)}
+.badge-gray{background:#f0f0ee;color:#555}.badge-blue{background:#e6f1fb;color:#0c447c}
+.badge-purple{background:#eeedfe;color:#3c3489}
+.avail-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
+.avail-full{background:#2ec97a}.avail-partial{background:#f0a830}.avail-unavailable{background:var(--danger)}
+.avail-opt{padding:6px 14px;border-radius:8px;border:1.5px solid var(--border);font-size:13px;cursor:pointer;font-weight:500;background:var(--surface);transition:all 0.15s;color:var(--text)}
+.avail-opt.sel-full{border-color:#2ec97a;background:#d4f5e9;color:#0a5c3a}
+.avail-opt.sel-partial{border-color:#f0a830;background:#fdefd4;color:#7a4a00}
+.avail-opt.sel-unavailable{border-color:var(--danger);background:var(--danger-light);color:#a32d2d}
+button{cursor:pointer;font-family:inherit}
+.btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--dark);transition:all 0.15s}
+.btn:hover{background:var(--accent-light);border-color:var(--accent)}
+.btn-primary{background:var(--dark);color:#fff;border-color:var(--dark)}.btn-primary:hover{background:#004040}
+.btn-accent{background:var(--accent);color:var(--dark);border-color:var(--accent);font-weight:600}.btn-accent:hover{background:#2ec8bf}
+.btn-sm{padding:4px 10px;font-size:12px}
+.btn-danger{background:var(--surface);border-color:var(--danger);color:var(--danger)}.btn-danger:hover{background:var(--danger-light)}
+.btn-gold{background:var(--surface);border-color:var(--gold);color:var(--gold)}.btn-gold:hover{background:var(--gold-light)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,45,45,0.5);z-index:100;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border-radius:var(--radius-lg);padding:1.5rem;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;border:1px solid var(--border)}
+.modal-lg{max-width:680px}
+.modal-title{font-size:17px;font-weight:700;margin-bottom:1.25rem;color:var(--dark)}
+.modal-footer{display:flex;gap:8px;justify-content:flex-end;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
+.form-group{margin-bottom:13px}
+label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.4px}
+input[type=text],input[type=password],input[type=date],input[type=number],select,textarea{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--surface);color:var(--dark);outline:none;transition:border 0.15s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(65,217,208,0.15)}
+textarea{resize:vertical;min-height:80px}
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--dark);color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;z-index:200;opacity:0;transition:opacity 0.2s;pointer-events:none;border:1px solid var(--accent)}
+.toast.show{opacity:1}
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--dark)}
+.login-box{background:var(--surface);border:1px solid var(--accent-dim);border-radius:20px;padding:2.5rem;width:100%;max-width:400px;box-shadow:0 8px 40px rgba(0,45,45,0.3)}
+.login-logo{font-size:24px;font-weight:800;margin-bottom:4px;color:var(--dark)}.login-logo span{color:var(--accent)}
+.login-sub{font-size:13px;color:var(--text-muted);margin-bottom:2rem}
+.role-toggle{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:1.5rem;background:var(--bg);border-radius:10px;padding:4px;border:1px solid var(--border)}
+.role-btn{padding:8px;border-radius:7px;border:none;background:transparent;font-size:13px;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all 0.15s}
+.role-btn.active{background:var(--dark);color:var(--accent)}
+.login-error{font-size:13px;color:var(--danger);background:var(--danger-light);border-radius:8px;padding:8px 12px;margin-top:8px;display:none}
+.member-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1rem;cursor:pointer;transition:all 0.15s}
+.member-card:hover{box-shadow:0 4px 20px rgba(65,217,208,0.15);border-color:var(--accent)}
+.feed-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;margin-bottom:10px}
+.shoutout-item{background:linear-gradient(135deg,#fffbe6,var(--gold-light));border:1px solid #f0c855;border-radius:var(--radius-lg);padding:1.1rem;margin-bottom:10px}
+.goal-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin-bottom:10px;display:flex;align-items:flex-start;gap:12px;transition:all 0.15s}
+.goal-card[draggable=true]{cursor:grab}
+.goal-card.dragging{opacity:0.4;border-style:dashed}
+.goal-card.drag-over{border-color:var(--accent);background:var(--accent-light)}
+.goal-pill{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;border:none;white-space:nowrap;flex-shrink:0;letter-spacing:0.3px}
+.pill-ns{background:#f0f0ee;color:#666}.pill-ip{background:var(--accent-light);color:var(--dark)}.pill-done{background:#d4f5e9;color:#0a5c3a}
+.task-check{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-top:2px;transition:all 0.15s}
+.task-check.done{background:var(--accent);border-color:var(--accent);color:var(--dark);font-size:11px;font-weight:700}
+.task-text{flex:1;font-size:13px;color:var(--dark);line-height:1.4}
+.task-done-text{text-decoration:line-through;color:var(--text-muted)}
+.task-meta-line{font-size:11px;color:var(--text-muted);margin-top:3px}
+.p-high{color:#c0392b;font-weight:700}.p-med{color:#b8730a;font-weight:700}.p-low{color:#1e8449;font-weight:700}
+.team-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;margin-bottom:1rem}
+.team-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.idea-matrix-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem}
+#idea-canvas{width:100%;display:block;border-radius:8px;background:#f8fefe;cursor:crosshair}
+#idea-tooltip{position:fixed;background:var(--dark);color:#fff;font-size:12px;padding:8px 12px;border-radius:8px;pointer-events:none;display:none;z-index:500;border:1px solid var(--accent);max-width:200px;line-height:1.4}
+.mytasks-layout{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;align-items:start}
+.profile-sec{margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.profile-sec:last-child{border:none;margin:0;padding:0}
+.profile-sec-label{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px}
+.idea-score-pill{display:inline-flex;align-items:center;gap:6px;background:var(--accent-light);border:1px solid var(--accent-dim);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700;color:var(--dark)}
+@media(max-width:700px){.main{padding:1rem}.grid2{grid-template-columns:1fr}.topbar{padding:0 1rem}.nav-btn{padding:6px 8px;font-size:12px}.mytasks-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="login-screen">
+<div class="login-box">
+<div class="login-logo">College<span>Map</span></div>
+<div class="login-sub">Team tracker — sign in to continue</div>
+<div class="role-toggle">
+<button class="role-btn active" id="role-admin-btn" onclick="setRole('admin')">Admin</button>
+<button class="role-btn" id="role-member-btn" onclick="setRole('member')">Member</button>
+</div>
+<div class="form-group"><label>Username</label><input type="text" id="login-username" placeholder="your username" onkeydown="if(event.key==='Enter')doLogin()"/></div>
+<div class="form-group"><label>Password</label><input type="password" id="login-password" placeholder="your password" onkeydown="if(event.key==='Enter')doLogin()"/></div>
+<div class="login-error" id="login-error">Incorrect username or password.</div>
+<button class="btn btn-accent" style="width:100%;margin-top:10px;padding:10px;font-size:14px" onclick="doLogin()" id="login-btn">Sign in</button>
+</div>
+</div>
+<div id="app" style="display:none">
+<div class="topbar">
+<div class="logo">College<span>Map</span> <span style="color:rgba(255,255,255,0.2);margin:0 8px">|</span><span style="color:rgba(255,255,255,0.35);font-size:13px;font-weight:400">Team</span></div>
+<div style="display:flex;align-items:center;gap:10px">
+<div class="nav">
+<button class="nav-btn active" onclick="showPage('home',this)">Home</button>
+<button class="nav-btn" onclick="showPage('team',this)">Team</button>
+<button class="nav-btn" id="nav-manage" onclick="showPage('manage',this)">Manage</button>
+<button class="nav-btn" onclick="showPage('mytasks',this)">My Tasks</button>
+</div>
+<span style="font-size:12px;color:rgba(255,255,255,0.35)" id="user-label"></span>
+<button class="btn btn-sm" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.6)" onclick="doLogout()">Sign out</button>
+</div>
+</div>
+<div class="main">
+<div id="page-home" class="page active">
+<div class="page-header">
+<div class="page-title">Home</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<div id="home-admin-actions" style="display:flex;gap:8px">
+<button class="btn btn-primary" onclick="openModal('announce-modal')">Announce</button>
+<button class="btn btn-gold" onclick="openModal('shoutout-modal')">Shoutout</button>
+<button class="btn" style="border-color:var(--accent);color:var(--dark)" onclick="openModal('add-goal-modal')">Goal</button>
+<button class="btn" onclick="loadAll(true)">Refresh</button>
+</div>
+<button class="btn btn-accent" onclick="openModal('add-idea-modal')">I have an idea!</button>
+</div>
+</div>
+<div class="stats-row" id="stats-row"></div>
+<div class="section-label">Team goals</div>
+<div id="goals-list"></div>
+<div class="section-label">Availability</div>
+<div id="avail-strip"></div>
+<div class="section-label">Idea matrix</div>
+<div class="idea-matrix-wrap">
+<canvas id="idea-canvas" height="340"></canvas>
+<div style="display:flex;gap:1.5rem;margin-top:12px;flex-wrap:wrap">
+<span style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:#41d9d0;display:inline-block"></span>Unique + Fast</span>
+<span style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:#a78bfa;display:inline-block"></span>Unique + Slow</span>
+<span style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:#f59e0b;display:inline-block"></span>Common + Fast</span>
+<span style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:#94a3b8;display:inline-block"></span>Common + Slow</span>
+</div>
+</div>
+<div id="idea-tooltip"></div>
+<div class="section-label" style="margin-top:1.5rem">Shoutouts and announcements</div>
+<div id="feed-list"></div>
+</div>
+<div id="page-team" class="page">
+<div class="page-header">
+<div class="page-title">Team</div>
+<div style="display:flex;gap:8px;align-items:center">
+<button class="btn btn-sm" id="team-tab-mine" onclick="setTeamTab('mine',this)" style="font-weight:700;border-color:var(--accent)">My Team</button>
+<button class="btn btn-sm" id="team-tab-all" onclick="setTeamTab('all',this)">All</button>
+<select id="team-filter" onchange="renderTeamPage()" style="width:auto;padding:6px 10px;font-size:12px;display:none"></select>
+</div>
+</div>
+<div class="grid2" id="team-grid"></div>
+</div>
+<div id="page-manage" class="page">
+<div class="page-header">
+<div class="page-title">Manage</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="btn btn-primary" onclick="openModal('add-member-modal')">+ Member</button>
+<button class="btn" onclick="openModal('add-team-modal')">+ Team</button>
+<button class="btn btn-accent" onclick="openModal('add-task-modal')">+ Task</button>
+</div>
+</div>
+<div class="section-label">Members by team</div>
+<div id="manage-members-list"></div>
+<div class="section-label">Teams</div>
+<div id="manage-teams-list" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem"></div>
+<div class="section-label">Tasks by team</div>
+<div id="manage-tasks-list"></div>
+</div>
+<div id="page-mytasks" class="page">
+<div class="page-header"><div class="page-title">My Tasks</div></div>
+<div class="mytasks-layout">
+<div>
+<div id="my-status-section" class="card" style="margin-bottom:1.5rem">
+<div style="font-size:14px;font-weight:700;margin-bottom:10px">My status</div>
+<textarea id="my-status-input" placeholder="What are you working on right now?" style="min-height:60px"></textarea>
+<div style="display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap">
+<div id="my-avail-selector" style="display:flex;gap:6px">
+<button class="avail-opt" data-val="full" onclick="selectAvail('full',this)">Full</button>
+<button class="avail-opt" data-val="partial" onclick="selectAvail('partial',this)">Partial</button>
+<button class="avail-opt" data-val="unavailable" onclick="selectAvail('unavailable',this)">Out</button>
+</div>
+<button class="btn btn-accent btn-sm" onclick="saveMyStatus()">Save</button>
+</div>
+</div>
+<div class="card" id="member-add-task-section" style="margin-bottom:1.5rem">
+<div style="font-size:14px;font-weight:700;margin-bottom:10px">Add a task</div>
+<div class="form-group"><input type="text" id="mt-text" placeholder="What needs to be done?"/></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<select id="mt-priority" style="width:auto"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select>
+<input type="date" id="mt-due" style="width:auto"/>
+<button class="btn btn-accent btn-sm" onclick="saveMyTask()">Add</button>
+</div>
+</div>
+<div class="section-label" style="margin-top:0">My active tasks</div>
+<div id="my-tasks-list"></div>
+<div class="section-label">Completed</div>
+<div id="my-tasks-done-list"></div>
+</div>
+<div>
+<div class="section-label" style="margin-top:0">Assigned by admin</div>
+<div id="my-assigned-cards"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-overlay" id="profile-modal">
+<div class="modal modal-lg">
+<div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:1.25rem">
+<div class="avatar av-1" id="profile-avatar" style="width:52px;height:52px;font-size:18px"></div>
+<div style="flex:1"><div style="font-size:20px;font-weight:800" id="profile-name"></div><div style="font-size:13px;color:var(--text-muted);margin-top:3px" id="profile-meta"></div><div style="margin-top:6px" id="profile-avail"></div></div>
+<button class="btn btn-sm" onclick="closeModal('profile-modal')">Close</button>
+</div>
+<div class="profile-sec"><div class="profile-sec-label">Currently working on</div><div id="profile-status" style="font-size:14px;color:var(--text-secondary);line-height:1.5"></div></div>
+<div class="profile-sec"><div class="profile-sec-label">Active tasks</div><div id="profile-tasks"></div></div>
+<div class="profile-sec"><div class="profile-sec-label">Completed</div><div id="profile-tasks-done"></div></div>
+</div>
+</div>
+<div class="modal-overlay" id="add-member-modal">
+<div class="modal">
+<div class="modal-title">Add member</div>
+<div class="form-group"><label>Full name</label><input type="text" id="nm-name" placeholder="e.g. Priya Sharma"/></div>
+<div class="form-group"><label>Team</label><select id="nm-team"><option value="">Select team</option></select></div>
+<div class="form-group"><label>Role</label><input type="text" id="nm-role" placeholder="e.g. Lead, Intern"/></div>
+<div class="form-group"><label>Type</label><select id="nm-type"><option value="paid">Paid</option><option value="intern">Intern</option></select></div>
+<div class="form-group"><label>Phone</label><input type="text" id="nm-phone" placeholder="9876543210"/></div>
+<div style="border-top:1px solid var(--border);padding-top:1rem;margin-top:0.5rem">
+<div class="form-group"><label>Username</label><input type="text" id="nm-username" placeholder="e.g. priya"/></div>
+<div class="form-group"><label>Password</label><input type="text" id="nm-password" placeholder="e.g. cm2026"/></div>
+</div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('add-member-modal')">Cancel</button><button class="btn btn-accent" onclick="saveMember()">Add member</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="edit-member-modal">
+<div class="modal">
+<div class="modal-title">Edit member</div>
+<input type="hidden" id="em-id"/>
+<div class="form-group"><label>Full name</label><input type="text" id="em-name"/></div>
+<div class="form-group"><label>Team</label><select id="em-team"></select></div>
+<div class="form-group"><label>Role</label><input type="text" id="em-role"/></div>
+<div class="form-group"><label>Type</label><select id="em-type"><option value="paid">Paid</option><option value="intern">Intern</option></select></div>
+<div class="form-group"><label>Phone</label><input type="text" id="em-phone"/></div>
+<div style="border-top:1px solid var(--border);padding-top:1rem;margin-top:0.5rem">
+<div class="form-group"><label>Username</label><input type="text" id="em-username"/></div>
+<div class="form-group"><label>Password (blank = keep)</label><input type="text" id="em-password" placeholder="New password..."/></div>
+</div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('edit-member-modal')">Cancel</button><button class="btn btn-accent" onclick="updateMember()">Save</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="add-team-modal">
+<div class="modal">
+<div class="modal-title">Create team</div>
+<div class="form-group"><label>Team name</label><input type="text" id="nt-name" placeholder="e.g. Design"/></div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('add-team-modal')">Cancel</button><button class="btn btn-accent" onclick="saveTeam()">Create</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="add-task-modal">
+<div class="modal">
+<div class="modal-title">Assign task</div>
+<div class="form-group"><label>Task</label><textarea id="at-text" placeholder="Describe the task..." style="min-height:60px"></textarea></div>
+<div class="form-group"><label>Assign to (pick one or more)</label><div id="at-member-checklist" style="max-height:200px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:8px"></div></div>
+<div class="form-group"><label>Priority</label><select id="at-priority"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></div>
+<div class="form-group"><label>Due date</label><input type="date" id="at-due"/></div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('add-task-modal')">Cancel</button><button class="btn btn-accent" onclick="saveTask()">Assign</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="announce-modal">
+<div class="modal">
+<div class="modal-title">Announcement</div>
+<div class="form-group"><label>Title</label><input type="text" id="an-title" placeholder="e.g. New feature launched!"/></div>
+<div class="form-group"><label>Message</label><textarea id="an-body" placeholder="Write your announcement..."></textarea></div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('announce-modal')">Cancel</button><button class="btn btn-primary" onclick="saveAnnouncement()">Post</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="shoutout-modal">
+<div class="modal">
+<div class="modal-title">Give a shoutout</div>
+<div class="form-group"><label>Member</label><select id="so-member"><option value="">Select member</option></select></div>
+<div class="form-group"><label>Message</label><textarea id="so-body" placeholder="What did they do amazingly?"></textarea></div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('shoutout-modal')">Cancel</button><button class="btn btn-gold" onclick="saveShoutout()">Give shoutout</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="add-goal-modal">
+<div class="modal">
+<div class="modal-title">Add team goal</div>
+<div class="form-group"><label>Title</label><input type="text" id="gl-title" placeholder="e.g. Hit 1000 YouTube subscribers"/></div>
+<div class="form-group"><label>Description</label><textarea id="gl-desc" placeholder="More context..." style="min-height:60px"></textarea></div>
+<div class="form-group"><label>Status</label><select id="gl-status"><option value="not-started">Not Started</option><option value="in-progress" selected>In Progress</option><option value="done">Done</option></select></div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('add-goal-modal')">Cancel</button><button class="btn btn-accent" onclick="saveGoal()">Add goal</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="add-idea-modal">
+<div class="modal">
+<div class="modal-title">Share an idea</div>
+<div class="form-group"><label>Title</label><input type="text" id="idea-title" placeholder="Short name for your idea"/></div>
+<div class="form-group"><label>Description</label><textarea id="idea-desc" placeholder="Explain your idea in detail..."></textarea></div>
+<div class="form-group"><label>Uniqueness (1-10)</label><div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">1 = everyone does this, 10 = never seen before</div><input type="number" id="idea-unique" min="1" max="10" placeholder="e.g. 7"/></div>
+<div class="form-group"><label>Speed to execute (1-10)</label><div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">1 = takes months, 10 = done this week</div><input type="number" id="idea-speed" min="1" max="10" placeholder="e.g. 5"/></div>
+<div class="modal-footer"><button class="btn" onclick="closeModal('add-idea-modal')">Cancel</button><button class="btn btn-accent" onclick="saveIdea()">Submit idea</button></div>
+</div>
+</div>
+<div class="modal-overlay" id="idea-detail-modal">
+<div class="modal modal-lg">
+<div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:1.25rem">
+<div style="flex:1"><div style="font-size:18px;font-weight:800;margin-bottom:8px" id="idea-detail-title"></div><div style="display:flex;gap:8px;flex-wrap:wrap" id="idea-detail-scores"></div></div>
+<button class="btn btn-sm" onclick="closeModal('idea-detail-modal')">Close</button>
+</div>
+<div style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem" id="idea-detail-desc"></div>
+<div style="font-size:12px;color:var(--text-muted)" id="idea-detail-meta"></div>
+<div id="idea-detail-admin-actions" style="display:flex;gap:8px;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)"></div>
+</div>
+</div>
+<script>
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbz24142r0HtLxxfDBX5OCXn288da6swTYCv1jAN71trGUOqrOvyjy6UvEdJ3jVsJy4V/exec';
+const ADMIN_USERNAME='admin',ADMIN_PASSWORD='collegemap2026';
+const AVATAR_COLORS=['av-1','av-2','av-3','av-4','av-5','av-6'];
+const DEFAULT_TEAMS=['Web Dev','Instagram','YouTube','New Joinees'];
+let state={members:[],teams:[],tasks:[],feed:[],goals:[],ideas:[]};
+let currentUser={role:null,memberId:null,username:null};
+let loginRole='admin',myAvail='full',teamTab='mine',dragGoalId=null;
+function setRole(r){loginRole=r;document.getElementById('role-admin-btn').classList.toggle('active',r==='admin');document.getElementById('role-member-btn').classList.toggle('active',r==='member')}
+async function doLogin(){
+const u=document.getElementById('login-username').value.trim().toLowerCase();
+const p=document.getElementById('login-password').value.trim();
+const btn=document.getElementById('login-btn'),err=document.getElementById('login-error');
+err.style.display='none';btn.textContent='...';btn.disabled=true;
+if(loginRole==='admin'){
+if(u===ADMIN_USERNAME&&p===ADMIN_PASSWORD){currentUser={role:'admin',memberId:null,username:'Admin'};await loadAll();showApp();}
+else err.style.display='block';
+btn.textContent='Sign in';btn.disabled=false;return;
+}
+await loadAll();
+const member=state.members.find(m=>m.username&&m.username.toLowerCase()===u&&m.password===p);
+if(member){currentUser={role:'member',memberId:member.id,username:member.name};showApp();}
+else err.style.display='block';
+btn.textContent='Sign in';btn.disabled=false;
+}
+function showApp(){
+document.getElementById('login-screen').style.display='none';
+document.getElementById('app').style.display='block';
+document.getElementById('user-label').textContent=currentUser.username+(currentUser.role==='admin'?' (admin)':'');
+applyRoleUI();showPage('home',document.querySelector('.nav-btn'));
+}
+function doLogout(){
+currentUser={role:null,memberId:null,username:null};
+document.getElementById('login-screen').style.display='flex';
+document.getElementById('app').style.display='none';
+['login-username','login-password'].forEach(id=>document.getElementById(id).value='');
+document.getElementById('login-error').style.display='none';
+}
+function applyRoleUI(){
+const isAdmin=currentUser.role==='admin';
+document.getElementById('nav-manage').style.display=isAdmin?'':'none';
+document.getElementById('home-admin-actions').style.display=isAdmin?'flex':'none';
+}
+function toast(msg,dur=2500){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
+async function sheetGet(name){try{const r=await fetch(`${SCRIPT_URL}?sheet=${encodeURIComponent(name)}`);const d=await r.json();return d.rows||[];}catch(e){return[]}}
+async function sheetWrite(name,rows){try{await fetch(SCRIPT_URL,{method:'POST',body:JSON.stringify({sheet:name,action:'write_all',rows}),headers:{'Content-Type':'text/plain'}});}catch(e){toast('Save failed')}}
+function membersToRows(arr){return[['id','name','team','role','type','phone','username','password','status','availability','color'],...arr.map(m=>[m.id,m.name,m.team||'',m.role||'',m.type||'paid',m.phone||'',m.username||'',m.password||'',m.status||'',m.availability||'full',m.color||'av-1'])]}
+function rowsToMembers(rows){if(rows.length<2)return[];return rows.slice(1).filter(r=>r[0]).map(r=>({id:''+r[0],name:''+r[1],team:''+r[2],role:''+r[3],type:''+r[4],phone:''+r[5],username:''+r[6],password:''+r[7],status:''+r[8],availability:''+r[9],color:r[10]||'av-1'}))}
+function teamsToRows(arr){return[['name'],...arr.map(t=>[t])]}
+function rowsToTeams(rows){if(rows.length<2)return[...DEFAULT_TEAMS];return rows.slice(1).filter(r=>r[0]).map(r=>''+r[0])}
+function tasksToRows(arr){return[['id','text','memberId','priority','due','done','createdAt','source'],...arr.map(t=>[t.id,t.text,t.memberId,t.priority||'medium',t.due||'',t.done||'',t.createdAt||'',t.source||'assigned'])]}
+function rowsToTasks(rows){if(rows.length<2)return[];return rows.slice(1).filter(r=>r[0]).map(r=>({id:''+r[0],text:''+r[1],memberId:''+r[2],priority:''+r[3],due:''+r[4],done:''+r[5],createdAt:''+r[6],source:''+r[7]}))}
+function feedToRows(arr){return[['id','type','title','body','authorId','targetId','createdAt'],...arr.map(f=>[f.id,f.type,f.title||'',f.body||'',f.authorId||'',f.targetId||'',f.createdAt||''])]}
+function rowsToFeed(rows){if(rows.length<2)return[];return rows.slice(1).filter(r=>r[0]).map(r=>({id:''+r[0],type:''+r[1],title:''+r[2],body:''+r[3],authorId:''+r[4],targetId:''+r[5],createdAt:''+r[6]}))}
+function goalsToRows(arr){return[['id','title','desc','status','order','createdAt'],...arr.map(g=>[g.id,g.title,g.desc||'',g.status||'not-started',g.order||0,g.createdAt||''])]}
+function rowsToGoals(rows){if(rows.length<2)return[];return rows.slice(1).filter(r=>r[0]).map((r,i)=>({id:''+r[0],title:''+r[1],desc:''+r[2],status:''+r[3],order:parseInt(r[4])||i,createdAt:''+r[5]}))}
+function ideasToRows(arr){return[['id','title','desc','unique','speed','authorId','status','createdAt'],...arr.map(i=>[i.id,i.title,i.desc||'',i.unique||5,i.speed||5,i.authorId||'',i.status||'pending',i.createdAt||''])]}
+function rowsToIdeas(rows){if(rows.length<2)return[];return rows.slice(1).filter(r=>r[0]).map(r=>({id:''+r[0],title:''+r[1],desc:''+r[2],unique:parseInt(r[3])||5,speed:parseInt(r[4])||5,authorId:''+r[5],status:''+r[6],createdAt:''+r[7]}))}
+async function loadAll(showToast=false){
+const[mR,tR,tkR,fR,gR,iR]=await Promise.all([sheetGet('Members'),sheetGet('Teams'),sheetGet('Tasks'),sheetGet('Feed'),sheetGet('Goals'),sheetGet('Ideas')]);
+state.members=rowsToMembers(mR);state.teams=rowsToTeams(tR);state.tasks=rowsToTasks(tkR);
+state.feed=rowsToFeed(fR);state.goals=rowsToGoals(gR).sort((a,b)=>a.order-b.order);state.ideas=rowsToIdeas(iR);
+if(showToast)toast('Refreshed');renderAll();
+}
+function initials(n){return n.trim().split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)}
+function avatarColor(i){return AVATAR_COLORS[i%AVATAR_COLORS.length]}
+function fmtDate(d){if(!d)return'';const dt=new Date(d+'T00:00:00');return dt.toLocaleDateString('en-IN',{day:'numeric',month:'short'})}
+function timeAgo(iso){if(!iso)return'';const d=new Date(iso),now=new Date(),diff=Math.floor((now-d)/1000);if(diff<60)return'just now';if(diff<3600)return Math.floor(diff/60)+'m ago';if(diff<86400)return Math.floor(diff/3600)+'h ago';return Math.floor(diff/86400)+'d ago'}
+function availBadge(a){if(a==='full')return'<span class="badge badge-green">Full</span>';if(a==='partial')return'<span class="badge badge-amber">Partial</span>';return'<span class="badge badge-red">Out</span>'}
+function pLabel(p){if(p==='high')return'<span class="p-high">High</span>';if(p==='medium')return'<span class="p-med">Medium</span>';return'<span class="p-low">Low</span>'}
+function gpClass(s){if(s==='in-progress')return'pill-ip';if(s==='done')return'pill-done';return'pill-ns'}
+function gpLabel(s){if(s==='in-progress')return'In Progress';if(s==='done')return'Done';return'Not Started'}
+function ideaColor(u,s){if(u>=6&&s>=6)return'#41d9d0';if(u>=6&&s<6)return'#a78bfa';if(u<6&&s>=6)return'#f59e0b';return'#94a3b8'}
+function showPage(id,btn){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page-'+id).classList.add('active');
+document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+if(btn)btn.classList.add('active');renderAll();
+}
+function openModal(id){
+if(id==='add-member-modal'||id==='edit-member-modal')populateTeamSelects();
+if(id==='add-task-modal')populateMemberChecklist();
+if(id==='shoutout-modal')populateMemberSelect('so-member');
+document.getElementById(id).classList.add('open');
+}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open')}));
+function populateTeamSelects(){['nm-team','em-team'].forEach(id=>{const sel=document.getElementById(id);if(!sel)return;const cur=sel.value;sel.innerHTML='<option value="">Select team</option>'+state.teams.map(t=>`<option value="${t}">${t}</option>`).join('');sel.value=cur;})}
+function populateMemberSelect(selId){const sel=document.getElementById(selId);if(!sel)return;sel.innerHTML='<option value="">Select member</option>'+state.members.map(m=>`<option value="${m.id}">${m.name} (${m.team||'No team'})</option>`).join('')}
+function populateTeamFilter(){const sel=document.getElementById('team-filter');const cur=sel.value;sel.innerHTML='<option value="">All</option>'+state.teams.map(t=>`<option value="${t}">${t}</option>`).join('');sel.value=cur}
+function populateMemberChecklist(){const el=document.getElementById('at-member-checklist');el.innerHTML=state.members.map(m=>`<label style="display:flex;align-items:center;gap:8px;padding:6px 4px;cursor:pointer;font-size:13px;border-bottom:1px solid var(--bg)"><input type="checkbox" value="${m.id}" style="width:auto;margin:0"/><span class="avatar ${m.color}" style="width:24px;height:24px;font-size:10px">${initials(m.name)}</span>${m.name}<span style="color:var(--text-muted);font-size:11px">${m.team||''}</span></label>`).join('')}
+async function saveMember(){
+const name=document.getElementById('nm-name').value.trim(),username=document.getElementById('nm-username').value.trim().toLowerCase(),password=document.getElementById('nm-password').value.trim(),team=document.getElementById('nm-team').value;
+if(!name||!username||!password||!team)return alert('Name, team, username and password are required');
+if(state.members.find(m=>m.username===username))return alert('Username taken');
+const id='mbr_'+Date.now();
+state.members.push({id,name,team,role:document.getElementById('nm-role').value.trim(),type:document.getElementById('nm-type').value,phone:document.getElementById('nm-phone').value.trim(),username,password,status:'',availability:'full',color:avatarColor(state.members.length)});
+closeModal('add-member-modal');['nm-name','nm-role','nm-phone','nm-username','nm-password'].forEach(f=>document.getElementById(f).value='');
+toast('Saving...');await sheetWrite('Members',membersToRows(state.members));toast('Member added');renderAll();
+}
+function editMember(id){
+const m=state.members.find(x=>x.id===id);if(!m)return;populateTeamSelects();
+document.getElementById('em-id').value=m.id;document.getElementById('em-name').value=m.name;
+document.getElementById('em-team').value=m.team||'';document.getElementById('em-role').value=m.role||'';
+document.getElementById('em-type').value=m.type||'paid';document.getElementById('em-phone').value=m.phone||'';
+document.getElementById('em-username').value=m.username||'';document.getElementById('em-password').value='';
+openModal('edit-member-modal');
+}
+async function updateMember(){
+const id=document.getElementById('em-id').value,name=document.getElementById('em-name').value.trim();
+if(!name)return alert('Name required');
+const idx=state.members.findIndex(m=>m.id===id);if(idx<0)return;
+const nu=document.getElementById('em-username').value.trim().toLowerCase(),np=document.getElementById('em-password').value.trim();
+if(state.members.find(m=>m.username===nu&&m.id!==id))return alert('Username taken');
+state.members[idx]={...state.members[idx],name,team:document.getElementById('em-team').value,role:document.getElementById('em-role').value.trim(),type:document.getElementById('em-type').value,phone:document.getElementById('em-phone').value.trim(),username:nu||state.members[idx].username,password:np||state.members[idx].password};
+closeModal('edit-member-modal');toast('Saving...');await sheetWrite('Members',membersToRows(state.members));toast('Updated');renderAll();
+}
+async function removeMember(id){
+if(!confirm('Remove this member?'))return;
+state.members=state.members.filter(m=>m.id!==id);state.tasks=state.tasks.filter(t=>t.memberId!==id);
+toast('Saving...');await Promise.all([sheetWrite('Members',membersToRows(state.members)),sheetWrite('Tasks',tasksToRows(state.tasks))]);toast('Removed');renderAll();
+}
+async function saveTeam(){
+const name=document.getElementById('nt-name').value.trim();
+if(!name)return alert('Name required');if(state.teams.includes(name))return alert('Already exists');
+state.teams.push(name);closeModal('add-team-modal');document.getElementById('nt-name').value='';
+toast('Saving...');await sheetWrite('Teams',teamsToRows(state.teams));toast('Team created');renderAll();
+}
+async function removeTeam(name){
+if(!confirm('Remove '+name+'?'))return;
+state.teams=state.teams.filter(t=>t!==name);state.members=state.members.map(m=>m.team===name?{...m,team:''}:m);
+toast('Saving...');await Promise.all([sheetWrite('Teams',teamsToRows(state.teams)),sheetWrite('Members',membersToRows(state.members))]);toast('Removed');renderAll();
+}
+async function saveTask(){
+const text=document.getElementById('at-text').value.trim();
+const checked=[...document.querySelectorAll('#at-member-checklist input:checked')].map(i=>i.value);
+if(!text)return alert('Task required');if(!checked.length)return alert('Select at least one member');
+const priority=document.getElementById('at-priority').value,due=document.getElementById('at-due').value,createdAt=new Date().toISOString();
+checked.forEach(memberId=>{state.tasks.push({id:'tsk_'+Date.now()+'_'+memberId,text,memberId,priority,due,done:'',createdAt,source:'assigned'});});
+closeModal('add-task-modal');['at-text','at-due'].forEach(f=>document.getElementById(f).value='');document.getElementById('at-priority').value='medium';
+toast('Saving...');await sheetWrite('Tasks',tasksToRows(state.tasks));toast('Assigned');renderAll();
+}
+async function saveMyTask(){
+const text=document.getElementById('mt-text').value.trim();if(!text)return alert('Task text required');
+state.tasks.push({id:'tsk_'+Date.now(),text,memberId:currentUser.memberId,priority:document.getElementById('mt-priority').value,due:document.getElementById('mt-due').value,done:'',createdAt:new Date().toISOString(),source:'self'});
+document.getElementById('mt-text').value='';document.getElementById('mt-due').value='';
+toast('Saving...');await sheetWrite('Tasks',tasksToRows(state.tasks));toast('Added');renderAll();
+}
+async function toggleTask(id){
+const idx=state.tasks.findIndex(t=>t.id===id);if(idx<0)return;
+state.tasks[idx].done=state.tasks[idx].done?'':new Date().toISOString();
+await sheetWrite('Tasks',tasksToRows(state.tasks));renderAll();
+}
+async function removeTask(id){
+if(!confirm('Remove?'))return;state.tasks=state.tasks.filter(t=>t.id!==id);
+await sheetWrite('Tasks',tasksToRows(state.tasks));toast('Removed');renderAll();
+}
+async function saveAnnouncement(){
+const title=document.getElementById('an-title').value.trim(),body=document.getElementById('an-body').value.trim();
+if(!title||!body)return alert('Title and message required');
+state.feed.unshift({id:'feed_'+Date.now(),type:'announcement',title,body,authorId:'admin',targetId:'',createdAt:new Date().toISOString()});
+closeModal('announce-modal');['an-title','an-body'].forEach(f=>document.getElementById(f).value='');
+toast('Saving...');await sheetWrite('Feed',feedToRows(state.feed));toast('Posted');renderAll();
+}
+async function saveShoutout(){
+const memberId=document.getElementById('so-member').value,body=document.getElementById('so-body').value.trim();
+if(!memberId||!body)return alert('Select member and write a message');
+state.feed.unshift({id:'feed_'+Date.now(),type:'shoutout',title:'',body,authorId:'admin',targetId:memberId,createdAt:new Date().toISOString()});
+closeModal('shoutout-modal');document.getElementById('so-body').value='';
+toast('Saving...');await sheetWrite('Feed',feedToRows(state.feed));toast('Shoutout posted');renderAll();
+}
+async function deleteFeedItem(id){
+if(!confirm('Delete?'))return;state.feed=state.feed.filter(f=>f.id!==id);
+await sheetWrite('Feed',feedToRows(state.feed));toast('Deleted');renderAll();
+}
+async function saveGoal(){
+const title=document.getElementById('gl-title').value.trim();if(!title)return alert('Title required');
+state.goals.push({id:'goal_'+Date.now(),title,desc:document.getElementById('gl-desc').value.trim(),status:document.getElementById('gl-status').value,order:state.goals.length,createdAt:new Date().toISOString()});
+closeModal('add-goal-modal');['gl-title','gl-desc'].forEach(f=>document.getElementById(f).value='');
+toast('Saving...');await sheetWrite('Goals',goalsToRows(state.goals));toast('Goal added');renderAll();
+}
+async function cycleGoalStatus(id){
+const idx=state.goals.findIndex(g=>g.id===id);if(idx<0)return;
+const order=['not-started','in-progress','done'];
+state.goals[idx].status=order[(order.indexOf(state.goals[idx].status)+1)%order.length];
+await sheetWrite('Goals',goalsToRows(state.goals));renderAll();
+}
+async function removeGoal(id){
+if(!confirm('Remove goal?'))return;state.goals=state.goals.filter(g=>g.id!==id);
+await sheetWrite('Goals',goalsToRows(state.goals));toast('Removed');renderAll();
+}
+async function handleGoalDrop(e,card){
+e.preventDefault();card.classList.remove('drag-over');
+if(!dragGoalId||card.dataset.id===dragGoalId)return;
+const fi=state.goals.findIndex(g=>g.id===dragGoalId),ti=state.goals.findIndex(g=>g.id===card.dataset.id);
+if(fi<0||ti<0)return;
+const moved=state.goals.splice(fi,1)[0];state.goals.splice(ti,0,moved);
+state.goals.forEach((g,i)=>g.order=i);renderGoals();
+await sheetWrite('Goals',goalsToRows(state.goals));
+}
+async function saveIdea(){
+const title=document.getElementById('idea-title').value.trim(),desc=document.getElementById('idea-desc').value.trim();
+const unique=Math.min(10,Math.max(1,parseInt(document.getElementById('idea-unique').value)||5));
+const speed=Math.min(10,Math.max(1,parseInt(document.getElementById('idea-speed').value)||5));
+if(!title||!desc)return alert('Title and description required');
+state.ideas.push({id:'idea_'+Date.now(),title,desc,unique,speed,authorId:currentUser.memberId||'admin',status:'pending',createdAt:new Date().toISOString()});
+closeModal('add-idea-modal');['idea-title','idea-desc','idea-unique','idea-speed'].forEach(f=>document.getElementById(f).value='');
+toast('Saving...');await sheetWrite('Ideas',ideasToRows(state.ideas));toast('Idea submitted');renderAll();
+}
+async function updateIdeaStatus(id,status){
+const idx=state.ideas.findIndex(i=>i.id===id);if(idx<0)return;
+state.ideas[idx].status=status;await sheetWrite('Ideas',ideasToRows(state.ideas));closeModal('idea-detail-modal');toast('Updated');renderAll();
+}
+async function deleteIdea(id){
+if(!confirm('Delete idea?'))return;state.ideas=state.ideas.filter(i=>i.id!==id);
+await sheetWrite('Ideas',ideasToRows(state.ideas));closeModal('idea-detail-modal');toast('Deleted');renderAll();
+}
+function openIdeaDetail(id){
+const idea=state.ideas.find(i=>i.id===id);if(!idea)return;
+const author=state.members.find(m=>m.id===idea.authorId);
+document.getElementById('idea-detail-title').textContent=idea.title;
+document.getElementById('idea-detail-desc').textContent=idea.desc;
+document.getElementById('idea-detail-meta').textContent='By '+(author?author.name:'Admin')+' · '+timeAgo(idea.createdAt)+' · Status: '+idea.status;
+document.getElementById('idea-detail-scores').innerHTML=`<span class="idea-score-pill">Uniqueness: ${idea.unique}/10</span><span class="idea-score-pill" style="margin-left:6px">Speed: ${idea.speed}/10</span>`;
+const actions=document.getElementById('idea-detail-admin-actions');
+if(currentUser.role==='admin'){actions.innerHTML=`<button class="btn btn-sm btn-accent" onclick="updateIdeaStatus('${id}','approved')">Approve</button><button class="btn btn-sm" onclick="updateIdeaStatus('${id}','soon')">Mark as Soon</button><button class="btn btn-sm btn-danger" onclick="deleteIdea('${id}')">Delete</button>`;actions.style.display='flex';}
+else actions.style.display='none';
+openModal('idea-detail-modal');
+}
+function selectAvail(val){myAvail=val;document.querySelectorAll('#my-avail-selector .avail-opt').forEach(b=>{b.className='avail-opt';if(b.dataset.val===val)b.classList.add('sel-'+val);})}
+async function saveMyStatus(){
+const status=document.getElementById('my-status-input').value.trim();
+const idx=state.members.findIndex(m=>m.id===currentUser.memberId);if(idx<0)return;
+state.members[idx].status=status;state.members[idx].availability=myAvail;
+toast('Saving...');await sheetWrite('Members',membersToRows(state.members));toast('Status updated');renderAll();
+}
+function openProfile(memberId){
+const m=state.members.find(x=>x.id===memberId);if(!m)return;
+const av=document.getElementById('profile-avatar');av.className='avatar '+m.color;av.style.cssText='width:52px;height:52px;font-size:18px';av.textContent=initials(m.name);
+document.getElementById('profile-name').textContent=m.name;
+document.getElementById('profile-meta').textContent=`${m.team||'No team'} · ${m.role||'Member'} · ${m.type==='intern'?'Intern':'Paid'}${m.phone?' · '+m.phone:''}`;
+document.getElementById('profile-avail').innerHTML=availBadge(m.availability||'full');
+document.getElementById('profile-status').textContent=m.status||'No status set';
+const active=state.tasks.filter(t=>t.memberId===memberId&&!t.done);
+const done=state.tasks.filter(t=>t.memberId===memberId&&t.done);
+document.getElementById('profile-tasks').innerHTML=active.length?active.map(t=>`<div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--bg)"><div class="task-text">${t.text}<div class="task-meta-line">${pLabel(t.priority)}${t.due?' · Due '+fmtDate(t.due):''}</div></div></div>`).join(''):'<p style="color:var(--text-muted);font-size:13px">No active tasks</p>';
+document.getElementById('profile-tasks-done').innerHTML=done.length?done.map(t=>`<div style="font-size:13px;color:var(--text-muted);text-decoration:line-through;padding:4px 0">${t.text}</div>`).join(''):'<p style="color:var(--text-muted);font-size:13px">None yet</p>';
+openModal('profile-modal');
+}
+function setTeamTab(tab){
+teamTab=tab;
+document.getElementById('team-tab-mine').style.cssText=tab==='mine'?'font-weight:700;border-color:var(--accent)':'';
+document.getElementById('team-tab-all').style.cssText=tab==='all'?'font-weight:700;border-color:var(--accent)':'';
+document.getElementById('team-filter').style.display=tab==='all'?'block':'none';
+renderTeamPage();
+}
+function drawIdeaCanvas(){
+const canvas=document.getElementById('idea-canvas');if(!canvas)return;
+const W=canvas.offsetWidth||800;canvas.width=W;canvas.height=340;
+const ctx=canvas.getContext('2d'),pad=55,cw=W-pad*2,ch=260;
+[[0,0,'rgba(65,217,208,0.05)'],[1,0,'rgba(167,139,250,0.05)'],[0,1,'rgba(245,158,11,0.05)'],[1,1,'rgba(148,163,184,0.05)']].forEach(([xi,yi,c])=>{ctx.fillStyle=c;ctx.fillRect(pad+xi*(cw/2),pad+yi*(ch/2),cw/2,ch/2);});
+ctx.strokeStyle='rgba(0,45,45,0.1)';ctx.lineWidth=1;
+ctx.beginPath();ctx.moveTo(pad+cw/2,pad);ctx.lineTo(pad+cw/2,pad+ch);ctx.stroke();
+ctx.beginPath();ctx.moveTo(pad,pad+ch/2);ctx.lineTo(pad+cw,pad+ch/2);ctx.stroke();
+ctx.fillStyle='rgba(0,45,45,0.3)';ctx.font='11px -apple-system,sans-serif';ctx.textAlign='center';
+ctx.fillText('Common',pad+cw*0.25,pad+ch+18);ctx.fillText('Unique',pad+cw*0.75,pad+ch+18);
+ctx.save();ctx.translate(16,pad+ch*0.25);ctx.rotate(-Math.PI/2);ctx.fillText('Slow',0,0);ctx.restore();
+ctx.save();ctx.translate(16,pad+ch*0.75);ctx.rotate(-Math.PI/2);ctx.fillText('Fast',0,0);ctx.restore();
+ctx.font='bold 10px -apple-system,sans-serif';
+[['rgba(65,217,208,0.6)','UNIQUE+FAST',cw*0.75,12],['rgba(167,139,250,0.6)','UNIQUE+SLOW',cw*0.75,ch/2+12],['rgba(245,158,11,0.5)','COMMON+FAST',cw*0.25,12],['rgba(148,163,184,0.6)','COMMON+SLOW',cw*0.25,ch/2+12]].forEach(([c,t,x,y])=>{ctx.fillStyle=c;ctx.textAlign='center';ctx.fillText(t,pad+x,pad+y);});
+const visible=state.ideas.filter(i=>i.status!=='deleted');
+visible.forEach(idea=>{
+const x=pad+(idea.unique/10)*cw,y=pad+ch-((idea.speed/10)*ch);
+ctx.beginPath();ctx.arc(x,y,7,0,Math.PI*2);ctx.fillStyle=ideaColor(idea.unique,idea.speed);ctx.fill();
+ctx.strokeStyle='rgba(255,255,255,0.8)';ctx.lineWidth=1.5;ctx.stroke();
+if(idea.status==='approved'){ctx.beginPath();ctx.arc(x,y,10,0,Math.PI*2);ctx.strokeStyle='rgba(65,217,208,0.6)';ctx.lineWidth=2;ctx.stroke();}
+});
+const tip=document.getElementById('idea-tooltip');
+canvas.onmousemove=function(e){
+const rect=canvas.getBoundingClientRect(),mx=e.clientX-rect.left,my=e.clientY-rect.top;
+let found=false;
+visible.forEach(idea=>{
+const x=pad+(idea.unique/10)*cw,y=pad+ch-((idea.speed/10)*ch);
+if(Math.hypot(mx-x,my-y)<12){
+const author=state.members.find(m=>m.id===idea.authorId);
+tip.style.display='block';tip.style.left=(e.clientX+12)+'px';tip.style.top=(e.clientY-10)+'px';
+tip.innerHTML=`<strong>${idea.title}</strong><br>By ${author?author.name:'Admin'}<br>Unique: ${idea.unique}/10 · Fast: ${idea.speed}/10`;found=true;
+}
+});
+if(!found)tip.style.display='none';canvas.style.cursor=found?'pointer':'crosshair';
+};
+canvas.onmouseleave=()=>tip.style.display='none';
+canvas.onclick=function(e){
+const rect=canvas.getBoundingClientRect(),mx=e.clientX-rect.left,my=e.clientY-rect.top;
+visible.forEach(idea=>{const x=pad+(idea.unique/10)*cw,y=pad+ch-((idea.speed/10)*ch);if(Math.hypot(mx-x,my-y)<12)openIdeaDetail(idea.id);});
+};
+}
+function renderAll(){
+const active=document.querySelector('#app .page.active');if(!active)return;
+const id=active.id.replace('page-','');
+if(id==='home')renderHome();
+if(id==='team'){populateTeamFilter();renderTeamPage();}
+if(id==='manage')renderManage();
+if(id==='mytasks')renderMyTasks();
+}
+function renderHome(){
+const isAdmin=currentUser.role==='admin';
+const full=state.members.filter(m=>m.availability==='full').length,openT=state.tasks.filter(t=>!t.done).length,doneG=state.goals.filter(g=>g.status==='done').length;
+document.getElementById('stats-row').innerHTML=`<div class="stat-card"><div class="stat-num">${state.members.length}</div><div class="stat-label">Members</div></div><div class="stat-card"><div class="stat-num">${state.teams.length}</div><div class="stat-label">Teams</div></div><div class="stat-card"><div class="stat-num">${full}</div><div class="stat-label">Available</div></div><div class="stat-card"><div class="stat-num">${openT}</div><div class="stat-label">Open tasks</div></div><div class="stat-card"><div class="stat-num">${doneG}/${state.goals.length}</div><div class="stat-label">Goals done</div></div><div class="stat-card"><div class="stat-num">${state.ideas.filter(i=>i.status==='approved').length}</div><div class="stat-label">Ideas approved</div></div>`;
+renderGoals();
+document.getElementById('avail-strip').innerHTML=state.members.length?`<div style="display:flex;gap:8px;flex-wrap:wrap">${state.members.map(m=>`<div style="display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 10px;cursor:pointer" onclick="openProfile('${m.id}')"><div class="avail-dot avail-${m.availability||'full'}"></div><span style="font-size:13px;font-weight:600">${m.name}</span><span style="font-size:11px;color:var(--text-muted)">${m.team||''}</span></div>`).join('')}</div>`:'<p style="color:var(--text-muted);font-size:13px">No members yet.</p>';
+setTimeout(drawIdeaCanvas,50);
+const shoutouts=state.feed.filter(f=>f.type==='shoutout');
+const announcements=state.feed.filter(f=>f.type==='announcement');
+const ordered=[...shoutouts,...announcements];
+const feedEl=document.getElementById('feed-list');
+if(!ordered.length){feedEl.innerHTML='<p style="color:var(--text-muted);font-size:13px">No posts yet.</p>';return;}
+feedEl.innerHTML=ordered.slice(0,20).map(f=>{
+if(f.type==='shoutout'){const target=state.members.find(m=>m.id===f.targetId);return`<div class="shoutout-item"><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><span style="font-size:20px">⭐</span><div><div style="font-size:14px;font-weight:700">Shoutout to ${target?target.name:'a team member'}!</div><div style="font-size:12px;color:var(--text-muted)">${timeAgo(f.createdAt)}</div></div>${isAdmin?`<button class="btn btn-sm btn-danger" style="margin-left:auto" onclick="deleteFeedItem('${f.id}')">Delete</button>`:''}</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5">${f.body}</div></div>`;}
+return`<div class="feed-item"><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><span style="font-size:20px">📢</span><div><div style="font-size:14px;font-weight:700">${f.title}</div><div style="font-size:12px;color:var(--text-muted)">${timeAgo(f.createdAt)}</div></div>${isAdmin?`<button class="btn btn-sm btn-danger" style="margin-left:auto" onclick="deleteFeedItem('${f.id}')">Delete</button>`:''}</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5">${f.body}</div></div>`;
+}).join('');
+}
+function renderGoals(){
+const isAdmin=currentUser.role==='admin';
+const el=document.getElementById('goals-list');
+if(!state.goals.length){el.innerHTML=`<p style="color:var(--text-muted);font-size:13px">No goals yet.${isAdmin?' Click Goal to add one.':''}</p>`;return;}
+el.innerHTML=state.goals.map(g=>`<div class="goal-card" draggable="${isAdmin}" data-id="${g.id}" ondragstart="dragGoalId=this.dataset.id;this.classList.add('dragging')" ondragend="this.classList.remove('dragging');document.querySelectorAll('.goal-card').forEach(c=>c.classList.remove('drag-over'))" ondragover="event.preventDefault();if(this.dataset.id!==dragGoalId)this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handleGoalDrop(event,this)"><button class="goal-pill ${gpClass(g.status)}" onclick="${isAdmin?`cycleGoalStatus('${g.id}')`:''}" style="${isAdmin?'':'cursor:default'}">${gpLabel(g.status)}</button><div style="flex:1"><div style="font-size:14px;font-weight:700;${g.status==='done'?'text-decoration:line-through;color:var(--text-muted)':''}">${g.title}</div>${g.desc?`<div style="font-size:13px;color:var(--text-muted);margin-top:4px;line-height:1.4">${g.desc}</div>`:''}</div>${isAdmin?`<button class="btn btn-sm btn-danger" onclick="removeGoal('${g.id}')">Remove</button>`:''}</div>`).join('');
+}
+function renderTeamPage(){
+const isAdmin=currentUser.role==='admin',filterVal=document.getElementById('team-filter').value;
+let members;
+if(teamTab==='mine'&&!isAdmin){const me=state.members.find(m=>m.id===currentUser.memberId);members=me?state.members.filter(m=>m.team===me.team):[];}
+else{members=filterVal?state.members.filter(m=>m.team===filterVal):state.members;}
+const el=document.getElementById('team-grid');
+if(!members.length){el.innerHTML='<p style="color:var(--text-muted);font-size:13px">No members found.</p>';return;}
+el.innerHTML=members.map(m=>{
+const activeTasks=state.tasks.filter(t=>t.memberId===m.id&&!t.done).length;
+return`<div class="member-card" onclick="openProfile('${m.id}')"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div class="avatar ${m.color}" style="width:40px;height:40px;font-size:14px">${initials(m.name)}</div><div style="flex:1"><div style="font-size:14px;font-weight:700">${m.name}</div><div style="font-size:12px;color:var(--text-muted)">${m.team||''}${m.role?' · '+m.role:''}</div></div><div class="avail-dot avail-${m.availability||'full'}" style="width:11px;height:11px"></div></div><div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px">${availBadge(m.availability||'full')}${m.type==='intern'?'<span class="badge badge-blue">Intern</span>':''}${activeTasks?`<span class="badge badge-purple">${activeTasks} task${activeTasks>1?'s':''}</span>`:''}</div><div style="font-size:13px;color:${m.status?'var(--text-secondary)':'var(--text-muted)'};background:var(--bg);border-radius:8px;padding:7px 10px;font-style:${m.status?'normal':'italic'}">${m.status||'No status set'}</div></div>`;
+}).join('');
+}
+function renderManage(){
+const ml=document.getElementById('manage-members-list');
+if(!state.members.length){ml.innerHTML='<p style="color:var(--text-muted);font-size:13px">No members yet.</p>';}
+else{
+const teams=[...new Set(state.members.map(m=>m.team||'Unassigned'))];
+ml.innerHTML=teams.map(team=>{
+const members=state.members.filter(m=>(m.team||'Unassigned')===team);
+return`<div class="team-block"><div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)"><div class="team-dot"></div><span style="font-size:14px;font-weight:700">${team}</span><span style="font-size:12px;color:var(--text-muted)">${members.length} member${members.length!==1?'s':''}</span></div>${members.map(m=>`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--bg)"><div class="avatar ${m.color}" style="width:32px;height:32px;font-size:11px">${initials(m.name)}</div><div style="flex:1"><div style="font-size:13px;font-weight:600">${m.name}</div><div style="font-size:11px;color:var(--text-muted)">${m.role||'Member'} · ${m.type} · ${m.username||'no login'}</div></div>${availBadge(m.availability||'full')}<button class="btn btn-sm" onclick="editMember('${m.id}')">Edit</button><button class="btn btn-sm btn-danger" onclick="removeMember('${m.id}')">Remove</button></div>`).join('')}</div>`;
+}).join('');
+}
+document.getElementById('manage-teams-list').innerHTML=state.teams.map(t=>`<div style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 12px"><span style="font-size:13px;font-weight:600">${t}</span><span style="font-size:11px;color:var(--text-muted)">${state.members.filter(m=>m.team===t).length}</span><button onclick="removeTeam('${t}')" style="font-size:13px;color:var(--danger);background:none;border:none;cursor:pointer">x</button></div>`).join('');
+const tkl=document.getElementById('manage-tasks-list');
+if(!state.tasks.length){tkl.innerHTML='<p style="color:var(--text-muted);font-size:13px">No tasks yet.</p>';return;}
+const teams=[...new Set(state.members.map(m=>m.team||'Unassigned'))];
+tkl.innerHTML=teams.map(team=>{
+const memberIds=state.members.filter(m=>(m.team||'Unassigned')===team).map(m=>m.id);
+const teamTasks=state.tasks.filter(t=>memberIds.includes(t.memberId));
+if(!teamTasks.length)return'';
+const sorted=[...teamTasks].sort((a,b)=>(a.done?1:0)-(b.done?1:0));
+return`<div class="team-block"><div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)"><div class="team-dot"></div><span style="font-size:14px;font-weight:700">${team}</span><span style="font-size:12px;color:var(--text-muted)">${teamTasks.filter(t=>!t.done).length} open</span></div>${sorted.map(t=>{const m=state.members.find(x=>x.id===t.memberId);return`<div style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--bg)"><div class="task-check${t.done?' done':''}" onclick="toggleTask('${t.id}')">${t.done?'v':''}</div><div style="flex:1"><div class="${t.done?'task-done-text':''}" style="font-size:13px">${t.text}</div><div class="task-meta-line">${pLabel(t.priority)} · <strong>${m?m.name:'?'}</strong>${t.due?' · Due '+fmtDate(t.due):''}</div></div><button class="btn btn-sm btn-danger" onclick="removeTask('${t.id}')">x</button></div>`;}).join('')}</div>`;
+}).join('');
+}
+function renderMyTasks(){
+if(currentUser.role==='admin'){
+['my-status-section','member-add-task-section'].forEach(id=>document.getElementById(id).style.display='none');
+document.getElementById('my-tasks-list').innerHTML='<p style="color:var(--text-muted);font-size:13px">Use Manage to assign tasks.</p>';
+document.getElementById('my-tasks-done-list').innerHTML='';document.getElementById('my-assigned-cards').innerHTML='';return;
+}
+['my-status-section','member-add-task-section'].forEach(id=>document.getElementById(id).style.display='block');
+const me=state.members.find(m=>m.id===currentUser.memberId);
+if(me){document.getElementById('my-status-input').value=me.status||'';myAvail=me.availability||'full';document.querySelectorAll('#my-avail-selector .avail-opt').forEach(b=>{b.className='avail-opt';if(b.dataset.val===myAvail)b.classList.add('sel-'+myAvail);});}
+const selfActive=state.tasks.filter(t=>t.memberId===currentUser.memberId&&!t.done&&t.source==='self');
+const selfDone=state.tasks.filter(t=>t.memberId===currentUser.memberId&&t.done&&t.source==='self');
+const assigned=state.tasks.filter(t=>t.memberId===currentUser.memberId&&t.source==='assigned');
+document.getElementById('my-tasks-list').innerHTML=selfActive.length?selfActive.map(t=>`<div class="card" style="padding:10px 14px;margin-bottom:8px"><div style="display:flex;align-items:flex-start;gap:10px"><div class="task-check" onclick="toggleTask('${t.id}')"></div><div style="flex:1"><div class="task-text">${t.text}</div><div class="task-meta-line">${pLabel(t.priority)}${t.due?' · Due '+fmtDate(t.due):''}</div></div></div></div>`).join(''):'<p style="color:var(--text-muted);font-size:13px">No self-added tasks.</p>';
+document.getElementById('my-tasks-done-list').innerHTML=selfDone.length?selfDone.map(t=>`<div class="card" style="padding:10px 14px;margin-bottom:8px;opacity:0.5"><div style="display:flex;gap:10px"><div class="task-check done" onclick="toggleTask('${t.id}')">v</div><div class="task-done-text task-text">${t.text}</div></div></div>`).join(''):'<p style="color:var(--text-muted);font-size:13px">None yet.</p>';
+const activeAssigned=assigned.filter(t=>!t.done),doneAssigned=assigned.filter(t=>t.done);
+document.getElementById('my-assigned-cards').innerHTML=activeAssigned.length?activeAssigned.map(t=>`<div class="card" style="padding:12px;margin-bottom:10px;border-left:3px solid var(--accent)"><div style="display:flex;align-items:flex-start;gap:8px"><div class="task-check" onclick="toggleTask('${t.id}')"></div><div style="flex:1"><div class="task-text">${t.text}</div><div class="task-meta-line">${pLabel(t.priority)}${t.due?' · Due '+fmtDate(t.due):''}</div></div></div></div>`).join('')+'<p style="color:var(--text-muted);font-size:13px;margin-top:8px">No assigned tasks.</p>'
+:
+'<p style="color:var(--text-muted);font-size:13px">No tasks assigned yet.</p>';
+if(doneAssigned.length)document.getElementById('my-assigned-cards').innerHTML+=`<div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.6px;margin:12px 0 8px">Done</div>`+doneAssigned.map(t=>`<div class="card" style="padding:10px 12px;margin-bottom:8px;opacity:0.5"><div style="display:flex;gap:8px"><div class="task-check done" onclick="toggleTask('${t.id}')">v</div><div class="task-done-text task-text">${t.text}</div></div></div>`).join('');
+}
+</script>
+</body>
+</html>

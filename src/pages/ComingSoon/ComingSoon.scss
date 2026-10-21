@@ -1,0 +1,70 @@
+@import '../../components/colortheme.scss';
+
+.coming-soon-container {
+    background-color: $background;
+    color: $text-dark;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+
+    .content {
+        max-width: 500px;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: $primary;
+        }
+
+        p {
+            color: $text-muted;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .notify-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            input {
+                padding: 0.75rem 1rem;
+                border: 2px solid $primary3;
+                border-radius: 8px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 400px;
+                outline: none;
+
+                &:focus {
+                    border-color: $light-green-blue;
+                }
+            }
+
+            button {
+                padding: 0.75rem 1.5rem;
+                background-color: $primary;
+                color: $text-light;
+                font-size: 1rem;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: $primary3;
+                }
+            }
+        }
+    }
+
+    footer {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: $gray;
+    }
+}

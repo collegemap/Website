@@ -1,0 +1,130 @@
+$primary-color: #41D9D0;
+$secondary-color: #3E3E3E;
+$text-color: #FEFEFE;
+
+.question-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+}
+
+.question-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: $primary-color;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 1s ease-in-out;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.question-form-wrapper {
+  background: $secondary-color;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid $primary-color;
+  max-width: 600px;
+  width: 90%;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 30px;
+  }
+}
+
+.question-label {
+  font-size: 1.2rem;
+  color: $text-color;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.question-input,
+.question-select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+  margin-top: 5px;
+  background: #f9f9f9;
+  color: black;
+  transition: 0.3s;
+
+  &:focus {
+    border-color: darken($primary-color, 10%);
+    outline: none;
+    box-shadow: 0 0 5px lighten($primary-color, 10%);
+  }
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.yes-label {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.no-label {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.question-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: $primary-color;
+  color: $text-color;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

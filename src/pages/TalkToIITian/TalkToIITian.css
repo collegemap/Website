@@ -1,0 +1,1372 @@
+﻿/* ════════════════════════════════════════════════════════════════════════════
+   Talk to IITian — Multi-Step Flow Styles
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ── Base / Page ─────────────────────────────────────────────────────────── */
+
+.talk-to-iitian-page {
+  background-color: #ebf6f7;
+  min-height: 100vh;
+  padding: 2rem 2rem 8rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #1a202c;
+}
+
+.tti-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tti-page-label {
+  display: none;
+}
+
+/* ── Step Progress Indicator ─────────────────────────────────────────────── */
+
+.tti-progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto 3rem;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.tti-progress-step {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  position: relative;
+}
+
+.tti-progress-step:last-child {
+  flex: 0;
+}
+
+.tti-progress-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 2.5px solid #cbd5e0;
+  background: #fff;
+  color: #a0aec0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.tti-progress-circle.active {
+  border-color: #1593a1;
+  background: #1593a1;
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(21, 147, 161, 0.15);
+}
+
+.tti-progress-circle.completed {
+  border-color: #1593a1;
+  background: #1593a1;
+  color: #fff;
+}
+
+.tti-progress-line {
+  flex: 1;
+  height: 3px;
+  background: #cbd5e0;
+  transition: background 0.4s ease;
+  margin: 0;
+}
+
+.tti-progress-line.completed {
+  background: #1593a1;
+}
+
+.tti-progress-label {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #a0aec0;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.tti-progress-circle.active+.tti-progress-line+.tti-progress-label,
+.tti-progress-step .tti-progress-circle.active~.tti-progress-label {
+  color: #1593a1;
+}
+
+.tti-progress-label.active {
+  color: #1593a1;
+}
+
+.tti-progress-label.completed {
+  color: #1593a1;
+}
+
+/* ── Step Transitions ────────────────────────────────────────────────────── */
+
+.tti-step-container {
+  animation: ttiFadeSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes ttiFadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   STEP 1: Landing (Hero + Info — existing styles)
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.tti-hero-section {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+  justify-content: space-between;
+}
+
+.tti-hero-content {
+  flex: 1.2;
+}
+
+.tti-title {
+  font-size: clamp(2.8rem, 4vw, 3.5rem);
+  color: #151b26;
+  margin: 0 0 2rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.tti-title span {
+  color: #1593a1;
+}
+
+.tti-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tti-list li {
+  color: #2d3748;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+.tti-list li::before {
+  content: "\2713";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #1593a1;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.tti-hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  perspective: 1000px;
+}
+
+.tti-visual-img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  background: #000;
+  box-shadow: 0 30px 60px -15px rgba(21, 147, 161, 0.4), 0 0 0 2px rgba(21, 147, 161, 0.15);
+  transform: translateY(-5px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tti-visual-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 70px -15px rgba(21, 147, 161, 0.5), 0 0 0 2px rgba(21, 147, 161, 0.25);
+}
+
+.tti-middle-section {
+  background: #ffffff;
+  padding: 4rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 3rem;
+}
+
+.tti-middle-heading {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: #151b26;
+  text-align: center;
+  font-weight: 800;
+  margin: 0 auto 4rem;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+.tti-middle-heading span {
+  color: #1593a1;
+}
+
+.tti-steps-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tti-step {
+  border: 2px solid #0f9892;
+  border-radius: 14px;
+  padding: 24px 20px;
+  background: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.tti-step-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f9892;
+  margin-bottom: 8px;
+}
+
+.tti-step-desc {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tti-step-arrow {
+  color: #a0aec0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  align-self: center;
+  margin-top: -30px;
+}
+
+/* ── Fixed Bottom Bar (Landing CTA) ──────────────────────────────────────── */
+
+.tti-fixed-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0a1628;
+  border-top: 1px solid rgba(16, 195, 188, 0.2);
+  padding: 1rem 2rem;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  animation: tti-nav-slide-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.3s;
+}
+
+@keyframes tti-nav-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tti-fixed-bar-content {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.tti-fixed-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.tti-arrow {
+  color: #10c3bc;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* color: #ffffff; */
+/* background: #1593a1; */
+.tti-start-now-btn {
+  background: #10c3bc;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(16, 195, 188, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tti-start-now-btn:hover {
+  box-shadow: 0 0 26px rgba(16, 195, 188, 0.75);
+  transform: translateY(-1px);
+  transition: all 0.25s ease;
+}
+
+.tti-start-now-btn:hover {
+  background: #117a86;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(21, 147, 161, 0.3);
+}
+
+.tti-start-now-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   STEP 2: Video Demo
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.tti-video-step {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  /* space for fixed bottom bar */
+}
+
+.tti-video-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.tti-video-header h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #151b26;
+  margin: 0 0 0.5rem;
+}
+
+.tti-video-header p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tti-video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 1.25rem;
+  border: 2px dashed rgba(21, 147, 161, 0.85);
+  background: #dff7fb;
+  box-shadow: 0 10px 30px rgba(21, 147, 161, 0.12);
+}
+
+.tti-video-container iframe,
+.tti-video-container video {
+  width: 100%;
+  height: auto;
+  border: none;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #000;
+  display: block;
+}
+
+.tti-video-info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tti-video-info-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.tti-video-info-card .card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.tti-video-info-card .card-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #151b26;
+  margin-bottom: 0.25rem;
+}
+
+.tti-video-info-card .card-desc {
+  font-size: 0.78rem;
+  color: #718096;
+  line-height: 1.4;
+}
+
+.tti-continue-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1593a1, #0e7a86);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.tti-continue-btn::after {
+  content: " →";
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.tti-continue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(21, 147, 161, 0.35);
+}
+
+.tti-continue-btn:hover::after {
+  transform: translateX(4px);
+}
+
+.tti-continue-btn:active {
+  transform: translateY(0);
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   STEP 3: Payment (processing overlay)
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.tti-payment-step {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.tti-payment-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.tti-payment-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ebf6f7, #d4f0f3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+}
+
+.tti-payment-card h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #151b26;
+  margin: 0 0 0.5rem;
+}
+
+.tti-payment-card .tti-payment-amount {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1593a1;
+  margin: 1rem 0;
+}
+
+.tti-payment-card .tti-payment-desc {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.tti-payment-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: left;
+}
+
+.tti-payment-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  font-size: 0.9rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.tti-payment-features li .feature-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1593a1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.tti-pay-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1593a1, #0e7a86);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.tti-pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(21, 147, 161, 0.35);
+}
+
+.tti-pay-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tti-pay-btn.processing {
+  background: #718096;
+}
+
+.tti-back-link {
+  background: none;
+  border: none;
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.tti-back-link:hover {
+  color: #4a5568;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   STEP 4: Form
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.tti-form-step {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tti-form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tti-form-header h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #151b26;
+  margin: 0 0 0.5rem;
+}
+
+.tti-form-header p {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0;
+}
+
+.tti-payment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #ebf6f7, #d4f0f3);
+  color: #0e7a86;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  margin-top: 0.75rem;
+  border: 1px solid rgba(21, 147, 161, 0.15);
+}
+
+.tti-form-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.tti-form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.tti-form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.tti-form-group label .required {
+  color: #e53e3e;
+  margin-left: 2px;
+}
+
+.tti-form-group input,
+.tti-form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #1a202c;
+  background: #f7fafc;
+  transition: all 0.25s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.tti-form-group input:focus,
+.tti-form-group textarea:focus {
+  border-color: #1593a1;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(21, 147, 161, 0.1);
+}
+
+.tti-form-group input.error,
+.tti-form-group textarea.error {
+  border-color: #e53e3e;
+  background: #fff5f5;
+}
+
+.tti-form-group input.error:focus,
+.tti-form-group textarea.error:focus {
+  box-shadow: 0 0 0 4px rgba(229, 62, 62, 0.1);
+}
+
+.tti-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.tti-field-error {
+  font-size: 0.78rem;
+  color: #e53e3e;
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  animation: ttiShakeIn 0.3s ease;
+}
+
+@keyframes ttiShakeIn {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.tti-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1593a1, #0e7a86);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.tti-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(21, 147, 161, 0.35);
+}
+
+.tti-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tti-submit-btn.loading {
+  pointer-events: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   STEP 5: Confirmation / Success
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.tti-confirmation-step {
+  max-width: 560px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.tti-success-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tti-success-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #1593a1, #48bb78, #1593a1);
+  background-size: 200% 100%;
+  animation: ttiGradientShift 3s ease infinite;
+}
+
+@keyframes ttiGradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.tti-success-checkmark {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: ttiCheckPop 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  box-shadow: 0 6px 24px rgba(72, 187, 120, 0.3);
+}
+
+@keyframes ttiCheckPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tti-success-checkmark svg {
+  width: 40px;
+  height: 40px;
+  stroke: #fff;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: ttiCheckDraw 0.5s ease 0.3s forwards;
+}
+
+@keyframes ttiCheckDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.tti-success-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #151b26;
+  margin: 0 0 0.75rem;
+  animation: ttiFadeUp 0.5s ease 0.2s both;
+}
+
+.tti-success-card .tti-success-msg {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0 0 2rem;
+  animation: ttiFadeUp 0.5s ease 0.35s both;
+}
+
+@keyframes ttiFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tti-whatsapp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  color: #166534;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  animation: ttiFadeUp 0.5s ease 0.5s both;
+  border: 1px solid rgba(22, 101, 52, 0.12);
+}
+
+.tti-whatsapp-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.tti-success-details {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  animation: ttiFadeUp 0.5s ease 0.6s both;
+}
+
+.tti-success-details p {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0.3rem 0;
+}
+
+.tti-success-details strong {
+  color: #4a5568;
+}
+
+/* ── Warning Modal (Back Navigation) ─────────────────────────────────────── */
+
+.tti-warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: ttiFadeIn 0.2s ease;
+}
+
+@keyframes ttiFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tti-warning-modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: ttiModalPop 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes ttiModalPop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tti-warning-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tti-warning-modal h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #151b26;
+  margin: 0 0 0.5rem;
+}
+
+.tti-warning-modal p {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.tti-warning-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tti-warning-stay {
+  flex: 1;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #1593a1, #0e7a86);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tti-warning-stay:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(21, 147, 161, 0.3);
+}
+
+.tti-warning-leave {
+  flex: 1;
+  padding: 0.75rem;
+  background: transparent;
+  color: #718096;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tti-warning-leave:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+  color: #4a5568;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────────────────── */
+
+.tti-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: ttiSpin 0.7s linear infinite;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+@keyframes ttiSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   Recovery Banner
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.tti-recovery-banner {
+  background: linear-gradient(135deg, #fefce8, #fef9c3);
+  border: 1px solid #fbbf24;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: ttiFadeSlideIn 0.4s ease;
+}
+
+.tti-recovery-banner .recovery-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.tti-recovery-banner .recovery-text {
+  font-size: 0.85rem;
+  color: #92400e;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   Responsive
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .talk-to-iitian-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .tti-hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .tti-list {
+    align-items: center;
+  }
+
+  .tti-steps-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .tti-step-arrow {
+    transform: rotate(90deg);
+    margin-top: 0;
+  }
+
+  .tti-fixed-bar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tti-middle-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .tti-video-info-cards {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .tti-form-card {
+    padding: 1.5rem;
+  }
+
+  .tti-payment-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tti-success-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tti-progress-bar {
+    margin-bottom: 2rem;
+  }
+
+  .tti-progress-label {
+    display: none;
+  }
+
+  .tti-progress-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .tti-warning-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .tti-title {
+    font-size: 2.2rem;
+  }
+
+  .tti-middle-heading {
+    font-size: 1.15rem;
+  }
+
+  .tti-fixed-text {
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .tti-title {
+    font-size: 2.2rem;
+  }
+
+  .tti-middle-heading {
+    font-size: 1.15rem;
+  }
+
+  /* ── Fixed bottom bar: stack on mobile ── */
+  .tti-fixed-bottom-bar {
+    padding: 10px 16px 12px;
+  }
+
+  .tti-fixed-bar-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .tti-fixed-text {
+    font-size: 10.5px;
+    justify-content: center;
+    gap: 3px;
+    flex-wrap: nowrap;
+  }
+
+  .tti-fixed-text span {
+    white-space: nowrap;
+  }
+
+  .tti-arrow {
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .tti-start-now-btn {
+    text-align: center;
+    width: 100%;
+    padding: 11px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tti-list {
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.tti-hero-start-btn {
+  margin-top: 24px;
+  padding: 10px 100px;
+  background-color: #10c3bc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tti-hero-start-btn:hover {
+  background-color: #0da89f;
+}
+
+/* ── Mobile spacing fixes (max-width: 768px) ── */
+@media (max-width: 768px) {
+  .talk-to-iitian-page {
+    padding: 1rem 1rem 8rem;   /* less top padding */
+  }
+
+  .tti-hero-section {
+    gap: 1.25rem;              /* was 2rem — tighter between all flex children */
+    margin-bottom: 1.5rem;     /* was 3rem */
+  }
+
+  .tti-title {
+    font-size: 2rem;
+    margin: 0 0 0.75rem;       /* was 2rem bottom margin */
+  }
+
+  .tti-list {
+    gap: 0.85rem;              /* was 1.5rem between list items */
+  }
+
+  .tti-list li {
+    font-size: 1rem;
+  }
+
+  .tti-visual-img {
+    border-radius: 12px;
+  }
+
+  .tti-hero-start-btn {
+    margin-top: 12px;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .tti-middle-section {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tti-middle-heading {
+    margin-bottom: 1.5rem;    /* was 4rem */
+  }
+}
+@media (max-width: 768px) {
+  .tti-hero-visual {
+    min-height: unset;
+    margin-top: 2 rem;   /* pulls the image up */
+  }
+}
+
+@media (max-width: 768px) {
+  .tti-middle-section {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tti-middle-heading {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .tti-step {
+    padding: 16px 14px;
+    gap: 6px;
+  }
+
+  .tti-step-title {
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+  }
+
+  .tti-step-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .tti-step-arrow {
+    font-size: 1.1rem;
+    margin: -8px 0;   /* tighten the gap above/below arrow */
+    color: #cbd5e0;
+  }
+}
+
+/* Mobile-only line break helper */
+.tti-mobile-break {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tti-mobile-break {
+    display: block;
+  }
+
+  .tti-step-arrow {
+    color: #10c3bc;
+    font-size: 1.3rem;
+    margin: -6px 0;
+  }
+}

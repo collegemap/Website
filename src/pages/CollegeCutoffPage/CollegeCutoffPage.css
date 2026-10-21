@@ -1,0 +1,558 @@
+/* ============================================================
+   CollegeCutoffPage.css
+   Matches CollegeMap site theme:
+     Primary:  #10c3bc  (teal)
+     Dark:     #005d63
+     BG:       #ffffff / #fef9f5 / #f8f8f8
+     Text:     #111111 / #757575
+   ============================================================ */
+
+/* ─── Root ─────────────────────────────────────────────────── */
+.ccp-root {
+  min-height: 100vh;
+  background: #f8f8f8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #111111;
+}
+
+/* ─── Hero Banner ──────────────────────────────────────────── */
+.ccp-hero {
+  background: linear-gradient(135deg, #005d63 0%, #10c3bc 100%);
+  padding: 48px 24px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ccp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 80% at 90% 50%, rgba(255,255,255,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 50% at 10% 20%, rgba(255,255,255,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ccp-hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Breadcrumb ───────────────────────────────────────────── */
+.ccp-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.ccp-breadcrumb a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ccp-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.ccp-breadcrumb svg {
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* ─── Badge Row ────────────────────────────────────────────── */
+.ccp-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.ccp-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+}
+
+.ccp-year-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #ffffff;
+}
+
+/* ─── Hero Title ───────────────────────────────────────────── */
+.ccp-title {
+  font-size: clamp(20px, 3.5vw, 32px);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.ccp-subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+/* ─── Stat Chips ───────────────────────────────────────────── */
+.ccp-stat-chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ccp-chip {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 110px;
+}
+
+.ccp-chip-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ccp-chip-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ccp-chip-value.highlight {
+  color: #e5f6ff;
+}
+
+/* ─── Main Content Area ────────────────────────────────────── */
+.ccp-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 36px 24px 80px;
+}
+
+/* ─── Section Header ───────────────────────────────────────── */
+.ccp-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ccp-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.ccp-section-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(16, 195, 188, 0.1);
+  border: 1px solid rgba(16, 195, 188, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10c3bc;
+  flex-shrink: 0;
+}
+
+/* ─── Filters ──────────────────────────────────────────────── */
+.ccp-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.ccp-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.ccp-filter-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #757575;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ccp-filter-select {
+  background: #ffffff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 9px 30px 9px 12px;
+  color: #111111;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23757575' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.ccp-filter-select:focus {
+  border-color: #10c3bc;
+  box-shadow: 0 0 0 3px rgba(16, 195, 188, 0.12);
+}
+
+.ccp-clear-btn {
+  align-self: flex-end;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  background: #ffffff;
+  color: #757575;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  white-space: nowrap;
+}
+
+.ccp-clear-btn:hover {
+  border-color: #10c3bc;
+  color: #005d63;
+  background: #f0fdfc;
+}
+
+/* ─── Table Card ───────────────────────────────────────────── */
+.ccp-table-card {
+  background: #ffffff;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.ccp-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ccp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 520px;
+}
+
+.ccp-table thead {
+  background: linear-gradient(135deg, #005d63 0%, #10c3bc 100%);
+}
+
+.ccp-table thead th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.ccp-th-right {
+  text-align: right !important;
+}
+
+.ccp-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.12s;
+}
+
+.ccp-table tbody tr:hover {
+  background: #f0fdfc;
+}
+
+.ccp-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.ccp-table td {
+  padding: 13px 18px;
+  vertical-align: middle;
+  color: #333333;
+  font-size: 13.5px;
+}
+
+/* ─── Rank Cells ───────────────────────────────────────────── */
+.ccp-td-rank {
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ccp-td-rank.opening {
+  color: #10c3bc;
+}
+
+.ccp-td-rank.closing {
+  color: #005d63;
+}
+
+/* ─── Category Badges ──────────────────────────────────────── */
+.ccp-cat-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.ccp-cat-badge.open  { background: rgba(16,195,188,0.1);  color: #005d63; border: 1px solid rgba(16,195,188,0.3); }
+.ccp-cat-badge.ews   { background: rgba(245,158,11,0.1);  color: #92400e; border: 1px solid rgba(245,158,11,0.3); }
+.ccp-cat-badge.obc   { background: rgba(59,130,246,0.1);  color: #1e40af; border: 1px solid rgba(59,130,246,0.25); }
+.ccp-cat-badge.sc    { background: rgba(139,92,246,0.1);  color: #5b21b6; border: 1px solid rgba(139,92,246,0.25); }
+.ccp-cat-badge.st    { background: rgba(236,72,153,0.1);  color: #9d174d; border: 1px solid rgba(236,72,153,0.25); }
+
+/* ─── Gender Pill ──────────────────────────────────────────── */
+.ccp-gender-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #757575;
+}
+
+/* ─── No Data ──────────────────────────────────────────────── */
+.ccp-no-data {
+  text-align: center;
+  padding: 44px 24px;
+  color: #9e9e9e;
+  font-size: 14px;
+}
+
+/* ─── Info Block ───────────────────────────────────────────── */
+.ccp-info-block {
+  background: #ffffff;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 26px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.ccp-info-block h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 12px;
+}
+
+.ccp-info-block p {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.75;
+  margin: 0 0 10px;
+}
+
+.ccp-info-block p:last-child {
+  margin: 0;
+}
+
+.ccp-info-block strong {
+  color: #111111;
+}
+
+/* ─── CTA Block ────────────────────────────────────────────── */
+.ccp-cta-block {
+  background: linear-gradient(135deg, #005d63 0%, #10c3bc 100%);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(16, 195, 188, 0.25);
+}
+
+.ccp-cta-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.ccp-cta-text p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+.ccp-cta-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.ccp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #005d63;
+  font-size: 13.5px;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  white-space: nowrap;
+}
+
+.ccp-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.ccp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.ccp-btn-secondary:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.55);
+}
+
+/* ─── Not Found ────────────────────────────────────────────── */
+.ccp-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 40px 24px;
+  gap: 12px;
+}
+
+.ccp-not-found h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.ccp-not-found p {
+  font-size: 14px;
+  color: #757575;
+  margin: 0 0 20px;
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .ccp-hero {
+    padding: 36px 16px 28px;
+  }
+
+  .ccp-main {
+    padding: 24px 16px 60px;
+  }
+
+  .ccp-stat-chips {
+    gap: 8px;
+  }
+
+  .ccp-chip {
+    min-width: 96px;
+    padding: 10px 14px;
+  }
+
+  .ccp-chip-value {
+    font-size: 18px;
+  }
+
+  .ccp-cta-block {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ccp-filters {
+    flex-direction: column;
+  }
+
+  .ccp-filter-group {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .ccp-info-block {
+    padding: 20px;
+  }
+}

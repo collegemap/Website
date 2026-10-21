@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle requests for files that exist on the server
+RewriteCond %{REQUEST_FILENAME} !-f
+# Handle requests for directories that exist on the server
+RewriteCond %{REQUEST_FILENAME} !-d
+# For all other requests, redirect to the React app
+RewriteRule ^(.*)$ /index.html [L,QSA]

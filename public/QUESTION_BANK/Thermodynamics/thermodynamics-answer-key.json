@@ -1,0 +1,4830 @@
+{
+  "chapterId": "thermodynamics",
+  "chapterName": "Thermodynamics",
+  "exam": "JEE Mains",
+  "subject": "Physics",
+  "totalQuestions": 150,
+  "difficulties": [
+    {
+      "difficultyId": "easy",
+      "difficultyName": "Easy",
+      "questionCount": 50,
+      "questions": [
+        {
+          "questionNumber": 1,
+          "globalQuestionNumber": 1,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 2,
+          "globalQuestionNumber": 2,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 3,
+          "globalQuestionNumber": 3,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 4,
+          "globalQuestionNumber": 4,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 5,
+          "globalQuestionNumber": 5,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 6,
+          "globalQuestionNumber": 6,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 7,
+          "globalQuestionNumber": 7,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 8,
+          "globalQuestionNumber": 8,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 9,
+          "globalQuestionNumber": 9,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 10,
+          "globalQuestionNumber": 10,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 11,
+          "globalQuestionNumber": 11,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 12,
+          "globalQuestionNumber": 12,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 13,
+          "globalQuestionNumber": 13,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 14,
+          "globalQuestionNumber": 14,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 15,
+          "globalQuestionNumber": 15,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 16,
+          "globalQuestionNumber": 16,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 17,
+          "globalQuestionNumber": 17,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 18,
+          "globalQuestionNumber": 18,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 19,
+          "globalQuestionNumber": 19,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 20,
+          "globalQuestionNumber": 20,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 21,
+          "globalQuestionNumber": 21,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 22,
+          "globalQuestionNumber": 22,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 23,
+          "globalQuestionNumber": 23,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 24,
+          "globalQuestionNumber": 24,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 25,
+          "globalQuestionNumber": 25,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 26,
+          "globalQuestionNumber": 26,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "D"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 27,
+          "globalQuestionNumber": 27,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 28,
+          "globalQuestionNumber": 28,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 29,
+          "globalQuestionNumber": 29,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 30,
+          "globalQuestionNumber": 30,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 31,
+          "globalQuestionNumber": 31,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 32,
+          "globalQuestionNumber": 32,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 33,
+          "globalQuestionNumber": 33,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 34,
+          "globalQuestionNumber": 34,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 35,
+          "globalQuestionNumber": 35,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 36,
+          "globalQuestionNumber": 36,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 37,
+          "globalQuestionNumber": 37,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 38,
+          "globalQuestionNumber": 38,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 39,
+          "globalQuestionNumber": 39,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "D"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 40,
+          "globalQuestionNumber": 40,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 41,
+          "globalQuestionNumber": 41,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 42,
+          "globalQuestionNumber": 42,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 43,
+          "globalQuestionNumber": 43,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 44,
+          "globalQuestionNumber": 44,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 45,
+          "globalQuestionNumber": 45,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 46,
+          "globalQuestionNumber": 46,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 47,
+          "globalQuestionNumber": 47,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 48,
+          "globalQuestionNumber": 48,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 49,
+          "globalQuestionNumber": 49,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "B"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 50,
+          "globalQuestionNumber": 50,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "easy",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        }
+      ]
+    },
+    {
+      "difficultyId": "medium",
+      "difficultyName": "Medium",
+      "questionCount": 50,
+      "questions": [
+        {
+          "questionNumber": 1,
+          "globalQuestionNumber": 51,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 2,
+          "globalQuestionNumber": 52,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 3,
+          "globalQuestionNumber": 53,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 4,
+          "globalQuestionNumber": 54,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "D"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 5,
+          "globalQuestionNumber": 55,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 6,
+          "globalQuestionNumber": 56,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 7,
+          "globalQuestionNumber": 57,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 8,
+          "globalQuestionNumber": 58,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 9,
+          "globalQuestionNumber": 59,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 10,
+          "globalQuestionNumber": 60,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 11,
+          "globalQuestionNumber": 61,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 12,
+          "globalQuestionNumber": 62,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 13,
+          "globalQuestionNumber": 63,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 14,
+          "globalQuestionNumber": 64,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 15,
+          "globalQuestionNumber": 65,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "D"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 16,
+          "globalQuestionNumber": 66,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 17,
+          "globalQuestionNumber": 67,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 18,
+          "globalQuestionNumber": 68,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 19,
+          "globalQuestionNumber": 69,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 20,
+          "globalQuestionNumber": 70,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 21,
+          "globalQuestionNumber": 71,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 22,
+          "globalQuestionNumber": 72,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 23,
+          "globalQuestionNumber": 73,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 24,
+          "globalQuestionNumber": 74,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 25,
+          "globalQuestionNumber": 75,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 26,
+          "globalQuestionNumber": 76,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 27,
+          "globalQuestionNumber": 77,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 28,
+          "globalQuestionNumber": 78,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 29,
+          "globalQuestionNumber": 79,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 30,
+          "globalQuestionNumber": 80,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 31,
+          "globalQuestionNumber": 81,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 32,
+          "globalQuestionNumber": 82,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 33,
+          "globalQuestionNumber": 83,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 34,
+          "globalQuestionNumber": 84,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 35,
+          "globalQuestionNumber": 85,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 36,
+          "globalQuestionNumber": 86,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 37,
+          "globalQuestionNumber": 87,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 38,
+          "globalQuestionNumber": 88,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "D"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 39,
+          "globalQuestionNumber": 89,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 40,
+          "globalQuestionNumber": 90,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 41,
+          "globalQuestionNumber": 91,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 42,
+          "globalQuestionNumber": 92,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 43,
+          "globalQuestionNumber": 93,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 44,
+          "globalQuestionNumber": 94,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 45,
+          "globalQuestionNumber": 95,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 46,
+          "globalQuestionNumber": 96,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 47,
+          "globalQuestionNumber": 97,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 48,
+          "globalQuestionNumber": 98,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 49,
+          "globalQuestionNumber": 99,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 50,
+          "globalQuestionNumber": 100,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "medium",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        }
+      ]
+    },
+    {
+      "difficultyId": "hard",
+      "difficultyName": "Hard",
+      "questionCount": 50,
+      "questions": [
+        {
+          "questionNumber": 1,
+          "globalQuestionNumber": 101,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 2,
+          "globalQuestionNumber": 102,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 3,
+          "globalQuestionNumber": 103,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 4,
+          "globalQuestionNumber": 104,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 5,
+          "globalQuestionNumber": 105,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 6,
+          "globalQuestionNumber": 106,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 7,
+          "globalQuestionNumber": 107,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 8,
+          "globalQuestionNumber": 108,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 9,
+          "globalQuestionNumber": 109,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 10,
+          "globalQuestionNumber": 110,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 11,
+          "globalQuestionNumber": 111,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 12,
+          "globalQuestionNumber": 112,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 13,
+          "globalQuestionNumber": 113,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 14,
+          "globalQuestionNumber": 114,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 15,
+          "globalQuestionNumber": 115,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 16,
+          "globalQuestionNumber": 116,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 17,
+          "globalQuestionNumber": 117,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 18,
+          "globalQuestionNumber": 118,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 19,
+          "globalQuestionNumber": 119,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 20,
+          "globalQuestionNumber": 120,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 21,
+          "globalQuestionNumber": 121,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 22,
+          "globalQuestionNumber": 122,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 23,
+          "globalQuestionNumber": 123,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 24,
+          "globalQuestionNumber": 124,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 25,
+          "globalQuestionNumber": 125,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 26,
+          "globalQuestionNumber": 126,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 27,
+          "globalQuestionNumber": 127,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 28,
+          "globalQuestionNumber": 128,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 29,
+          "globalQuestionNumber": 129,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 30,
+          "globalQuestionNumber": 130,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 31,
+          "globalQuestionNumber": 131,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 32,
+          "globalQuestionNumber": 132,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 33,
+          "globalQuestionNumber": 133,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 34,
+          "globalQuestionNumber": 134,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 35,
+          "globalQuestionNumber": 135,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 36,
+          "globalQuestionNumber": 136,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 37,
+          "globalQuestionNumber": 137,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 38,
+          "globalQuestionNumber": 138,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 39,
+          "globalQuestionNumber": 139,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 40,
+          "globalQuestionNumber": 140,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 41,
+          "globalQuestionNumber": 141,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 42,
+          "globalQuestionNumber": 142,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "C"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 43,
+          "globalQuestionNumber": 143,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 44,
+          "globalQuestionNumber": 144,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 45,
+          "globalQuestionNumber": 145,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 46,
+          "globalQuestionNumber": 146,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 47,
+          "globalQuestionNumber": 147,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 48,
+          "globalQuestionNumber": 148,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 49,
+          "globalQuestionNumber": 149,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 50,
+          "globalQuestionNumber": 150,
+          "exam": "JEE Mains",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "difficulty": "hard",
+          "questionType": "single-correct",
+          "options": [
+            {
+              "optionId": "A",
+              "optionText": "A"
+            },
+            {
+              "optionId": "B",
+              "optionText": "B"
+            },
+            {
+              "optionId": "C",
+              "optionText": "C"
+            },
+            {
+              "optionId": "D",
+              "optionText": "D"
+            }
+          ],
+          "correctAnswer": [
+            "A"
+          ],
+          "marks": 4,
+          "negativeMarks": -1
+        }
+      ]
+    }
+  ]
+}

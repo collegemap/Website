@@ -1,0 +1,61 @@
+# CollegeMap
+
+> One-stop platform for your JEE journey: from preparation to college counseling. Built by IITians, for future IITians.
+
+## About
+
+CollegeMap (https://collegemap.in) is an EdTech platform that helps JEE aspirants with comprehensive preparation resources, college counseling, mentorship programs, and direct access to IITians. The platform provides data-driven tools for college prediction, branch comparison, and admission guidance.
+
+## Core Features
+
+- **College Predictor**: Predict your chances of admission to IITs, NITs, and IIITs based on your JEE rank, category, and preferences. Uses real JoSAA cutoff data.
+- **Branch Comparison**: Compare branches across different IITs and NITs with placement data, research output, faculty strength, and curriculum details.
+- **JEE Preparation Resources**: Curated study materials, previous year question papers (PYQs) for JEE Mains and Advanced, and practice tests.
+- **CBT Practice Portal**: Computer-Based Test practice portal simulating the real JEE exam interface with timed tests and performance analytics.
+- **Talk to IITians**: Connect directly with current IITians for personalized advice on JEE preparation, college selection, and life at IITs.
+- **Study with IITians**: Group study sessions and mentorship programs led by current IIT students.
+- **Energy Batch**: Intensive JEE preparation batch program with structured curriculum and mentor support.
+- **Blog**: Expert articles on JEE preparation strategies, IIT admissions, branch selection guides, and career guidance.
+- **News**: Latest updates on JEE Mains, JEE Advanced, JoSAA counseling, and college admissions.
+- **Seminars**: Free educational seminars and workshops on JEE preparation and college admissions.
+
+## Pages
+
+- Home: https://collegemap.in/
+- College Predictor: https://collegemap.in/CollegePredictor
+- Branch Comparison: https://collegemap.in/BranchComparision
+- JEE Resources: https://collegemap.in/Resources
+- PYQ (Previous Year Questions): https://collegemap.in/pyq
+- CBT Practice Exams: https://collegemap.in/exams
+- Talk to IITians: https://collegemap.in/TalkToIITians
+- Study with IITians: https://collegemap.in/StudyWithIITians
+- Energy Batch: https://collegemap.in/EnergyBatch
+- Blog: https://collegemap.in/blog
+- News: https://collegemap.in/news
+- Seminars: https://collegemap.in/seminar
+- About Us: https://collegemap.in/AboutUs
+- Our Team: https://collegemap.in/team
+- Contact Us: https://collegemap.in/contact
+- How It Works: https://collegemap.in/HowItWorks
+- About IITs (Colleges): https://collegemap.in/College
+- Privacy Policy: https://collegemap.in/Privacy-Policy
+- Terms and Conditions: https://collegemap.in/Terms-and-Conditions
+- Refund Policy: https://collegemap.in/refund
+
+## Target Audience
+
+- JEE Mains and JEE Advanced aspirants (Class 11 and 12 students)
+- Students seeking admission to IITs, NITs, and IIITs
+- Parents looking for guidance on engineering college admissions in India
+- Students going through JoSAA counseling process
+
+## Technology
+
+- React single-page application
+- Hosted on Vercel
+- Supabase backend for data and authentication
+
+## Contact
+
+- Website: https://collegemap.in
+- Contact Page: https://collegemap.in/contact

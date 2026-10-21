@@ -1,0 +1,387 @@
+{
+  "paperId": "jee-main-2025-22-jan-shift-2",
+  "paperTitle": "JEE Main 2025 22 Jan Shift 2",
+  "sections": {
+    "mathematics": {
+      "1": {
+        "difficulty": "medium",
+        "lesson": "Matrices and Determinants",
+        "type": "MCQ"
+      },
+      "2": {
+        "difficulty": "medium",
+        "lesson": "Permutations and Combinations",
+        "type": "MCQ"
+      },
+      "3": {
+        "difficulty": "hard",
+        "lesson": "Binomial Theorem and Its Simple Applications",
+        "type": "MCQ"
+      },
+      "4": {
+        "difficulty": "hard",
+        "lesson": "Three Dimensional Geometry",
+        "type": "MCQ"
+      },
+      "5": {
+        "difficulty": "hard",
+        "lesson": "Statistics and Probability",
+        "type": "MCQ"
+      },
+      "6": {
+        "difficulty": "hard",
+        "lesson": "Integral Calculus",
+        "type": "MCQ"
+      },
+      "7": {
+        "difficulty": "medium",
+        "lesson": "Integral Calculus",
+        "type": "MCQ"
+      },
+      "8": {
+        "difficulty": "hard",
+        "lesson": "Limit, Continuity and Differentiability",
+        "type": "MCQ"
+      },
+      "9": {
+        "difficulty": "hard",
+        "lesson": "Co-ordinate Geometry",
+        "type": "MCQ"
+      },
+      "10": {
+        "difficulty": "medium",
+        "lesson": "Vector Algebra",
+        "type": "MCQ"
+      },
+      "11": {
+        "difficulty": "medium",
+        "lesson": "Limit, Continuity and Differentiability",
+        "type": "MCQ"
+      },
+      "12": {
+        "difficulty": "medium",
+        "lesson": "Sets, Relations and Functions",
+        "type": "MCQ"
+      },
+      "13": {
+        "difficulty": "medium",
+        "lesson": "Sequence and Series",
+        "type": "MCQ"
+      },
+      "14": {
+        "difficulty": "medium",
+        "lesson": "Three Dimensional Geometry",
+        "type": "MCQ"
+      },
+      "15": {
+        "difficulty": "hard",
+        "lesson": "Matrices and Determinants",
+        "type": "MCQ"
+      },
+      "16": {
+        "difficulty": "hard",
+        "lesson": "Differential Equations",
+        "type": "MCQ"
+      },
+      "17": {
+        "difficulty": "hard",
+        "lesson": "Complex Numbers and Quadratic Equations",
+        "type": "MCQ"
+      },
+      "18": {
+        "difficulty": "medium",
+        "lesson": "Trigonometry",
+        "type": "MCQ"
+      },
+      "19": {
+        "difficulty": "hard",
+        "lesson": "Co-ordinate Geometry",
+        "type": "MCQ"
+      },
+      "20": {
+        "difficulty": "hard",
+        "lesson": "Co-ordinate Geometry",
+        "type": "MCQ"
+      },
+      "21": {
+        "difficulty": "hard",
+        "lesson": "Binomial Theorem and Its Simple Applications",
+        "type": "Numerical"
+      },
+      "22": {
+        "difficulty": "medium",
+        "lesson": "Sets, Relations and Functions",
+        "type": "Numerical"
+      },
+      "23": {
+        "difficulty": "medium",
+        "lesson": "Co-ordinate Geometry",
+        "type": "Numerical"
+      },
+      "24": {
+        "difficulty": "hard",
+        "lesson": "Differential Equations",
+        "type": "Numerical"
+      },
+      "25": {
+        "difficulty": "hard",
+        "lesson": "Co-ordinate Geometry",
+        "type": "Numerical"
+      }
+    },
+    "physics": {
+      "1": {
+        "difficulty": "easy",
+        "lesson": "Electronic Devices",
+        "type": "MCQ"
+      },
+      "2": {
+        "difficulty": "easy",
+        "lesson": "Properties of Solids and Liquids",
+        "type": "MCQ"
+      },
+      "3": {
+        "difficulty": "medium",
+        "lesson": "Rotational Motion",
+        "type": "MCQ"
+      },
+      "4": {
+        "difficulty": "easy",
+        "lesson": "Optics",
+        "type": "MCQ"
+      },
+      "5": {
+        "difficulty": "easy",
+        "lesson": "Electrostatics",
+        "type": "MCQ"
+      },
+      "6": {
+        "difficulty": "medium",
+        "lesson": "Optics",
+        "type": "MCQ"
+      },
+      "7": {
+        "difficulty": "easy",
+        "lesson": "Thermodynamics",
+        "type": "MCQ"
+      },
+      "8": {
+        "difficulty": "medium",
+        "lesson": "Atoms and Nuclei",
+        "type": "MCQ"
+      },
+      "9": {
+        "difficulty": "medium",
+        "lesson": "Optics",
+        "type": "MCQ"
+      },
+      "10": {
+        "difficulty": "medium",
+        "lesson": "Electromagnetic Induction and Alternating Currents",
+        "type": "MCQ"
+      },
+      "11": {
+        "difficulty": "easy",
+        "lesson": "Kinematics",
+        "type": "MCQ"
+      },
+      "12": {
+        "difficulty": "medium",
+        "lesson": "Work, Energy and Power",
+        "type": "MCQ"
+      },
+      "13": {
+        "difficulty": "medium",
+        "lesson": "Gravitation",
+        "type": "MCQ"
+      },
+      "14": {
+        "difficulty": "medium",
+        "lesson": "Electromagnetic Induction and Alternating Currents",
+        "type": "MCQ"
+      },
+      "15": {
+        "difficulty": "easy",
+        "lesson": "Electrostatics",
+        "type": "MCQ"
+      },
+      "16": {
+        "difficulty": "medium",
+        "lesson": "Properties of Solids and Liquids",
+        "type": "Numerical"
+      },
+      "17": {
+        "difficulty": "easy",
+        "lesson": "Dual Nature of Matter and Radiation",
+        "type": "Numerical"
+      },
+      "18": {
+        "difficulty": "medium",
+        "lesson": "Experimental Skills",
+        "type": "Numerical"
+      },
+      "19": {
+        "difficulty": "medium",
+        "lesson": "Kinetic Theory of Gases",
+        "type": "Numerical"
+      },
+      "20": {
+        "difficulty": "medium",
+        "lesson": "Work, Energy and Power",
+        "type": "Numerical"
+      },
+      "21": {
+        "difficulty": "medium",
+        "lesson": "Dual Nature of Matter and Radiation",
+        "type": "Numerical"
+      },
+      "22": {
+        "difficulty": "easy",
+        "lesson": "Current Electricity",
+        "type": "Numerical"
+      },
+      "23": {
+        "difficulty": "medium",
+        "lesson": "Electromagnetic Induction and Alternating Currents",
+        "type": "Numerical"
+      },
+      "24": {
+        "difficulty": "medium",
+        "lesson": "Rotational Motion",
+        "type": "Numerical"
+      },
+      "25": {
+        "difficulty": "medium",
+        "lesson": "Magnetic Effects of Current and Magnetism",
+        "type": "Numerical"
+      }
+    },
+    "chemistry": {
+      "1": {
+        "difficulty": "easy",
+        "lesson": "Purification and Characterisation of Organic Compounds",
+        "type": "MCQ"
+      },
+      "2": {
+        "difficulty": "medium",
+        "lesson": "Solutions",
+        "type": "MCQ"
+      },
+      "3": {
+        "difficulty": "hard",
+        "lesson": "Coordination Compounds",
+        "type": "MCQ"
+      },
+      "4": {
+        "difficulty": "medium",
+        "lesson": "Redox Reactions and Electrochemistry",
+        "type": "MCQ"
+      },
+      "5": {
+        "difficulty": "medium",
+        "lesson": "Chemical Kinetics",
+        "type": "MCQ"
+      },
+      "6": {
+        "difficulty": "medium",
+        "lesson": "Organic Compounds Containing Halogens",
+        "type": "MCQ"
+      },
+      "7": {
+        "difficulty": "medium",
+        "lesson": "Redox Reactions and Electrochemistry",
+        "type": "MCQ"
+      },
+      "8": {
+        "difficulty": "medium",
+        "lesson": "Equilibrium",
+        "type": "MCQ"
+      },
+      "9": {
+        "difficulty": "hard",
+        "lesson": "Coordination Compounds",
+        "type": "MCQ"
+      },
+      "10": {
+        "difficulty": "medium",
+        "lesson": "Classification of Elements and Periodicity in Properties",
+        "type": "MCQ"
+      },
+      "11": {
+        "difficulty": "medium",
+        "lesson": "Biomolecules",
+        "type": "MCQ"
+      },
+      "12": {
+        "difficulty": "easy",
+        "lesson": "Atomic Structure",
+        "type": "MCQ"
+      },
+      "13": {
+        "difficulty": "medium",
+        "lesson": "Classification of Elements and Periodicity in Properties",
+        "type": "MCQ"
+      },
+      "14": {
+        "difficulty": "hard",
+        "lesson": "Organic Compounds Containing Oxygen",
+        "type": "MCQ"
+      },
+      "15": {
+        "difficulty": "medium",
+        "lesson": "Some Basic Principles of Organic Chemistry",
+        "type": "MCQ"
+      },
+      "16": {
+        "difficulty": "medium",
+        "lesson": "Hydrocarbons",
+        "type": "MCQ"
+      },
+      "17": {
+        "difficulty": "medium",
+        "lesson": "Some Basic Principles of Organic Chemistry",
+        "type": "MCQ"
+      },
+      "18": {
+        "difficulty": "hard",
+        "lesson": "Organic Compounds Containing Nitrogen",
+        "type": "MCQ"
+      },
+      "19": {
+        "difficulty": "medium",
+        "lesson": "Chemical Bonding and Molecular Structure",
+        "type": "MCQ"
+      },
+      "20": {
+        "difficulty": "easy",
+        "lesson": "p-Block Elements",
+        "type": "MCQ"
+      },
+      "21": {
+        "difficulty": "medium",
+        "lesson": "Hydrocarbons",
+        "type": "Numerical"
+      },
+      "22": {
+        "difficulty": "easy",
+        "lesson": "Solutions",
+        "type": "Numerical"
+      },
+      "23": {
+        "difficulty": "hard",
+        "lesson": "Chemical Thermodynamics",
+        "type": "Numerical"
+      },
+      "24": {
+        "difficulty": "medium",
+        "lesson": "d- and f-Block Elements",
+        "type": "Numerical"
+      },
+      "25": {
+        "difficulty": "easy",
+        "lesson": "Coordination Compounds",
+        "type": "Numerical"
+      }
+    }
+  }
+}

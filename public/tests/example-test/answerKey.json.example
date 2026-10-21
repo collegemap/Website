@@ -1,0 +1,90 @@
+{
+  "paperId": "example-test",
+  "paperTitle": "Example Test Paper",
+  "paperType": "JEE Main",
+  "duration": 10800,
+  "totalQuestions": 6,
+  "sections": [
+    {
+      "sectionId": "physics",
+      "sectionName": "Physics",
+      "questionCount": 2,
+      "questions": [
+        {
+          "questionNumber": 1,
+          "questionType": "single-correct",
+          "options": [
+            { "optionId": "A", "optionText": "Option A text" },
+            { "optionId": "B", "optionText": "Option B text" },
+            { "optionId": "C", "optionText": "Option C text" },
+            { "optionId": "D", "optionText": "Option D text" }
+          ],
+          "correctAnswer": ["A"],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 2,
+          "questionType": "integer",
+          "correctIntegerAnswer": 42,
+          "marks": 4,
+          "negativeMarks": 0
+        }
+      ]
+    },
+    {
+      "sectionId": "chemistry",
+      "sectionName": "Chemistry",
+      "questionCount": 2,
+      "questions": [
+        {
+          "questionNumber": 1,
+          "questionType": "multiple-correct",
+          "options": [
+            { "optionId": "A", "optionText": "Option A text" },
+            { "optionId": "B", "optionText": "Option B text" },
+            { "optionId": "C", "optionText": "Option C text" },
+            { "optionId": "D", "optionText": "Option D text" }
+          ],
+          "correctAnswer": ["A", "C"],
+          "marks": 4,
+          "negativeMarks": -2
+        },
+        {
+          "questionNumber": 2,
+          "questionType": "integer",
+          "correctIntegerAnswer": { "min": 40, "max": 45 },
+          "marks": 4,
+          "negativeMarks": 0
+        }
+      ]
+    },
+    {
+      "sectionId": "mathematics",
+      "sectionName": "Mathematics",
+      "questionCount": 2,
+      "questions": [
+        {
+          "questionNumber": 1,
+          "questionType": "single-correct",
+          "options": [
+            { "optionId": "A", "optionText": "Option A text" },
+            { "optionId": "B", "optionText": "Option B text" },
+            { "optionId": "C", "optionText": "Option C text" },
+            { "optionId": "D", "optionText": "Option D text" }
+          ],
+          "correctAnswer": ["B"],
+          "marks": 4,
+          "negativeMarks": -1
+        },
+        {
+          "questionNumber": 2,
+          "questionType": "integer",
+          "correctIntegerAnswer": 100,
+          "marks": 4,
+          "negativeMarks": 0
+        }
+      ]
+    }
+  ]
+}

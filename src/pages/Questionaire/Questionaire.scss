@@ -1,0 +1,196 @@
+@import "../../components/colortheme.scss";
+
+.questionnaire-container {
+    min-height: 100vh;
+    background: url("../../assets/questionsBackground.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+    padding: 2rem;
+    flex-direction: column;
+
+    .questionnaire-box {
+        background: var(--highlight);
+        border: 1px solid #00f0ff;
+        border-radius: 16px;
+        padding: 2rem;
+        width: 45%;
+        max-width: 800px;
+        backdrop-filter: blur(8px);
+    }
+
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+        color: #eee;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h1.ques {
+        color: var(--primary2);
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #ccc;
+        margin-bottom: 2rem;
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--dark-green-blue);
+    }
+
+    .input-group input,
+    select {
+        width: -webkit-fill-available;
+        padding: 0.75rem;
+        background: var(--background);
+        color: var(--dark-green-blue);
+        border: 1px solid #00f0ff;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .check-eligibility-container {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    button {
+        background-color: var(--primary2);
+        border: 2px solid #4edad6;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #4edad6;
+        color: #000;
+        box-shadow: 0 0 10px #4edad6;
+    }
+
+    .preferences-table {
+        margin-top: 2rem;
+    }
+
+    .preferences-table table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #fff;
+    }
+
+    .preferences-table td {
+        padding: 0.75rem;
+        text-align: center;
+        border: 1px solid #00f0ff;
+        color: var(--dark-green-blue);
+    }
+
+    .prefrence-icon-label {
+        display: flex;
+        gap: 10px;
+
+        .prefrence-icon {
+            color: var(--accent-light);
+            background: var(--primary2);
+            padding: 4px;
+            border-radius: 3px;
+            display: flex;
+        }
+    }
+
+    .yes-radio.selected,
+    .no-radio.selected {
+        color: var(--light-green-blue);
+        font-weight: bold;
+    }
+
+    .get-results-button {
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .error-message {
+        color: #ff6b6b;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .eligibility-message {
+        margin-top: 1rem;
+        font-style: italic;
+        color: #ccc;
+    }
+
+    .confirmation-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid #00f0ff;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+        max-width: 400px;
+        color: #fff;
+        box-shadow: 0 0 20px #00f0ff;
+    }
+
+    .popup-buttons button {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .questionnaire-container {
+        align-items: center;
+
+        .questionnaire-box {
+            width: 80% !important;
+        }
+    }
+
+    .preferences-table {
+        table {
+            max-width: 100%;
+            font-size: 0.85rem;
+
+            td {
+                padding: 0;
+            }
+        }
+
+        .prefrence-icon-label {
+            .prefrence-icon {
+                font-size: 1rem;
+            }
+
+            .prefrence-name {
+                font-size: 0.8rem;
+                text-align: left;
+            }
+        }
+    }
+}

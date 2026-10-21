@@ -1,0 +1,317 @@
+@import '../../components/colortheme.scss';
+
+.cpr-page {
+  min-height: 78vh;
+  padding: 1.25rem 1rem 2.5rem;
+  background: linear-gradient(165deg, #f0faf9 0%, $accent-light 45%, $background-alt 100%);
+}
+
+.cpr-shell {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cpr-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $dark-green-blue;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cpr-back:hover {
+  color: $primary;
+}
+
+.cpr-hero {
+  background: $background;
+  border-radius: 20px;
+  padding: 1.5rem 1.35rem 1.35rem;
+  box-shadow: 0 4px 24px rgba($primary, 0.08), 0 1px 0 rgba($primary, 0.06) inset;
+  border: 1px solid rgba($primary3, 0.35);
+  margin-bottom: 1rem;
+}
+
+.cpr-hero-rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cpr-hero-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $gray;
+  margin-bottom: 0.25rem;
+}
+
+.cpr-hero-num {
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: $dark-green-blue;
+  letter-spacing: -0.02em;
+}
+
+.cpr-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-bottom: 0.65rem;
+}
+
+.cpr-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba($primary, 0.1);
+  color: $dark-green-blue;
+  border: 1px solid rgba($primary3, 0.4);
+}
+
+.cpr-hero-sub {
+  margin: 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: $gray;
+}
+
+.cpr-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 520px) {
+  .cpr-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cpr-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.5rem;
+  border-radius: 14px;
+  border: 1.5px solid rgba($primary3, 0.35);
+  background: $background;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.cpr-stat:hover {
+  border-color: rgba($primary, 0.5);
+}
+
+.cpr-stat.is-active {
+  border-color: $primary;
+  background: rgba($primary, 0.08);
+  box-shadow: 0 2px 12px rgba($primary, 0.12);
+}
+
+.cpr-stat-n {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: $dark-green-blue;
+  line-height: 1.2;
+}
+
+.cpr-stat-l {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $gray;
+  margin-top: 0.15rem;
+}
+
+.cpr-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cpr-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem 1rem;
+  align-items: start;
+  background: $background;
+  border-radius: 16px;
+  padding: 1rem 1rem 1rem 0;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba($primary3, 0.25);
+  overflow: hidden;
+}
+
+@media (max-width: 540px) {
+  .cpr-card {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .cpr-card-type {
+    width: fit-content;
+  }
+}
+
+.cpr-card-type {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 0.55rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  border-radius: 0 12px 12px 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+}
+
+.cpr-type--iit {
+  background: linear-gradient(180deg, #0d6b66 0%, $primary 100%);
+  color: #fff;
+}
+
+.cpr-type--nit {
+  background: linear-gradient(180deg, #005a8f 0%, #138496 100%);
+  color: #fff;
+}
+
+.cpr-type--iiit {
+  background: linear-gradient(180deg, #0a5c58 0%, $primary 100%);
+  color: #fff;
+}
+
+.cpr-card-body {
+  min-width: 0;
+  padding-right: 0.25rem;
+}
+
+.cpr-card-inst {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $text-dark;
+  line-height: 1.35;
+}
+
+.cpr-card-branch {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  color: $davys-gray;
+  line-height: 1.4;
+}
+
+.cpr-card-ranks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cpr-card-rk {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $gray;
+  margin-bottom: 0.15rem;
+}
+
+.cpr-card-rv {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $dark-green-blue;
+  font-variant-numeric: tabular-nums;
+}
+
+.cpr-card-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.55rem;
+  border-radius: 8px;
+  background: rgba($gray, 0.12);
+  color: $davys-gray;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.cpr-card-badge--most-likely {
+  background: rgba(16, 195, 188, 0.18);
+  color: $dark-green-blue;
+}
+
+.cpr-card-badge--very-likely {
+  background: rgba(139, 195, 74, 0.2);
+  color: #4b830d;
+}
+
+.cpr-card-badge--likely {
+  background: rgba(255, 152, 0, 0.18);
+  color: #c76a00;
+}
+
+.cpr-card-badge--less-likely {
+  background: rgba(255, 77, 77, 0.18);
+  color: #c00000;
+}
+
+.cpr-none {
+  text-align: center;
+  color: $gray;
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+}
+
+.cpr-empty {
+  max-width: 360px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: $background;
+  border-radius: 16px;
+  border: 1px solid rgba($primary3, 0.3);
+}
+
+.cpr-empty p {
+  margin: 0 0 1rem;
+  color: $gray;
+}
+
+.cpr-btn-primary {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: $primary;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cpr-btn-primary:hover {
+  filter: brightness(1.05);
+}

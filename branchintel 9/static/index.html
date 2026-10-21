@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Branch Comparison — BranchIntel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div id="loading" class="loading-overlay" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Comparing branches… this can take up to a minute.</p>
+    </div>
+
+    <div class="page">
+      <div class="card">
+        <h1>Branch Comparison</h1>
+        <form id="compare-form" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="iit1">Select IIT 1</label>
+              <select id="iit1" name="iit1" required>
+                <option value="">Choose IIT</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="branch1">Select Branch 1</label>
+              <select id="branch1" name="branch1" required>
+                <option value="">Choose Branch</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="iit2">Select IIT 2</label>
+              <select id="iit2" name="iit2" required>
+                <option value="">Choose IIT</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="branch2">Select Branch 2</label>
+              <select id="branch2" name="branch2" required>
+                <option value="">Choose Branch</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-top: 1rem">
+            <label for="user_query">Your question (optional)</label>
+            <textarea
+              id="user_query"
+              name="user_query"
+              placeholder="e.g. Which is better for a very good job?"
+            ></textarea>
+          </div>
+          <p id="form-error" class="error-msg" hidden></p>
+          <div class="actions">
+            <button type="submit" class="btn" id="submit-btn">Compare branches</button>
+          </div>
+          <p class="hint">Results open on the next page after you compare.</p>
+        </form>
+      </div>
+    </div>
+    <script src="/static/compare.js"></script>
+  </body>
+</html>

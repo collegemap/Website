@@ -1,0 +1,2313 @@
+// .team {
+//     background-color: #e5f6ff;
+//     text-align: center;
+//     padding: 3rem 2rem;
+
+//     h2 {
+//         font-size: 2rem;
+//         margin-bottom: 0.5rem;
+//     }
+
+//     p {
+//         margin-bottom: 2rem;
+//         color: #333;
+//     }
+
+//     .team-grid {
+//         display: grid;
+//         grid-template-columns: repeat(4, 1fr);
+//         gap: 1.5rem;
+//         justify-items: center;
+//         padding: 0 200px;
+//     }
+
+//     .member {
+//         text-align: center;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: flex-start;
+//         height: auto;
+
+//         .photo {
+//             width: 105px;
+//             height: 105px;
+//             border-radius: 50%;
+//             overflow: hidden;
+//             margin-bottom: 1rem;
+//             flex-shrink: 0;
+//             border: 3px solid var(--light-green-blue, #10c3bc);
+//             box-shadow: 0 4px 10px rgba(16, 195, 188, 0.2);
+
+//             img {
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//                 object-position: center;
+//                 display: block;
+//             }
+//         }
+
+//         .member a {
+//             margin-top: 0.5rem;
+//             display: inline-block;
+//             color: #0e76a8;
+//             font-size: 1.5rem;
+//             /* Increased size of the icon */
+//         }
+
+//         .member a i {
+//             font-size: 1.5rem;
+//             /* Ensure the LinkedIn icon is big enough */
+//             color: #0e76a8;
+//             /* LinkedIn blue color */
+//             transition: color 0.3s ease;
+//         }
+
+//         .member a i:hover {
+//             color: #0077b5;
+//             /* Change to a slightly darker blue when hovered */
+//         }
+
+
+//         h4 {
+//             margin: 0.5rem 0;
+//             font-size: 1.15rem;
+//             font-weight: 700;
+//             color: black;
+//         }
+
+//         h4,
+//         .role,
+//         .member-itt {
+//             margin: 0;
+//         }
+
+//         .role {
+//             font-size: 1rem;
+//             font-weight: 500;
+//             color: #333;
+//         }
+
+//         .member-itt {
+//             color: var(--light-green-blue);
+//             margin-top: 4px;
+//             font-size: 0.95rem;
+//             font-weight: 600;
+//         }
+
+//         a {
+//             margin-top: 0.5rem;
+//             display: inline-block;
+//             color: #0e76a8;
+
+//             i {
+//                 font-size: 1.5rem;
+//             }
+//         }
+//     }
+
+
+//     @media (max-width: 768px) {
+//         .team-grid {
+//             grid-template-columns: repeat(2, 1fr) !important;
+//             gap: 1rem;
+//             padding: 0 !important;
+//         }
+
+//         .member {
+//             min-height: 200px !important;
+//             height: 200px !important;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: space-between;
+//             padding: 1rem 0;
+
+//             .photo {
+//                 width: 80px;
+//                 height: 80px;
+//                 flex-shrink: 0;
+//             }
+
+//             h4 {
+//                 font-size: 1.05rem;
+//             }
+//             .role {
+//                 color: #333;
+//             }
+//             .role,
+//             .member-itt {
+//                 font-size: 0.95rem;
+//                 text-align: center;
+//                 padding: 0 0.5rem;
+//             }
+
+//             a {
+//                 margin-top: auto;
+
+//                 i {
+//                     font-size: 1.2rem;
+//                 }
+//             }
+//         }
+//     }
+
+//     @media (max-width: 1000px) and (min-width: 769px) {
+//         .team-grid {
+//             padding: 0 !important;
+//         }
+//     }
+// }
+
+// .team {
+//     background-color: #e5f6ff;
+//     text-align: center;
+//     padding: 3rem 2rem;
+
+//     h2 {
+//         font-size: 2rem;
+//         margin-bottom: 0.5rem;
+//     }
+
+//     p {
+//         margin-bottom: 3rem;
+//         color: #333;
+//     }
+
+//     .team-grid {
+//         display: grid;
+//         grid-template-columns: repeat(4, 1fr);
+//         gap: 2rem 1.5rem;
+//         justify-items: center;
+//         padding: 0 200px;
+//     }
+
+//     .member {
+//         text-align: center;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: flex-start;
+//         width: 100%;
+//         padding-top: 55px; /* half of photo height to allow overflow */
+//         position: relative;
+
+//         .photo {
+//             width: 110px;
+//             height: 110px;
+//             border-radius: 50%;
+//             overflow: hidden;
+//             flex-shrink: 0;
+//             border: 3px solid #10c3bc;
+//             position: absolute;
+//             top: 0;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             z-index: 1;
+//             background: white;
+
+//             img {
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//                 object-position: center;
+//                 display: block;
+//             }
+//         }
+
+//         /* The card body sits below the overlapping photo */
+//         &::after {
+//             content: '';
+//             display: block;
+//         }
+
+//         .card-body {
+//             background: white;
+//             border-radius: 16px;
+//             border: 1.5px solid #c8eef8;
+//             padding: 65px 1rem 1.25rem;
+//             width: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 2px;
+//             min-height: 160px;
+//         }
+
+//         h4 {
+//             margin: 0.3rem 0 0;
+//             font-size: 1.1rem;
+//             font-weight: 700;
+//             color: #111;
+//         }
+
+//         .role {
+//             font-size: 0.9rem;
+//             font-weight: 600;
+//             color: #333;
+//             margin: 0;
+//         }
+
+//         .member-itt {
+//             color: #10c3bc;
+//             margin: 3px 0 0;
+//             font-size: 0.85rem;
+//             font-weight: 600;
+//         }
+
+//         a {
+//             margin-top: 0.6rem;
+//             display: inline-block;
+//             color: #0e76a8;
+//         }
+//     }
+
+//     @media (max-width: 768px) {
+//         .team-grid {
+//             grid-template-columns: repeat(2, 1fr) !important;
+//             gap: 2rem 1rem;
+//             padding: 0 !important;
+//         }
+
+//         .member {
+//             .photo {
+//                 width: 80px;
+//                 height: 80px;
+//             }
+
+//             padding-top: 40px;
+
+//             .card-body {
+//                 padding-top: 50px;
+//                 min-height: 140px;
+//             }
+
+//             h4 {
+//                 font-size: 0.95rem;
+//             }
+
+//             .role,
+//             .member-itt {
+//                 font-size: 0.8rem;
+//             }
+//         }
+//     }
+
+//     @media (max-width: 1000px) and (min-width: 769px) {
+//         .team-grid {
+//             padding: 0 !important;
+//         }
+//     }
+// }
+// .team {
+//     background-color: #e5f6ff;
+//     text-align: center;
+//     padding: 3rem 2rem;
+
+//     h2 {
+//         font-size: 2rem;
+//         margin-bottom: 0.5rem;
+//     }
+
+//     p {
+//         margin-bottom: 3rem;
+//         color: #333;
+//     }
+
+//     .team-grid {
+//         position: relative;
+//         z-index: 1;
+//         display: grid;
+//         grid-template-columns: repeat(4, 1fr);
+//         gap: 2rem 1.5rem;
+//         justify-items: stretch; /* stretch so all cells fill equally */
+//         align-items: start;
+//         padding: 0 200px;
+//     }
+
+//     .member {
+//         text-align: center;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: flex-start;
+//         width: 100%;
+//         padding-top: 55px;
+//         position: relative;
+//         height: 100%; /* fill grid cell */
+
+//         .photo {
+//             width: 110px;
+//             height: 110px;
+//             border-radius: 50%;
+//             overflow: hidden;
+//             flex-shrink: 0;
+//             border: 3px solid #10c3bc;
+//             position: absolute;
+//             top: 0;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             z-index: 1;
+//             background: white;
+
+//             img {
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//                 object-position: center;
+//                 display: block;
+//             }
+//         }
+
+//         .card-body {
+//             /* Glassmorphism */
+//             background: rgba(255, 255, 255, 0.45);
+//             backdrop-filter: blur(12px);
+//             -webkit-backdrop-filter: blur(12px);
+//             border-radius: 16px;
+//             border: 1.5px solid rgba(255, 255, 255, 0.75);
+//             box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+
+//             padding: 65px 1rem 1.5rem;
+//             width: 100%;
+//             flex: 1; /* makes all card bodies stretch to same height in the row */
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 2px;
+//         }
+
+//         h4 {
+//             margin: 0.3rem 0 0;
+//             font-size: 1.1rem;
+//             font-weight: 700;
+//             color: #111;
+//         }
+
+//         .role {
+//             font-size: 0.9rem;
+//             font-weight: 600;
+//             color: #333;
+//             margin: 0;
+//         }
+
+//         .member-itt {
+//             color: #10c3bc;
+//             margin: 3px 0 0;
+//             font-size: 0.85rem;
+//             font-weight: 600;
+//         }
+
+//         a {
+//             margin-top: auto; /* pushes LinkedIn icon to bottom of card */
+//             padding-top: 0.75rem;
+//             display: inline-block;
+//             color: #0e76a8;
+//         }
+//     }
+
+//     @media (max-width: 768px) {
+//         .team-grid {
+//             grid-template-columns: repeat(2, 1fr) !important;
+//             gap: 2rem 1rem;
+//             padding: 0 !important;
+//         }
+
+//         .member {
+//             padding-top: 40px;
+
+//             .photo {
+//                 width: 80px;
+//                 height: 80px;
+//             }
+
+//             .card-body {
+//                 padding-top: 50px;
+//             }
+
+//             h4 {
+//                 font-size: 0.95rem;
+//             }
+
+//             .role,
+//             .member-itt {
+//                 font-size: 0.8rem;
+//             }
+//         }
+//     }
+
+//     @media (max-width: 1000px) and (min-width: 769px) {
+//         .team-grid {
+//             padding: 0 !important;
+//         }
+//     }
+// }
+
+// .team {
+//     background-color: #e5f6ff;
+//     text-align: center;
+//     padding: 3rem 2rem;
+//     position: relative;
+//     overflow: hidden;
+
+//     /* Dot grid in all 4 corners */
+//     &::before,
+//     &::after {
+//         content: '';
+//         position: absolute;
+//         width: 180px;
+//         height: 180px;
+//         background-image: radial-gradient(circle, #10c3bc 1.5px, transparent 1.5px);
+//         background-size: 18px 18px;
+//         opacity: 0.35;
+//         pointer-events: none;
+//     }
+
+//     &::before {
+//         top: 20px;
+//         left: 20px;
+//     }
+
+//     &::after {
+//         bottom: 20px;
+//         right: 20px;
+//     }
+
+//     /* We need 2 more pseudo-elements for the other 2 corners,
+//        so we use wrapper spans or place them on child elements */
+//     .dot-tr,
+//     .dot-bl {
+//         position: absolute;
+//         width: 180px;
+//         height: 180px;
+//         background-image: radial-gradient(circle, #10c3bc 1.5px, transparent 1.5px);
+//         background-size: 18px 18px;
+//         opacity: 0.35;
+//         pointer-events: none;
+//     }
+
+//     .dot-tr {
+//         top: 20px;
+//         right: 20px;
+//     }
+
+//     .dot-bl {
+//         bottom: 20px;
+//         left: 20px;
+//     }
+
+
+
+// //     &::before,
+// // &::after {
+// //     content: '';
+// //     position: absolute;
+// //     width: 220px;
+// //     height: 220px;
+// //     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+// //     background-size: 20px 20px;
+// //     opacity: 0.55;  /* was 0.35 */
+// //     pointer-events: none;
+// // }
+
+// // .dot-tr,
+// // .dot-bl {
+// //     position: absolute;
+// //     width: 220px;
+// //     height: 220px;
+// //     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+// //     background-size: 20px 20px;
+// //     opacity: 0.55;  /* was 0.35 */
+// //     pointer-events: none;
+// // }
+// // }
+
+// &::before,
+// &::after {
+//     content: '';
+//     position: absolute;
+//     width: 240px;
+//     height: 240px;
+//     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+//     background-size: 20px 20px;
+//     pointer-events: none;
+
+//     /* This mask creates the fade — dense inner corner, fades outward */
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at var(--corner-x) var(--corner-y), black 20%, transparent 75%);
+//     mask-image: radial-gradient(ellipse 100% 100% at var(--corner-x) var(--corner-y), black 20%, transparent 75%);
+//     opacity: 0.7;
+// }
+
+// &::before {
+//     top: 16px;
+//     left: 16px;
+//     --corner-x: 100%;
+//     --corner-y: 100%; /* fade from bottom-right (inner) outward */
+// }
+
+// &::after {
+//     bottom: 16px;
+//     right: 16px;
+//     --corner-x: 0%;
+//     --corner-y: 0%; /* fade from top-left (inner) outward */
+// }
+
+// .dot-tr,
+// .dot-bl {
+//     position: absolute;
+//     width: 240px;
+//     height: 240px;
+//     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+//     background-size: 20px 20px;
+//     pointer-events: none;
+//     opacity: 0.7;
+// }
+
+// .dot-tr {
+//     top: 16px;
+//     right: 16px;
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 75%);
+//     mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 75%);
+// }
+
+// .dot-bl {
+//     bottom: 16px;
+//     left: 16px;
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 75%);
+//     mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 75%);
+// }
+// }
+
+// &::before,
+// &::after {
+//     content: '';
+//     position: absolute;
+//     width: 280px;
+//     height: 280px;
+//     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+//     background-size: 20px 20px;
+//     pointer-events: none;
+//     z-index: 0; /* behind the cards */
+// }
+
+// &::before {
+//     top: 0;
+//     left: 0;
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+//     mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+//     opacity: 0.7;
+// }
+
+// &::after {
+//     bottom: 0;
+//     right: 0;
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+//     mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+//     opacity: 0.7;
+// }
+
+// .dot-tr {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 280px;
+//     height: 280px;
+//     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+//     background-size: 20px 20px;
+//     pointer-events: none;
+//     z-index: 0;
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+//     mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+//     opacity: 0.7;
+// }
+
+// .dot-bl {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 280px;
+//     height: 280px;
+//     background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+//     background-size: 20px 20px;
+//     pointer-events: none;
+//     z-index: 0;
+//     -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+//     mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+//     opacity: 0.7;
+// }
+
+
+
+
+
+
+.team {
+    background-color: #e5f6ff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    // Dot corners — top-left and bottom-right via pseudo-elements
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+    }
+
+    // Dot corners — top-right and bottom-left via span elements
+    .dot-tr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-bl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+    }
+
+    h2 {
+        position: relative;
+        z-index: 1;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 3rem;
+        color: #333;
+    }
+
+    .team-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1.5rem;
+        justify-items: stretch;
+        align-items: start;
+        padding: 0 200px;
+    }
+
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 55px;
+        position: relative;
+        height: 100%;
+
+        .photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #10c3bc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: white;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        .card-body {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+            padding: 65px 1rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        h4 {
+            margin: 0.3rem 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .member-itt {
+            color: #10c3bc;
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        a {
+            margin-top: auto;
+            padding-top: 0.75rem;
+            display: inline-block;
+            color: #0e76a8;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2rem 1rem;
+            padding: 0 !important;
+        }
+
+        .member {
+            padding-top: 40px;
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-body {
+                padding-top: 50px;
+            }
+
+            h4 {
+                font-size: 0.95rem;
+            }
+
+            .role,
+            .member-itt {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) and (min-width: 769px) {
+        .team-grid {
+            padding: 0 !important;
+        }
+    }
+}
+
+.team {
+    background-color: #e5f6ff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    // Blurred blob circles in opposite corners
+    .blob-tl {
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(16, 195, 188, 0.25) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(30px);
+    }
+
+    .blob-br {
+        position: absolute;
+        bottom: -80px;
+        right: -80px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(16, 195, 188, 0.25) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(30px);
+    }
+
+    // Dot corners — top-left and bottom-right
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+    }
+
+    // Dot corners — top-right and bottom-left
+    .dot-tr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-bl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+    }
+
+    // Heading section
+    .team-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0.5rem;
+
+        .team-badge {
+            display: inline-block;
+            background: rgba(16, 195, 188, 0.12);
+            color: #0aa19b;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(16, 195, 188, 0.3);
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0;
+            position: relative;
+            display: inline-block;
+
+            // Teal gradient underline
+            &::after {
+                content: '';
+                display: block;
+                margin: 0.3rem auto 0;
+                width: 60%;
+                height: 3px;
+                border-radius: 999px;
+                background: linear-gradient(90deg, transparent, #10c3bc, transparent);
+            }
+        }
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 3rem;
+        color: #555;
+    }
+
+    .team-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1.5rem;
+        justify-items: stretch;
+        align-items: start;
+        padding: 0 200px;
+    }
+
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 55px;
+        position: relative;
+        height: 100%;
+
+        .photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #10c3bc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: white;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        .card-body {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+            padding: 65px 1rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        h4 {
+            margin: 0.3rem 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .member-itt {
+            color: #10c3bc;
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        a {
+            margin-top: auto;
+            padding-top: 0.75rem;
+            display: inline-block;
+            color: #0e76a8;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blob-tl,
+        .blob-br {
+            width: 180px;
+            height: 180px;
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2rem 1rem;
+            padding: 0 !important;
+        }
+
+        .member {
+            padding-top: 40px;
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-body {
+                padding-top: 50px;
+            }
+
+            h4 { font-size: 0.95rem; }
+
+            .role,
+            .member-itt { font-size: 0.8rem; }
+        }
+    }
+
+    @media (max-width: 1000px) and (min-width: 769px) {
+        .team-grid {
+            padding: 0 !important;
+        }
+    }
+}
+
+.team {
+    background-color: #e5f6ff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    // Blobs — must be position:absolute children, filter:blur needs explicit size
+    .blob-tl {
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(16, 195, 188, 0.3);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(60px);
+    }
+
+    .blob-br {
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(16, 195, 188, 0.3);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(60px);
+    }
+
+    // Dot corners
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+    }
+
+    .dot-tr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-bl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+    }
+
+    // Heading block
+    .team-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2.5rem;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+
+            // Gradient underline
+            &::after {
+                content: '';
+                display: block;
+                margin: 0.3rem auto 0;
+                width: 50%;
+                height: 3px;
+                border-radius: 999px;
+                background: linear-gradient(90deg, transparent, #10c3bc, transparent);
+            }
+        }
+
+        // Badge-style subtitle
+        .team-subtitle {
+            display: inline-block;
+            background: rgba(16, 195, 188, 0.1);
+            color: #0aa19b;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.35rem 1.25rem;
+            border-radius: 999px;
+            border: 1px solid rgba(16, 195, 188, 0.3);
+            margin: 0;
+        }
+    }
+
+    .team-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1.5rem;
+        justify-items: stretch;
+        align-items: start;
+        padding: 0 200px;
+    }
+
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 55px;
+        position: relative;
+        height: 100%;
+
+        .photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #10c3bc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: white;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        .card-body {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+            padding: 65px 1rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        h4 {
+            margin: 0.3rem 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .member-itt {
+            color: #10c3bc;
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        a {
+            margin-top: auto;
+            padding-top: 0.75rem;
+            display: inline-block;
+            color: #0e76a8;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blob-tl,
+        .blob-br {
+            width: 200px;
+            height: 200px;
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2rem 1rem;
+            padding: 0 !important;
+        }
+
+        .member {
+            padding-top: 40px;
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-body {
+                padding-top: 50px;
+            }
+
+            h4 { font-size: 0.95rem; }
+
+            .role,
+            .member-itt { font-size: 0.8rem; }
+        }
+    }
+
+    @media (max-width: 1000px) and (min-width: 769px) {
+        .team-grid {
+            padding: 0 !important;
+        }
+    }
+}
+
+.team {
+    background-color: #e5f6ff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    // Blurred blob circles in opposite corners
+    .blob-tl {
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(16, 195, 188, 0.3);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(60px);
+    }
+
+    .blob-br {
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(16, 195, 188, 0.3);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(60px);
+    }
+
+    // Decorative hollow circles
+    .circle-tl {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid rgba(16, 195, 188, 0.25);
+        pointer-events: none;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid rgba(16, 195, 188, 0.15);
+        }
+    }
+
+    .circle-br {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid rgba(16, 195, 188, 0.25);
+        pointer-events: none;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid rgba(16, 195, 188, 0.15);
+        }
+    }
+
+    .circle-tr {
+        position: absolute;
+        top: 60px;
+        right: 260px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid rgba(16, 195, 188, 0.2);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .circle-bl {
+        position: absolute;
+        bottom: 60px;
+        left: 260px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid rgba(16, 195, 188, 0.2);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    // Dot corners — top-left and bottom-right
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+    }
+
+    .dot-tr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-bl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+    }
+
+    // Heading block
+    .team-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                display: block;
+                margin: 0.3rem auto 0;
+                width: 50%;
+                height: 3px;
+                border-radius: 999px;
+                background: linear-gradient(90deg, transparent, #10c3bc, transparent);
+            }
+        }
+
+        .team-subtitle {
+            display: inline-block;
+            background: rgba(16, 195, 188, 0.1);
+            color: #0aa19b;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.35rem 1.25rem;
+            border-radius: 999px;
+            border: 1px solid rgba(16, 195, 188, 0.3);
+            margin: 0;
+        }
+    }
+
+    .team-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1.5rem;
+        justify-items: stretch;
+        align-items: start;
+        padding: 0 200px;
+    }
+
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 55px;
+        position: relative;
+        height: 100%;
+
+        .photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #10c3bc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: white;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        .card-body {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+            padding: 65px 1rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        h4 {
+            margin: 0.3rem 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .member-itt {
+            color: #10c3bc;
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        a {
+            margin-top: auto;
+            padding-top: 0.75rem;
+            display: inline-block;
+            color: #0e76a8;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blob-tl,
+        .blob-br {
+            width: 200px;
+            height: 200px;
+        }
+
+        .circle-tl,
+        .circle-br {
+            width: 80px;
+            height: 80px;
+
+            &::after {
+                top: 12px;
+                left: 12px;
+                width: 44px;
+                height: 44px;
+            }
+        }
+
+        .circle-tr,
+        .circle-bl {
+            display: none;
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2rem 1rem;
+            padding: 0 !important;
+        }
+
+        .member {
+            padding-top: 40px;
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-body {
+                padding-top: 50px;
+            }
+
+            h4 { font-size: 0.95rem; }
+
+            .role,
+            .member-itt { font-size: 0.8rem; }
+        }
+    }
+
+    @media (max-width: 1000px) and (min-width: 769px) {
+        .team-grid {
+            padding: 0 !important;
+        }
+    }
+}
+
+.team {
+    background-color: #e5f6ff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    // Dot corners — top-left and bottom-right
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+    }
+
+    .dot-tr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-bl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+    }
+
+    // Heading block
+    .team-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                display: block;
+                margin: 0.3rem auto 0;
+                width: 50%;
+                height: 3px;
+                border-radius: 999px;
+                background: linear-gradient(90deg, transparent, #10c3bc, transparent);
+            }
+        }
+
+        .team-subtitle {
+            display: inline-block;
+            background: rgba(16, 195, 188, 0.1);
+            color: #0aa19b;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.35rem 1.25rem;
+            border-radius: 999px;
+            border: 1px solid rgba(16, 195, 188, 0.3);
+            margin: 0;
+        }
+    }
+
+    .team-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1.5rem;
+        justify-items: stretch;
+        align-items: start;
+        padding: 0 200px;
+    }
+
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 55px;
+        position: relative;
+        height: 100%;
+
+        // Hover pop effect
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-8px);
+
+            .card-body {
+                box-shadow: 0 12px 32px rgba(16, 195, 188, 0.18);
+                border-color: rgba(16, 195, 188, 0.4);
+            }
+
+            .photo {
+                border-color: #0aa19b;
+                box-shadow: 0 0 0 4px rgba(16, 195, 188, 0.15);
+            }
+        }
+
+        .photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #10c3bc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: white;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        .card-body {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+            padding: 65px 1rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        h4 {
+            margin: 0.3rem 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .member-itt {
+            color: #10c3bc;
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        a {
+            margin-top: auto;
+            padding-top: 0.75rem;
+            display: inline-block;
+            color: #0e76a8;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2rem 1rem;
+            padding: 0 !important;
+        }
+
+        // Disable hover pop on touch devices
+        .member {
+            &:hover {
+                transform: none;
+            }
+        }
+
+        .member {
+            padding-top: 40px;
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-body {
+                padding-top: 50px;
+            }
+
+            h4 { font-size: 0.95rem; }
+
+            .role,
+            .member-itt { font-size: 0.8rem; }
+        }
+    }
+
+    @media (max-width: 1000px) and (min-width: 769px) {
+        .team-grid {
+            padding: 0 !important;
+        }
+    }
+}
+
+// Add this breakpoint in your .team styles
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2.5rem 2rem;
+        padding: 0 2rem !important;
+    }
+
+    .member {
+        padding-top: 55px;
+
+        .photo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .card-body {
+            padding-top: 60px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        h4 { font-size: 1rem; }
+
+        .role,
+        .member-itt { font-size: 0.85rem; }
+    }
+}
+
+// Also update the existing 1000px breakpoint to be covered by above
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem 1rem;
+        padding: 0 1rem !important;
+    }
+
+    .member {
+        &:hover {
+            transform: none;
+        }
+
+        padding-top: 40px;
+
+        .photo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .card-body {
+            padding-top: 50px;
+        }
+
+        h4 { font-size: 0.95rem; }
+
+        .role,
+        .member-itt { font-size: 0.8rem; }
+    }
+}
+
+
+.team {
+    background-color: #e5f6ff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    // Smooth fade from previous section — change #fdf8f3 to your actual previous section's bg color
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to bottom, #fdf8f3, transparent);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    // All 4 dot corners via spans
+    .dot-tl,
+    .dot-tr,
+    .dot-bl,
+    .dot-br {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background-image: radial-gradient(circle, #10c3bc 2px, transparent 2px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    .dot-tl {
+        top: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-tr {
+        top: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 0%, black 20%, transparent 70%);
+    }
+
+    .dot-bl {
+        bottom: 0;
+        left: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 0% 100%, black 20%, transparent 70%);
+    }
+
+    .dot-br {
+        bottom: 0;
+        right: 0;
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+        mask-image: radial-gradient(ellipse 100% 100% at 100% 100%, black 20%, transparent 70%);
+    }
+
+    // Heading block
+    .team-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                display: block;
+                margin: 0.3rem auto 0;
+                width: 50%;
+                height: 3px;
+                border-radius: 999px;
+                background: linear-gradient(90deg, transparent, #10c3bc, transparent);
+            }
+        }
+
+        .team-subtitle {
+            display: inline-block;
+            background: rgba(16, 195, 188, 0.1);
+            color: #0aa19b;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.35rem 1.25rem;
+            border-radius: 999px;
+            border: 1px solid rgba(16, 195, 188, 0.3);
+            margin: 0;
+        }
+    }
+
+    // Cards grid
+    .team-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem 1.5rem;
+        justify-items: stretch;
+        align-items: start;
+        padding: 0 200px;
+    }
+
+    // Individual member card
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 55px;
+        position: relative;
+        height: 100%;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-8px);
+
+            .card-body {
+                box-shadow: 0 12px 32px rgba(16, 195, 188, 0.18);
+                border-color: rgba(16, 195, 188, 0.4);
+            }
+
+            .photo {
+                border-color: #0aa19b;
+                box-shadow: 0 0 0 4px rgba(16, 195, 188, 0.15);
+            }
+        }
+
+        .photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #10c3bc;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: white;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        .card-body {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 20px rgba(16, 195, 188, 0.08);
+            padding: 65px 1rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        h4 {
+            margin: 0.3rem 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .member-itt {
+            color: #10c3bc;
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        a {
+            margin-top: auto;
+            padding-top: 0.75rem;
+            display: inline-block;
+            color: #0e76a8;
+        }
+    }
+
+    // iPad / tablet
+    @media (max-width: 1024px) and (min-width: 769px) {
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2.5rem 2rem;
+            padding: 0 2rem !important;
+        }
+
+        .member {
+            padding-top: 55px;
+
+            .photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .card-body {
+                padding-top: 60px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            h4 { font-size: 1rem; }
+
+            .role,
+            .member-itt { font-size: 0.85rem; }
+        }
+    }
+
+    // Mobile
+    @media (max-width: 768px) {
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 2rem 1rem;
+            padding: 0 1rem !important;
+        }
+
+        .member {
+            &:hover {
+                transform: none;
+            }
+
+            padding-top: 40px;
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-body {
+                padding-top: 50px;
+            }
+
+            h4 { font-size: 0.95rem; }
+
+            .role,
+            .member-itt { font-size: 0.8rem; }
+        }
+    }
+}

@@ -1,0 +1,3064 @@
+{
+  "institute": "IIT Indore",
+  "program_type": "B.Tech",
+  "NIRF Engineering Rankings": "12 (As per 2025)",
+  "logo_image": "Indore.jpg",
+  "hero_image": "IITI.jpg",
+  "courses_offered": [
+    "Chemical Engineering",
+    "Civil Engineering",
+    "Computer Science and Engineering",
+    "Electrical Engineering",
+    "Engineering Physics",
+    "Mathematics and Computing",
+    "Mechanical Engineering",
+    "Metallurgical Engineering and Materials Science",
+    "Space Science and Engineering"
+  ],
+  "placements": [
+    {
+      "year": "2024-25",
+      "status": "Available",
+      "programs": [
+        {
+          "branch": "Civil Engineering",
+          "participated": 37,
+          "placed": 22,
+          "placement_rate": 59.46,
+          "avg_package_lpa": 18.46,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Computer Science and Engineering",
+          "participated": 82,
+          "placed": 79,
+          "placement_rate": 96.34,
+          "avg_package_lpa": 47.36,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Electrical Engineering",
+          "participated": 80,
+          "placed": 74,
+          "placement_rate": 92.5,
+          "avg_package_lpa": 24.83,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Engineering Physics",
+          "participated": null,
+          "placed": null,
+          "placement_rate": null,
+          "avg_package_lpa": null,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Mathematics and Computing",
+          "participated": null,
+          "placed": null,
+          "placement_rate": null,
+          "avg_package_lpa": null,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Mechanical Engineering",
+          "participated": 78,
+          "placed": 67,
+          "placement_rate": 85.9,
+          "avg_package_lpa": 14.96,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Metallurgical Engineering and Materials Science",
+          "participated": 40,
+          "placed": 34,
+          "placement_rate": 85.0,
+          "avg_package_lpa": 13.94,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Space Science and Engineering",
+          "participated": null,
+          "placed": null,
+          "placement_rate": null,
+          "avg_package_lpa": null,
+          "highest_package_lpa": null
+        }
+      ]
+    },
+    {
+      "year": "2023-24",
+      "status": "Available",
+      "programs": [
+        {
+          "branch": "Civil Engineering",
+          "participated": 40,
+          "placed": 20,
+          "placement_rate": 50.0,
+          "avg_package_lpa": 12.4,
+          "highest_package_lpa": 19.65
+        },
+        {
+          "branch": "Computer Science and Engineering",
+          "participated": 83,
+          "placed": 80,
+          "placement_rate": 96.39,
+          "avg_package_lpa": 33.67,
+          "highest_package_lpa": 64.1
+        },
+        {
+          "branch": "Electrical Engineering",
+          "participated": 65,
+          "placed": 56,
+          "placement_rate": 86.15,
+          "avg_package_lpa": 26.14,
+          "highest_package_lpa": 64.1
+        },
+        {
+          "branch": "Engineering Physics",
+          "participated": null,
+          "placed": null,
+          "placement_rate": null,
+          "avg_package_lpa": null,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Mathematics and Computing",
+          "participated": null,
+          "placed": null,
+          "placement_rate": null,
+          "avg_package_lpa": null,
+          "highest_package_lpa": null
+        },
+        {
+          "branch": "Mechanical Engineering",
+          "participated": 68,
+          "placed": 54,
+          "placement_rate": 79.41,
+          "avg_package_lpa": 16.51,
+          "highest_package_lpa": 41.42
+        },
+        {
+          "branch": "Metallurgical Engineering and Materials Science",
+          "participated": 36,
+          "placed": 26,
+          "placement_rate": 72.22,
+          "avg_package_lpa": 15.71,
+          "highest_package_lpa": 41.42
+        },
+        {
+          "branch": "Space Science and Engineering",
+          "participated": null,
+          "placed": null,
+          "placement_rate": null,
+          "avg_package_lpa": null,
+          "highest_package_lpa": null
+        }
+      ]
+    },
+    {
+      "year": "2022-23",
+      "status": "Data Not Available",
+      "programs": []
+    }
+  ],
+  "seat_matrix_2025": [
+    {
+      "program": "Chemical Engineering",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 32,
+        "open": 12,
+        "open_pwd": 1,
+        "gen_ews": 3,
+        "gen_ews_pwd": 0,
+        "sc": 5,
+        "sc_pwd": 0,
+        "st": 2,
+        "st_pwd": 0,
+        "obc_ncl": 8,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Chemical Engineering",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 8,
+        "open": 3,
+        "open_pwd": 0,
+        "gen_ews": 1,
+        "gen_ews_pwd": 0,
+        "sc": 1,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 2,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Civil Engineering",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 42,
+        "open": 16,
+        "open_pwd": 1,
+        "gen_ews": 5,
+        "gen_ews_pwd": 0,
+        "sc": 6,
+        "sc_pwd": 0,
+        "st": 3,
+        "st_pwd": 0,
+        "obc_ncl": 10,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Civil Engineering",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 11,
+        "open": 4,
+        "open_pwd": 0,
+        "gen_ews": 1,
+        "gen_ews_pwd": 0,
+        "sc": 2,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 3,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Computer Science and Engineering",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 65,
+        "open": 25,
+        "open_pwd": 2,
+        "gen_ews": 5,
+        "gen_ews_pwd": 1,
+        "sc": 9,
+        "sc_pwd": 1,
+        "st": 4,
+        "st_pwd": 1,
+        "obc_ncl": 16,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Computer Science and Engineering",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 17,
+        "open": 7,
+        "open_pwd": 0,
+        "gen_ews": 2,
+        "gen_ews_pwd": 0,
+        "sc": 2,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 5,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Electrical Engineering",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 67,
+        "open": 26,
+        "open_pwd": 1,
+        "gen_ews": 5,
+        "gen_ews_pwd": 1,
+        "sc": 9,
+        "sc_pwd": 1,
+        "st": 5,
+        "st_pwd": 1,
+        "obc_ncl": 17,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Electrical Engineering",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 18,
+        "open": 7,
+        "open_pwd": 0,
+        "gen_ews": 2,
+        "gen_ews_pwd": 0,
+        "sc": 3,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 5,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Engineering Physics",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 16,
+        "open": 5,
+        "open_pwd": 1,
+        "gen_ews": 2,
+        "gen_ews_pwd": 0,
+        "sc": 2,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 5,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Engineering Physics",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 4,
+        "open": 2,
+        "open_pwd": 0,
+        "gen_ews": 0,
+        "gen_ews_pwd": 0,
+        "sc": 1,
+        "sc_pwd": 0,
+        "st": 0,
+        "st_pwd": 0,
+        "obc_ncl": 1,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Mathematics and Computing",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 32,
+        "open": 12,
+        "open_pwd": 1,
+        "gen_ews": 3,
+        "gen_ews_pwd": 0,
+        "sc": 4,
+        "sc_pwd": 1,
+        "st": 2,
+        "st_pwd": 0,
+        "obc_ncl": 8,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Mathematics and Computing",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 8,
+        "open": 3,
+        "open_pwd": 0,
+        "gen_ews": 1,
+        "gen_ews_pwd": 0,
+        "sc": 1,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 2,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Mechanical Engineering",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 69,
+        "open": 28,
+        "open_pwd": 1,
+        "gen_ews": 5,
+        "gen_ews_pwd": 1,
+        "sc": 9,
+        "sc_pwd": 1,
+        "st": 5,
+        "st_pwd": 0,
+        "obc_ncl": 18,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Mechanical Engineering",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 18,
+        "open": 7,
+        "open_pwd": 0,
+        "gen_ews": 2,
+        "gen_ews_pwd": 0,
+        "sc": 3,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 5,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Metallurgical Engineering and Materials Science",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 42,
+        "open": 17,
+        "open_pwd": 0,
+        "gen_ews": 5,
+        "gen_ews_pwd": 0,
+        "sc": 6,
+        "sc_pwd": 0,
+        "st": 3,
+        "st_pwd": 0,
+        "obc_ncl": 10,
+        "obc_ncl_pwd": 1
+      }
+    },
+    {
+      "program": "Metallurgical Engineering and Materials Science",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 11,
+        "open": 4,
+        "open_pwd": 0,
+        "gen_ews": 1,
+        "gen_ews_pwd": 0,
+        "sc": 2,
+        "sc_pwd": 0,
+        "st": 1,
+        "st_pwd": 0,
+        "obc_ncl": 3,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Space Science and Engineering",
+      "type": "Gender-Neutral",
+      "seats": {
+        "total": 16,
+        "open": 6,
+        "open_pwd": 0,
+        "gen_ews": 2,
+        "gen_ews_pwd": 0,
+        "sc": 2,
+        "sc_pwd": 0,
+        "st": 2,
+        "st_pwd": 0,
+        "obc_ncl": 4,
+        "obc_ncl_pwd": 0
+      }
+    },
+    {
+      "program": "Space Science and Engineering",
+      "type": "Female-only (Supernumerary)",
+      "seats": {
+        "total": 4,
+        "open": 2,
+        "open_pwd": 0,
+        "gen_ews": 0,
+        "gen_ews_pwd": 0,
+        "sc": 1,
+        "sc_pwd": 0,
+        "st": 0,
+        "st_pwd": 0,
+        "obc_ncl": 1,
+        "obc_ncl_pwd": 0
+      }
+    }
+  ],
+  "cutoffs": {
+    "2025": [
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 5414,
+        "round_1_closing_rank": 7508,
+        "last_round_opening_rank": 7246,
+        "last_round_closing_rank": 8824
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 12689,
+        "round_1_closing_rank": 15214,
+        "last_round_opening_rank": 12689,
+        "last_round_closing_rank": 16373
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "301P",
+        "round_1_closing_rank": "301P",
+        "last_round_opening_rank": "301P",
+        "last_round_closing_rank": "301P"
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 997,
+        "round_1_closing_rank": 1257,
+        "last_round_opening_rank": 1220,
+        "last_round_closing_rank": 1297
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2612,
+        "round_1_closing_rank": 2612,
+        "last_round_opening_rank": 2612,
+        "last_round_closing_rank": 2612
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2437,
+        "round_1_closing_rank": 3233,
+        "last_round_opening_rank": 2811,
+        "last_round_closing_rank": 3502
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6614,
+        "round_1_closing_rank": 6755,
+        "last_round_opening_rank": 6614,
+        "last_round_closing_rank": 6970
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1483,
+        "round_1_closing_rank": 1974,
+        "last_round_opening_rank": 1537,
+        "last_round_closing_rank": 2047
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2553,
+        "round_1_closing_rank": 2553,
+        "last_round_opening_rank": 2553,
+        "last_round_closing_rank": 2553
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 933,
+        "round_1_closing_rank": 985,
+        "last_round_opening_rank": 933,
+        "last_round_closing_rank": 985
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1385,
+        "round_1_closing_rank": 1385,
+        "last_round_opening_rank": 1518,
+        "last_round_closing_rank": 1518
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 8139,
+        "round_1_closing_rank": 9821,
+        "last_round_opening_rank": 9004,
+        "last_round_closing_rank": 10641
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 15341,
+        "round_1_closing_rank": 16727,
+        "last_round_opening_rank": 16727,
+        "last_round_closing_rank": 17630
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1301,
+        "round_1_closing_rank": 1535,
+        "last_round_opening_rank": 1343,
+        "last_round_closing_rank": 1651
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2653,
+        "round_1_closing_rank": 2653,
+        "last_round_opening_rank": 3079,
+        "last_round_closing_rank": 3079
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3189,
+        "round_1_closing_rank": 3728,
+        "last_round_opening_rank": 3189,
+        "last_round_closing_rank": 3937
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6229,
+        "round_1_closing_rank": 7580,
+        "last_round_opening_rank": 7675,
+        "last_round_closing_rank": 7952
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1818,
+        "round_1_closing_rank": 1985,
+        "last_round_opening_rank": 1963,
+        "last_round_closing_rank": 2406
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2284,
+        "round_1_closing_rank": 2824,
+        "last_round_opening_rank": 2824,
+        "last_round_closing_rank": 3310
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 633,
+        "round_1_closing_rank": 842,
+        "last_round_opening_rank": 633,
+        "last_round_closing_rank": 842
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1321,
+        "round_1_closing_rank": 1321,
+        "last_round_opening_rank": 1321,
+        "last_round_closing_rank": 1321
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 952,
+        "round_1_closing_rank": 1628,
+        "last_round_opening_rank": 952,
+        "last_round_closing_rank": 1775
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2695,
+        "round_1_closing_rank": 3922,
+        "last_round_opening_rank": 2695,
+        "last_round_closing_rank": 3922
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 50,
+        "round_1_closing_rank": 69,
+        "last_round_opening_rank": 50,
+        "last_round_closing_rank": 69
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 170,
+        "round_1_closing_rank": 216,
+        "last_round_opening_rank": 170,
+        "last_round_closing_rank": 216
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 521,
+        "round_1_closing_rank": 593,
+        "last_round_opening_rank": 521,
+        "last_round_closing_rank": 593
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 13,
+        "round_1_closing_rank": 13,
+        "last_round_opening_rank": 13,
+        "last_round_closing_rank": 13
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 425,
+        "round_1_closing_rank": 571,
+        "last_round_opening_rank": 425,
+        "last_round_closing_rank": 585
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1705,
+        "round_1_closing_rank": 2012,
+        "last_round_opening_rank": 1900,
+        "last_round_closing_rank": 2106
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 55,
+        "round_1_closing_rank": 55,
+        "last_round_opening_rank": 59,
+        "last_round_closing_rank": 59
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 249,
+        "round_1_closing_rank": 312,
+        "last_round_opening_rank": 249,
+        "last_round_closing_rank": 329
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 700,
+        "round_1_closing_rank": 819,
+        "last_round_opening_rank": 700,
+        "last_round_closing_rank": 932
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "12P",
+        "round_1_closing_rank": "12P",
+        "last_round_opening_rank": "14P",
+        "last_round_closing_rank": "14P"
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 102,
+        "round_1_closing_rank": 154,
+        "last_round_opening_rank": 102,
+        "last_round_closing_rank": 155
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 387,
+        "round_1_closing_rank": 387,
+        "last_round_opening_rank": 387,
+        "last_round_closing_rank": 387
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2390,
+        "round_1_closing_rank": 3673,
+        "last_round_opening_rank": 2390,
+        "last_round_closing_rank": 3723
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6224,
+        "round_1_closing_rank": 7489,
+        "last_round_opening_rank": 6403,
+        "last_round_closing_rank": 8044
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 208,
+        "round_1_closing_rank": 208,
+        "last_round_opening_rank": 208,
+        "last_round_closing_rank": 208
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 438,
+        "round_1_closing_rank": 543,
+        "last_round_opening_rank": 438,
+        "last_round_closing_rank": 609
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1020,
+        "round_1_closing_rank": 1320,
+        "last_round_opening_rank": 1020,
+        "last_round_closing_rank": 1320
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "41P",
+        "round_1_closing_rank": "41P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1063,
+        "round_1_closing_rank": 1565,
+        "last_round_opening_rank": 1063,
+        "last_round_closing_rank": 1651
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2698,
+        "round_1_closing_rank": 4023,
+        "last_round_opening_rank": 2698,
+        "last_round_closing_rank": 4037
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 583,
+        "round_1_closing_rank": 978,
+        "last_round_opening_rank": 583,
+        "last_round_closing_rank": 978
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1249,
+        "round_1_closing_rank": 1938,
+        "last_round_opening_rank": 1938,
+        "last_round_closing_rank": 2099
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 379,
+        "round_1_closing_rank": 492,
+        "last_round_opening_rank": 379,
+        "last_round_closing_rank": 492
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 912,
+        "round_1_closing_rank": 912,
+        "last_round_opening_rank": 912,
+        "last_round_closing_rank": 912
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 5236,
+        "round_1_closing_rank": 6736,
+        "last_round_opening_rank": 5236,
+        "last_round_closing_rank": 8299
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 14114,
+        "round_1_closing_rank": 16482,
+        "last_round_opening_rank": 14114,
+        "last_round_closing_rank": 16848
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1657,
+        "round_1_closing_rank": 1666,
+        "last_round_opening_rank": 1657,
+        "last_round_closing_rank": 1666
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3188,
+        "round_1_closing_rank": 3380,
+        "last_round_opening_rank": 3329,
+        "last_round_closing_rank": 3586
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 7062,
+        "round_1_closing_rank": 7062,
+        "last_round_opening_rank": 7948,
+        "last_round_closing_rank": 7948
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2132,
+        "round_1_closing_rank": 2152,
+        "last_round_opening_rank": 2307,
+        "last_round_closing_rank": 2373
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3343,
+        "round_1_closing_rank": 3343,
+        "last_round_opening_rank": 3392,
+        "last_round_closing_rank": 3392
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1242,
+        "round_1_closing_rank": 1242,
+        "last_round_opening_rank": 1248,
+        "last_round_closing_rank": 1248
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1678,
+        "round_1_closing_rank": 2008,
+        "last_round_opening_rank": 1751,
+        "last_round_closing_rank": 2099
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 4271,
+        "round_1_closing_rank": 5553,
+        "last_round_opening_rank": 4271,
+        "last_round_closing_rank": 5553
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 135,
+        "round_1_closing_rank": 135,
+        "last_round_opening_rank": 135,
+        "last_round_closing_rank": 135
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 311,
+        "round_1_closing_rank": 325,
+        "last_round_opening_rank": 322,
+        "last_round_closing_rank": 332
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 632,
+        "round_1_closing_rank": 632,
+        "last_round_opening_rank": 895,
+        "last_round_closing_rank": 895
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 855,
+        "round_1_closing_rank": 896,
+        "last_round_opening_rank": 855,
+        "last_round_closing_rank": 999
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2246,
+        "round_1_closing_rank": 2488,
+        "last_round_opening_rank": 2246,
+        "last_round_closing_rank": 2488
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "68P",
+        "round_1_closing_rank": "68P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 492,
+        "round_1_closing_rank": 660,
+        "last_round_opening_rank": 492,
+        "last_round_closing_rank": 713
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1459,
+        "round_1_closing_rank": 1459,
+        "last_round_opening_rank": 1459,
+        "last_round_closing_rank": 1459
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 314,
+        "round_1_closing_rank": 350,
+        "last_round_opening_rank": 314,
+        "last_round_closing_rank": 360
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 780,
+        "round_1_closing_rank": 780,
+        "last_round_opening_rank": 1107,
+        "last_round_closing_rank": 1107
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 4506,
+        "round_1_closing_rank": 6741,
+        "last_round_opening_rank": 4522,
+        "last_round_closing_rank": 7545
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 12528,
+        "round_1_closing_rank": 15160,
+        "last_round_opening_rank": 12528,
+        "last_round_closing_rank": 16482
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "219P",
+        "round_1_closing_rank": "219P",
+        "last_round_opening_rank": "219P",
+        "last_round_closing_rank": "219P"
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 875,
+        "round_1_closing_rank": 1118,
+        "last_round_opening_rank": 875,
+        "last_round_closing_rank": 1225
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2409,
+        "round_1_closing_rank": 2452,
+        "last_round_opening_rank": 2452,
+        "last_round_closing_rank": 2614
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2014,
+        "round_1_closing_rank": 2776,
+        "last_round_opening_rank": 2249,
+        "last_round_closing_rank": 2937
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5816,
+        "round_1_closing_rank": 6741,
+        "last_round_opening_rank": 5816,
+        "last_round_closing_rank": 7110
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 406,
+        "round_1_closing_rank": 1649,
+        "last_round_opening_rank": 406,
+        "last_round_closing_rank": 1871
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2589,
+        "round_1_closing_rank": 2922,
+        "last_round_opening_rank": 2800,
+        "last_round_closing_rank": 3219
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 610,
+        "round_1_closing_rank": 759,
+        "last_round_opening_rank": 648,
+        "last_round_closing_rank": 804
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1218,
+        "round_1_closing_rank": 1218,
+        "last_round_opening_rank": 1254,
+        "last_round_closing_rank": 1254
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 8439,
+        "round_1_closing_rank": 10500,
+        "last_round_opening_rank": 8439,
+        "last_round_closing_rank": 11274
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 17303,
+        "round_1_closing_rank": 19295,
+        "last_round_opening_rank": 20322,
+        "last_round_closing_rank": 22422
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1449,
+        "round_1_closing_rank": 1714,
+        "last_round_opening_rank": 1452,
+        "last_round_closing_rank": 1912
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3256,
+        "round_1_closing_rank": 3256,
+        "last_round_opening_rank": 3256,
+        "last_round_closing_rank": 3256
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3969,
+        "round_1_closing_rank": 4383,
+        "last_round_opening_rank": 3993,
+        "last_round_closing_rank": 4698
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 8111,
+        "round_1_closing_rank": 8462,
+        "last_round_opening_rank": 8111,
+        "last_round_closing_rank": 8462
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2123,
+        "round_1_closing_rank": 2625,
+        "last_round_opening_rank": 2302,
+        "last_round_closing_rank": 2719
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3047,
+        "round_1_closing_rank": 3427,
+        "last_round_opening_rank": 3427,
+        "last_round_closing_rank": 3707
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1082,
+        "round_1_closing_rank": 1205,
+        "last_round_opening_rank": 1082,
+        "last_round_closing_rank": 1242
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1677,
+        "round_1_closing_rank": 1677,
+        "last_round_opening_rank": 1677,
+        "last_round_closing_rank": 1677
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 4860,
+        "round_1_closing_rank": 6548,
+        "last_round_opening_rank": 5679,
+        "last_round_closing_rank": 7419
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 10374,
+        "round_1_closing_rank": 12563,
+        "last_round_opening_rank": 13917,
+        "last_round_closing_rank": 13924
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1079,
+        "round_1_closing_rank": 1223,
+        "last_round_opening_rank": 1079,
+        "last_round_closing_rank": 1395
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2290,
+        "round_1_closing_rank": 2696,
+        "last_round_opening_rank": 2569,
+        "last_round_closing_rank": 3048
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6205,
+        "round_1_closing_rank": 6205,
+        "last_round_opening_rank": 6205,
+        "last_round_closing_rank": 6205
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1122,
+        "round_1_closing_rank": 1221,
+        "last_round_opening_rank": 1221,
+        "last_round_closing_rank": 1502
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2634,
+        "round_1_closing_rank": 2634,
+        "last_round_opening_rank": 2634,
+        "last_round_closing_rank": 2634
+      },
+      {
+        "program": "Space Science and Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 566,
+        "round_1_closing_rank": 795,
+        "last_round_opening_rank": 566,
+        "last_round_closing_rank": 795
+      }
+    ],
+    "2024": [
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 6161,
+        "round_1_closing_rank": 7489,
+        "last_round_opening_rank": 7109,
+        "last_round_closing_rank": 7913
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 13783,
+        "round_1_closing_rank": 15679,
+        "last_round_opening_rank": 15679,
+        "last_round_closing_rank": 16378
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "164P",
+        "round_1_closing_rank": "164P",
+        "last_round_opening_rank": "164P",
+        "last_round_closing_rank": "164P"
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1021,
+        "round_1_closing_rank": 1228,
+        "last_round_opening_rank": 1326,
+        "last_round_closing_rank": 1402
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2385,
+        "round_1_closing_rank": 2385,
+        "last_round_opening_rank": 2385,
+        "last_round_closing_rank": 2385
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2608,
+        "round_1_closing_rank": 3392,
+        "last_round_opening_rank": 3015,
+        "last_round_closing_rank": 3568
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6714,
+        "round_1_closing_rank": 6965,
+        "last_round_opening_rank": 6714,
+        "last_round_closing_rank": 6965
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1513,
+        "round_1_closing_rank": 1775,
+        "last_round_opening_rank": 1513,
+        "last_round_closing_rank": 1913
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2786,
+        "round_1_closing_rank": 2786,
+        "last_round_opening_rank": 2786,
+        "last_round_closing_rank": 2786
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 848,
+        "round_1_closing_rank": 922,
+        "last_round_opening_rank": 848,
+        "last_round_closing_rank": 922
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1642,
+        "round_1_closing_rank": 1642,
+        "last_round_opening_rank": 1642,
+        "last_round_closing_rank": 1642
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 7549,
+        "round_1_closing_rank": 9255,
+        "last_round_opening_rank": 8296,
+        "last_round_closing_rank": 9773
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 15886,
+        "round_1_closing_rank": 17255,
+        "last_round_opening_rank": 16460,
+        "last_round_closing_rank": 18217
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1299,
+        "round_1_closing_rank": 1423,
+        "last_round_opening_rank": 1299,
+        "last_round_closing_rank": 1474
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2775,
+        "round_1_closing_rank": 2775,
+        "last_round_opening_rank": 2775,
+        "last_round_closing_rank": 2775
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3296,
+        "round_1_closing_rank": 3741,
+        "last_round_opening_rank": 3390,
+        "last_round_closing_rank": 3974
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6590,
+        "round_1_closing_rank": 7272,
+        "last_round_opening_rank": 6590,
+        "last_round_closing_rank": 7849
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1600,
+        "round_1_closing_rank": 1866,
+        "last_round_opening_rank": 1600,
+        "last_round_closing_rank": 1881
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3290,
+        "round_1_closing_rank": 3425,
+        "last_round_opening_rank": 3425,
+        "last_round_closing_rank": 3731
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 566,
+        "round_1_closing_rank": 631,
+        "last_round_opening_rank": 566,
+        "last_round_closing_rank": 631
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1363,
+        "round_1_closing_rank": 1363,
+        "last_round_opening_rank": 1363,
+        "last_round_closing_rank": 1363
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 823,
+        "round_1_closing_rank": 1354,
+        "last_round_opening_rank": 823,
+        "last_round_closing_rank": 1389
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2431,
+        "round_1_closing_rank": 4011,
+        "last_round_opening_rank": 3499,
+        "last_round_closing_rank": 4698
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 47,
+        "round_1_closing_rank": 57,
+        "last_round_opening_rank": 47,
+        "last_round_closing_rank": 57
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 163,
+        "round_1_closing_rank": 190,
+        "last_round_opening_rank": 163,
+        "last_round_closing_rank": 218
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 523,
+        "round_1_closing_rank": 716,
+        "last_round_opening_rank": 716,
+        "last_round_closing_rank": 749
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 14,
+        "round_1_closing_rank": 14,
+        "last_round_opening_rank": 14,
+        "last_round_closing_rank": 22
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 301,
+        "round_1_closing_rank": 604,
+        "last_round_opening_rank": 301,
+        "last_round_closing_rank": 649
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1053,
+        "round_1_closing_rank": 1468,
+        "last_round_opening_rank": 1053,
+        "last_round_closing_rank": 1468
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 16,
+        "round_1_closing_rank": 16,
+        "last_round_opening_rank": 16,
+        "last_round_closing_rank": 16
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 245,
+        "round_1_closing_rank": 329,
+        "last_round_opening_rank": 245,
+        "last_round_closing_rank": 329
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 604,
+        "round_1_closing_rank": 728,
+        "last_round_opening_rank": 604,
+        "last_round_closing_rank": 728
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "9P",
+        "round_1_closing_rank": "9P",
+        "last_round_opening_rank": "12P",
+        "last_round_closing_rank": "12P"
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 113,
+        "round_1_closing_rank": 163,
+        "last_round_opening_rank": 113,
+        "last_round_closing_rank": 168
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 154,
+        "round_1_closing_rank": 154,
+        "last_round_opening_rank": 154,
+        "last_round_closing_rank": 154
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2359,
+        "round_1_closing_rank": 3498,
+        "last_round_opening_rank": 2359,
+        "last_round_closing_rank": 3818
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5167,
+        "round_1_closing_rank": 6916,
+        "last_round_opening_rank": 5167,
+        "last_round_closing_rank": 8297
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "53P",
+        "round_1_closing_rank": "252P",
+        "last_round_opening_rank": "53P",
+        "last_round_closing_rank": "270P"
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 451,
+        "round_1_closing_rank": 563,
+        "last_round_opening_rank": 451,
+        "last_round_closing_rank": 744
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1460,
+        "round_1_closing_rank": 1579,
+        "last_round_opening_rank": 1460,
+        "last_round_closing_rank": 1579
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "38P",
+        "round_1_closing_rank": "38P",
+        "last_round_opening_rank": "38P",
+        "last_round_closing_rank": "38P"
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1187,
+        "round_1_closing_rank": 1620,
+        "last_round_opening_rank": 1193,
+        "last_round_closing_rank": 1648
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2688,
+        "round_1_closing_rank": 4047,
+        "last_round_opening_rank": 2688,
+        "last_round_closing_rank": 4056
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 660,
+        "round_1_closing_rank": 978,
+        "last_round_opening_rank": 660,
+        "last_round_closing_rank": 997
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1470,
+        "round_1_closing_rank": 1704,
+        "last_round_opening_rank": 1470,
+        "last_round_closing_rank": 1704
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 322,
+        "round_1_closing_rank": 464,
+        "last_round_opening_rank": 350,
+        "last_round_closing_rank": 467
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 656,
+        "round_1_closing_rank": 656,
+        "last_round_opening_rank": 656,
+        "last_round_closing_rank": 656
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 5610,
+        "round_1_closing_rank": 6814,
+        "last_round_opening_rank": 5765,
+        "last_round_closing_rank": 7612
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 13790,
+        "round_1_closing_rank": 15115,
+        "last_round_opening_rank": 13790,
+        "last_round_closing_rank": 15115
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1302,
+        "round_1_closing_rank": 1402,
+        "last_round_opening_rank": 1302,
+        "last_round_closing_rank": 1511
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3128,
+        "round_1_closing_rank": 3528,
+        "last_round_opening_rank": 3128,
+        "last_round_closing_rank": 3618
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6911,
+        "round_1_closing_rank": 6911,
+        "last_round_opening_rank": 8144,
+        "last_round_closing_rank": 8144
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2066,
+        "round_1_closing_rank": 2070,
+        "last_round_opening_rank": 2066,
+        "last_round_closing_rank": 2104
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3315,
+        "round_1_closing_rank": 3315,
+        "last_round_opening_rank": 4096,
+        "last_round_closing_rank": 4096
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1066,
+        "round_1_closing_rank": 1066,
+        "last_round_opening_rank": 1173,
+        "last_round_closing_rank": 1173
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1591,
+        "round_1_closing_rank": 2074,
+        "last_round_opening_rank": 1591,
+        "last_round_closing_rank": 2180
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 4644,
+        "round_1_closing_rank": 4984,
+        "last_round_opening_rank": 4905,
+        "last_round_closing_rank": 5064
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 83,
+        "round_1_closing_rank": 83,
+        "last_round_opening_rank": 83,
+        "last_round_closing_rank": 83
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 232,
+        "round_1_closing_rank": 261,
+        "last_round_opening_rank": 232,
+        "last_round_closing_rank": 261
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 770,
+        "round_1_closing_rank": 770,
+        "last_round_opening_rank": 901,
+        "last_round_closing_rank": 901
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 610,
+        "round_1_closing_rank": 1030,
+        "last_round_opening_rank": 635,
+        "last_round_closing_rank": 1064
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1807,
+        "round_1_closing_rank": 2076,
+        "last_round_opening_rank": 1807,
+        "last_round_closing_rank": 2373
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "49P",
+        "round_1_closing_rank": "49P",
+        "last_round_opening_rank": "121P",
+        "last_round_closing_rank": "121P"
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 483,
+        "round_1_closing_rank": 692,
+        "last_round_opening_rank": 575,
+        "last_round_closing_rank": 719
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1041,
+        "round_1_closing_rank": 1041,
+        "last_round_opening_rank": 1041,
+        "last_round_closing_rank": 1041
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 260,
+        "round_1_closing_rank": 267,
+        "last_round_opening_rank": 260,
+        "last_round_closing_rank": 287
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 563,
+        "round_1_closing_rank": 563,
+        "last_round_opening_rank": 563,
+        "last_round_closing_rank": 563
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 4588,
+        "round_1_closing_rank": 6139,
+        "last_round_opening_rank": 4946,
+        "last_round_closing_rank": 6812
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 11751,
+        "round_1_closing_rank": 13169,
+        "last_round_opening_rank": 12137,
+        "last_round_closing_rank": 14123
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "366P",
+        "round_1_closing_rank": "366P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 733,
+        "round_1_closing_rank": 1100,
+        "last_round_opening_rank": 824,
+        "last_round_closing_rank": 1173
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2103,
+        "round_1_closing_rank": 2304,
+        "last_round_opening_rank": 2103,
+        "last_round_closing_rank": 2509
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2073,
+        "round_1_closing_rank": 2806,
+        "last_round_opening_rank": 2198,
+        "last_round_closing_rank": 2993
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5254,
+        "round_1_closing_rank": 6043,
+        "last_round_opening_rank": 5542,
+        "last_round_closing_rank": 6402
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1223,
+        "round_1_closing_rank": 1666,
+        "last_round_opening_rank": 1223,
+        "last_round_closing_rank": 1702
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2978,
+        "round_1_closing_rank": 3186,
+        "last_round_opening_rank": 3160,
+        "last_round_closing_rank": 3569
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 573,
+        "round_1_closing_rank": 737,
+        "last_round_opening_rank": 573,
+        "last_round_closing_rank": 747
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1636,
+        "round_1_closing_rank": 1636,
+        "last_round_opening_rank": 1636,
+        "last_round_closing_rank": 1636
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 7864,
+        "round_1_closing_rank": 10094,
+        "last_round_opening_rank": 8299,
+        "last_round_closing_rank": 10894
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 15947,
+        "round_1_closing_rank": 16814,
+        "last_round_opening_rank": 18413,
+        "last_round_closing_rank": 19770
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1577,
+        "round_1_closing_rank": 1692,
+        "last_round_opening_rank": 1577,
+        "last_round_closing_rank": 1821
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2989,
+        "round_1_closing_rank": 2989,
+        "last_round_opening_rank": 2989,
+        "last_round_closing_rank": 2989
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3582,
+        "round_1_closing_rank": 4313,
+        "last_round_opening_rank": 3582,
+        "last_round_closing_rank": 4524
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 8322,
+        "round_1_closing_rank": 8485,
+        "last_round_opening_rank": 8322,
+        "last_round_closing_rank": 8653
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2109,
+        "round_1_closing_rank": 2563,
+        "last_round_opening_rank": 2163,
+        "last_round_closing_rank": 2597
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3223,
+        "round_1_closing_rank": 3639,
+        "last_round_opening_rank": 3223,
+        "last_round_closing_rank": 4011
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1144,
+        "round_1_closing_rank": 1188,
+        "last_round_opening_rank": 1175,
+        "last_round_closing_rank": 1225
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1734,
+        "round_1_closing_rank": 1734,
+        "last_round_opening_rank": 1734,
+        "last_round_closing_rank": 1734
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 4319,
+        "round_1_closing_rank": 6362,
+        "last_round_opening_rank": 5666,
+        "last_round_closing_rank": 6640
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 9148,
+        "round_1_closing_rank": 10683,
+        "last_round_opening_rank": 10683,
+        "last_round_closing_rank": 10970
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1077,
+        "round_1_closing_rank": 1088,
+        "last_round_opening_rank": 1077,
+        "last_round_closing_rank": 1307
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1916,
+        "round_1_closing_rank": 3159,
+        "last_round_opening_rank": 1916,
+        "last_round_closing_rank": 3159
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5795,
+        "round_1_closing_rank": 5795,
+        "last_round_opening_rank": 5795,
+        "last_round_closing_rank": 5795
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1302,
+        "round_1_closing_rank": 1425,
+        "last_round_opening_rank": 1425,
+        "last_round_closing_rank": 1668
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1731,
+        "round_1_closing_rank": 1731,
+        "last_round_opening_rank": 1731,
+        "last_round_closing_rank": 1731
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 719,
+        "round_1_closing_rank": 719,
+        "last_round_opening_rank": 719,
+        "last_round_closing_rank": 719
+      }
+    ],
+    "2023": [
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 7553,
+        "round_1_closing_rank": 8861,
+        "last_round_opening_rank": 7553,
+        "last_round_closing_rank": 9658
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 13708,
+        "round_1_closing_rank": 14003,
+        "last_round_opening_rank": 14877,
+        "last_round_closing_rank": 15073
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1341,
+        "round_1_closing_rank": 1403,
+        "last_round_opening_rank": 1403,
+        "last_round_closing_rank": 1667
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2791,
+        "round_1_closing_rank": 2791,
+        "last_round_opening_rank": 2947,
+        "last_round_closing_rank": 2947
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3233,
+        "round_1_closing_rank": 3732,
+        "last_round_opening_rank": 3233,
+        "last_round_closing_rank": 4245
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5832,
+        "round_1_closing_rank": 5941,
+        "last_round_opening_rank": 5832,
+        "last_round_closing_rank": 5941
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1713,
+        "round_1_closing_rank": 2028,
+        "last_round_opening_rank": 1958,
+        "last_round_closing_rank": 2151
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2540,
+        "round_1_closing_rank": 2540,
+        "last_round_opening_rank": 2828,
+        "last_round_closing_rank": 2828
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 888,
+        "round_1_closing_rank": 965,
+        "last_round_opening_rank": 888,
+        "last_round_closing_rank": 965
+      },
+      {
+        "program": "Chemical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1302,
+        "round_1_closing_rank": 1302,
+        "last_round_opening_rank": 1490,
+        "last_round_closing_rank": 1490
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 8202,
+        "round_1_closing_rank": 9937,
+        "last_round_opening_rank": 9489,
+        "last_round_closing_rank": 10994
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 14585,
+        "round_1_closing_rank": 16636,
+        "last_round_opening_rank": 14994,
+        "last_round_closing_rank": 17993
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "90P",
+        "round_1_closing_rank": "90P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1368,
+        "round_1_closing_rank": 1497,
+        "last_round_opening_rank": 1596,
+        "last_round_closing_rank": 1777
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2555,
+        "round_1_closing_rank": 2555,
+        "last_round_opening_rank": 2863,
+        "last_round_closing_rank": 2863
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2848,
+        "round_1_closing_rank": 3770,
+        "last_round_opening_rank": 2848,
+        "last_round_closing_rank": 4204
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6324,
+        "round_1_closing_rank": 6605,
+        "last_round_opening_rank": 6605,
+        "last_round_closing_rank": 7000
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1615,
+        "round_1_closing_rank": 1983,
+        "last_round_opening_rank": 1802,
+        "last_round_closing_rank": 2146
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2857,
+        "round_1_closing_rank": 2964,
+        "last_round_opening_rank": 2857,
+        "last_round_closing_rank": 2964
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 669,
+        "round_1_closing_rank": 684,
+        "last_round_opening_rank": 669,
+        "last_round_closing_rank": 684
+      },
+      {
+        "program": "Civil Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1362,
+        "round_1_closing_rank": 1362,
+        "last_round_opening_rank": 1362,
+        "last_round_closing_rank": 1362
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 895,
+        "round_1_closing_rank": 1320,
+        "last_round_opening_rank": 914,
+        "last_round_closing_rank": 1385
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1970,
+        "round_1_closing_rank": 2768,
+        "last_round_opening_rank": 1970,
+        "last_round_closing_rank": 2768
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 42,
+        "round_1_closing_rank": 64,
+        "last_round_opening_rank": 42,
+        "last_round_closing_rank": 64
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 121,
+        "round_1_closing_rank": 159,
+        "last_round_opening_rank": 159,
+        "last_round_closing_rank": 210
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 357,
+        "round_1_closing_rank": 448,
+        "last_round_opening_rank": 357,
+        "last_round_closing_rank": 448
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 296,
+        "round_1_closing_rank": 423,
+        "last_round_opening_rank": 296,
+        "last_round_closing_rank": 448
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 962,
+        "round_1_closing_rank": 1182,
+        "last_round_opening_rank": 962,
+        "last_round_closing_rank": 1187
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "OBC-NCL (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 29,
+        "round_1_closing_rank": 29,
+        "last_round_opening_rank": 33,
+        "last_round_closing_rank": 33
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 152,
+        "round_1_closing_rank": 282,
+        "last_round_opening_rank": 198,
+        "last_round_closing_rank": 339
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 423,
+        "round_1_closing_rank": 548,
+        "last_round_opening_rank": 423,
+        "last_round_closing_rank": 548
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "SC (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "1P",
+        "round_1_closing_rank": "1P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 103,
+        "round_1_closing_rank": 134,
+        "last_round_opening_rank": 103,
+        "last_round_closing_rank": 134
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 175,
+        "round_1_closing_rank": 175,
+        "last_round_opening_rank": 175,
+        "last_round_closing_rank": 175
+      },
+      {
+        "program": "Computer Science and Engineering",
+        "category": "ST (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 6,
+        "round_1_closing_rank": 6,
+        "last_round_opening_rank": 6,
+        "last_round_closing_rank": 6
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2217,
+        "round_1_closing_rank": 3393,
+        "last_round_opening_rank": 2217,
+        "last_round_closing_rank": 3632
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5308,
+        "round_1_closing_rank": 6992,
+        "last_round_opening_rank": 5754,
+        "last_round_closing_rank": 7527
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 166,
+        "round_1_closing_rank": "191P",
+        "last_round_opening_rank": 166,
+        "last_round_closing_rank": "191P"
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 493,
+        "round_1_closing_rank": 644,
+        "last_round_opening_rank": 493,
+        "last_round_closing_rank": 644
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1331,
+        "round_1_closing_rank": 1414,
+        "last_round_opening_rank": 1331,
+        "last_round_closing_rank": 1414
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1088,
+        "round_1_closing_rank": 1597,
+        "last_round_opening_rank": 1344,
+        "last_round_closing_rank": 1820
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2304,
+        "round_1_closing_rank": 3368,
+        "last_round_opening_rank": 2304,
+        "last_round_closing_rank": 3615
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 470,
+        "round_1_closing_rank": 1002,
+        "last_round_opening_rank": 470,
+        "last_round_closing_rank": 1167
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1762,
+        "round_1_closing_rank": 1940,
+        "last_round_opening_rank": 1762,
+        "last_round_closing_rank": 2285
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 319,
+        "round_1_closing_rank": 485,
+        "last_round_opening_rank": 417,
+        "last_round_closing_rank": 516
+      },
+      {
+        "program": "Electrical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1039,
+        "round_1_closing_rank": 1039,
+        "last_round_opening_rank": 1064,
+        "last_round_closing_rank": 1064
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 5834,
+        "round_1_closing_rank": 7808,
+        "last_round_opening_rank": 5834,
+        "last_round_closing_rank": 8205
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 10052,
+        "round_1_closing_rank": 11731,
+        "last_round_opening_rank": 11731,
+        "last_round_closing_rank": 13594
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1365,
+        "round_1_closing_rank": 1384,
+        "last_round_opening_rank": 1544,
+        "last_round_closing_rank": 1803
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3389,
+        "round_1_closing_rank": 3903,
+        "last_round_opening_rank": 3389,
+        "last_round_closing_rank": 4196
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6968,
+        "round_1_closing_rank": 6968,
+        "last_round_opening_rank": 8034,
+        "last_round_closing_rank": 8034
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1956,
+        "round_1_closing_rank": 2233,
+        "last_round_opening_rank": 1956,
+        "last_round_closing_rank": 2233
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 4013,
+        "round_1_closing_rank": 4013,
+        "last_round_opening_rank": 4013,
+        "last_round_closing_rank": 4013
+      },
+      {
+        "program": "Engineering Physics",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1197,
+        "round_1_closing_rank": 1197,
+        "last_round_opening_rank": 1241,
+        "last_round_closing_rank": 1241
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1777,
+        "round_1_closing_rank": 2164,
+        "last_round_opening_rank": 1809,
+        "last_round_closing_rank": 2209
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3535,
+        "round_1_closing_rank": 3871,
+        "last_round_opening_rank": 3535,
+        "last_round_closing_rank": 3871
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 149,
+        "round_1_closing_rank": 149,
+        "last_round_opening_rank": "179P",
+        "last_round_closing_rank": "179P"
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 282,
+        "round_1_closing_rank": 360,
+        "last_round_opening_rank": 342,
+        "last_round_closing_rank": 366
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 517,
+        "round_1_closing_rank": 517,
+        "last_round_opening_rank": 517,
+        "last_round_closing_rank": 517
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 776,
+        "round_1_closing_rank": 1119,
+        "last_round_opening_rank": 776,
+        "last_round_closing_rank": 1319
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1202,
+        "round_1_closing_rank": 1604,
+        "last_round_opening_rank": 1202,
+        "last_round_closing_rank": 1623
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "OBC-NCL (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "35P",
+        "round_1_closing_rank": "35P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 551,
+        "round_1_closing_rank": 749,
+        "last_round_opening_rank": 584,
+        "last_round_closing_rank": 908
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1376,
+        "round_1_closing_rank": 1376,
+        "last_round_opening_rank": 1660,
+        "last_round_closing_rank": 1660
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 328,
+        "round_1_closing_rank": 358,
+        "last_round_opening_rank": 358,
+        "last_round_closing_rank": 394
+      },
+      {
+        "program": "Mathematics and Computing",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 664,
+        "round_1_closing_rank": 664,
+        "last_round_opening_rank": 664,
+        "last_round_closing_rank": 664
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 4980,
+        "round_1_closing_rank": 6970,
+        "last_round_opening_rank": 4980,
+        "last_round_closing_rank": 7474
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 9203,
+        "round_1_closing_rank": 13222,
+        "last_round_opening_rank": 9203,
+        "last_round_closing_rank": 14668
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OPEN (PwD)",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": "246P",
+        "round_1_closing_rank": "246P",
+        "last_round_opening_rank": null,
+        "last_round_closing_rank": null
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1063,
+        "round_1_closing_rank": 1153,
+        "last_round_opening_rank": 1143,
+        "last_round_closing_rank": 1256
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2514,
+        "round_1_closing_rank": 2542,
+        "last_round_opening_rank": 2514,
+        "last_round_closing_rank": 2542
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2252,
+        "round_1_closing_rank": 2850,
+        "last_round_opening_rank": 2547,
+        "last_round_closing_rank": 3217
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5081,
+        "round_1_closing_rank": 5397,
+        "last_round_opening_rank": 5182,
+        "last_round_closing_rank": 5517
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1299,
+        "round_1_closing_rank": 1609,
+        "last_round_opening_rank": 1299,
+        "last_round_closing_rank": 1732
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2316,
+        "round_1_closing_rank": 2614,
+        "last_round_opening_rank": 2560,
+        "last_round_closing_rank": 3157
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 558,
+        "round_1_closing_rank": 717,
+        "last_round_opening_rank": 558,
+        "last_round_closing_rank": 728
+      },
+      {
+        "program": "Mechanical Engineering",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1204,
+        "round_1_closing_rank": 1204,
+        "last_round_opening_rank": 1204,
+        "last_round_closing_rank": 1204
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 8652,
+        "round_1_closing_rank": 10681,
+        "last_round_opening_rank": 10567,
+        "last_round_closing_rank": 12217
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 14726,
+        "round_1_closing_rank": 17070,
+        "last_round_opening_rank": 16360,
+        "last_round_closing_rank": 18102
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1711,
+        "round_1_closing_rank": 1792,
+        "last_round_opening_rank": 1792,
+        "last_round_closing_rank": 2014
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "EWS",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3195,
+        "round_1_closing_rank": 3195,
+        "last_round_opening_rank": 3195,
+        "last_round_closing_rank": 3195
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 3967,
+        "round_1_closing_rank": 4238,
+        "last_round_opening_rank": 4155,
+        "last_round_closing_rank": 4684
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 6951,
+        "round_1_closing_rank": 7569,
+        "last_round_opening_rank": 6951,
+        "last_round_closing_rank": 7959
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 2093,
+        "round_1_closing_rank": 2424,
+        "last_round_opening_rank": 2306,
+        "last_round_closing_rank": 2708
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 3746,
+        "round_1_closing_rank": 3882,
+        "last_round_opening_rank": 4128,
+        "last_round_closing_rank": 4203
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1088,
+        "round_1_closing_rank": 1121,
+        "last_round_opening_rank": 1121,
+        "last_round_closing_rank": 1248
+      },
+      {
+        "program": "Metallurgical Engineering and Materials Science",
+        "category": "ST",
+        "gender": "Female-only",
+        "round_1_opening_rank": 1568,
+        "round_1_closing_rank": 1568,
+        "last_round_opening_rank": "289P",
+        "last_round_closing_rank": "289P"
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OPEN",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 6048,
+        "round_1_closing_rank": 7044,
+        "last_round_opening_rank": 6048,
+        "last_round_closing_rank": 7821
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OPEN",
+        "gender": "Female-only",
+        "round_1_opening_rank": 11835,
+        "round_1_closing_rank": 13253,
+        "last_round_opening_rank": 13280,
+        "last_round_closing_rank": 14142
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "EWS",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1010,
+        "round_1_closing_rank": 1327,
+        "last_round_opening_rank": 1365,
+        "last_round_closing_rank": 1521
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1860,
+        "round_1_closing_rank": 2976,
+        "last_round_opening_rank": 2489,
+        "last_round_closing_rank": 3492
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "OBC-NCL",
+        "gender": "Female-only",
+        "round_1_opening_rank": 5776,
+        "round_1_closing_rank": 5776,
+        "last_round_opening_rank": 6192,
+        "last_round_closing_rank": 6192
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "SC",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 1441,
+        "round_1_closing_rank": 1560,
+        "last_round_opening_rank": 1752,
+        "last_round_closing_rank": 1775
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "SC",
+        "gender": "Female-only",
+        "round_1_opening_rank": 2262,
+        "round_1_closing_rank": 2262,
+        "last_round_opening_rank": 2262,
+        "last_round_closing_rank": 2262
+      },
+      {
+        "program": "Space Sciences and Engineering",
+        "category": "ST",
+        "gender": "Gender-Neutral",
+        "round_1_opening_rank": 992,
+        "round_1_closing_rank": 992,
+        "last_round_opening_rank": 1008,
+        "last_round_closing_rank": 1008
+      }
+    ]
+  }
+}

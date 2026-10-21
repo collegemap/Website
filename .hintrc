@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "position: sticky",
+          "scroll-behavior",
+          "scroll-behavior: smooth",
+          "min-height: auto",
+          "backdrop-filter",
+          "user-select",
+          "-moz-appearance"
+        ]
+      }
+    ]
+  }
+}

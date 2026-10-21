@@ -1,0 +1,11 @@
+{
+  "framework": "create-react-app",
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "installCommand": "npm install",
+  "build": {
+    "env": {
+      "REACT_APP_COLLEGEMAP_API_URL": "https://collegemapseminarpage.vercel.app"
+    }
+  }
+}

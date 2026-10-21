@@ -1,0 +1,1356 @@
+{
+  "_meta": {
+    "IIT": "Backend/data/iitBranchCatalog.json",
+    "NIT": "Nit_data.pdf",
+    "IIIT": "IIIT_DATA.pdf",
+    "private": "Backend/data/privateBranchCatalog.json"
+  },
+  "IIT": {
+    "branchesByCollege": {
+      "IIT BHU": [
+        "Biochemical Engineering with M.Tech. in Biochemical Engineering and Biotechnology",
+        "Bioengineering with M.Tech in Biomedical Technology",
+        "Ceramic Engineering",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electrical Engineering with M.Tech. in Power Electronics",
+        "Electronics Engineering",
+        "Engineering Physics",
+        "Industrial Chemistry",
+        "Materials Science and Technology",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Metallurgical Engineering",
+        "Mining Engineering",
+        "Pharmaceutical Engineering & Technology"
+      ],
+      "IIT Bhilai": [
+        "Computer Science and Engineering",
+        "Data Science and Artificial Intelligence",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Materials Science and Metallurgical Engineering",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "IIT Bhubaneswar": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "IIT Bombay": [
+        "Aerospace Engineering",
+        "BS in Mathematics",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Economics",
+        "Electrical Engineering",
+        "Energy Engineering",
+        "Engineering Physics",
+        "Environmental Science and Engineering",
+        "Industrial Engineering and Operations Research",
+        "Mechanical Engineering",
+        "Metallurgical Engineering and Materials Science"
+      ],
+      "IIT Delhi": [
+        "Biotechnology and Biochemical Engineering",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electrical Engineering (Power and Automation)",
+        "Energy Engineering",
+        "Engineering Physics",
+        "Engineering and Computational Mechanics",
+        "Materials Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Production and Industrial Engineering",
+        "Textile Technology"
+      ],
+      "IIT Dhanbad (ISM)": [
+        "Applied Geology",
+        "Applied Geophysics",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Environmental Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Mineral and Metallurgical Engineering",
+        "Mining Engineering",
+        "Mining Machinery Engineering",
+        "Petroleum Engineering"
+      ],
+      "IIT Dharwad": [
+        "Chemical and Biochemical Engineering",
+        "Civil and Infrastructure Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Interdisciplinary Sciences",
+        "Mathematics and Computing",
+        "Mechanical Engineering"
+      ],
+      "IIT Gandhinagar": [
+        "Artificial Intelligence",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Integrated Circuit Design & Technology",
+        "Materials Engineering",
+        "Mechanical Engineering"
+      ],
+      "IIT Goa": [
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering"
+      ],
+      "IIT Guwahati": [
+        "Biosciences and Bioengineering",
+        "Chemical Engineering",
+        "Chemical Science and Technology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Data Science and Artificial Intelligence",
+        "Electronics and Communication Engineering",
+        "Electronics and Electrical Engineering",
+        "Energy Engineering",
+        "Engineering Physics",
+        "Mathematics and Computing",
+        "Mechanical Engineering"
+      ],
+      "IIT Hyderabad": [
+        "Artificial Intelligence",
+        "Biomedical Engineering",
+        "Biotechnology and Bioinformatics",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computational Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electrical Engineering (IC Design and Technology)",
+        "Engineering Physics",
+        "Engineering Science",
+        "Industrial Chemistry",
+        "Materials Science and Metallurgical Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering"
+      ],
+      "IIT Indore": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Engineering Physics",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Metallurgical Engineering and Materials Science",
+        "Space Sciences and Engineering"
+      ],
+      "IIT Jammu": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Materials Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering"
+      ],
+      "IIT Jodhpur": [
+        "Artificial Intelligence and Data Science",
+        "Bio Engineering",
+        "Chemical Engineering",
+        "Chemistry with Specialization",
+        "Civil and Infrastructure Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Materials Engineering",
+        "Mechanical Engineering",
+        "Physics with Specialization"
+      ],
+      "IIT Kanpur": [
+        "Aerospace Engineering",
+        "Biological Sciences and Bioengineering",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Earth Sciences",
+        "Economics",
+        "Electrical Engineering",
+        "Materials Science and Engineering",
+        "Mathematics and Scientific Computing",
+        "Mechanical Engineering",
+        "Physics",
+        "Statistics and Data Science"
+      ],
+      "IIT Kharagpur": [
+        "Aerospace Engineering",
+        "Agricultural and Food Engineering",
+        "Applied Geology",
+        "Artificial Intelligence",
+        "Biotechnology and Biochemical Engineering",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Economics",
+        "Electrical Engineering",
+        "Electronics and Electrical Communication Engineering",
+        "Exploration Geophysics",
+        "Industrial and Systems Engineering",
+        "Instrumentation Engineering",
+        "Manufacturing Science and Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Mining Engineering",
+        "Ocean Engineering and Naval Architecture",
+        "Physics"
+      ],
+      "IIT Madras": [
+        "Aerospace Engineering",
+        "Artificial Intelligence and Data Analytics",
+        "Biological Engineering",
+        "Biological Science",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Engineering Design",
+        "Engineering Physics",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Naval Architecture and Ocean Engineering",
+        "Physics"
+      ],
+      "IIT Mandi": [
+        "B.Tech in General Engineering",
+        "B.Tech in Materials Science and Engineering",
+        "B.Tech in Mathematics and Computing",
+        "B.Tech in Microelectronics & VLSI",
+        "BS in Chemical Sciences",
+        "Bio Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Data Science and Engineering",
+        "Electrical Engineering",
+        "Engineering Physics",
+        "Mechanical Engineering"
+      ],
+      "IIT Palakkad": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Data Science and Engineering",
+        "Electrical Engineering",
+        "Mechanical Engineering"
+      ],
+      "IIT Patna": [
+        "Artificial Intelligence and Data Science",
+        "B. Tech in CE. - M. Tech. in Geotechnical Engineering",
+        "B. Tech in CE. - M. Tech. in Structural Engineering",
+        "B. Tech. (CSE) and M.Tech in CSE",
+        "B. Tech. (ECE) -M. Tech. in VLSI",
+        "B. Tech. (EEE)-M. Tech. in (Power &. Control)",
+        "B. Tech. (ME) - M. Tech. in Mechatronics",
+        "B. Tech. (Mathematics & Computing) M. Tech. in (Mathematics & Computing)",
+        "B.Tech (Artificial Intelligence and Data Science) - MBA in Digital Business Management (IIM Bodh Gaya)",
+        "B.Tech (Chemical Engineering) - MBA in Hospital and Health Care Management (IIM Bodh Gaya)",
+        "B.Tech (Chemical Science and Technology) - MBA in Hospital and Health Care Management (IIM Bodh Gaya)",
+        "B.Tech (Civil Engineering) - MBA (IIM Bodh Gaya)",
+        "B.Tech (Computer Science and Engineering) - MBA in Digital Business Management (IIM Bodh Gaya)",
+        "B.Tech (Electrical and Electronics Engineering) - MBA (IIM Bodh Gaya)",
+        "B.Tech (Electronics and Communication Engineering) - MBA in Hospital and Healthcare Management (IIM Bodh Gaya)",
+        "B.Tech (Engineering Physics) - MBA (IIM Bodh Gaya)",
+        "B.Tech (Mathematics and Computing) - MBA in Digital Business Management (IIM Bodh Gaya)",
+        "B.Tech (Mechanical Engineering) - MBA (IIM Mumbai)",
+        "B.Tech (Metallurgical and Materials Engineering) - MBA (IIM Bodh Gaya)",
+        "B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems",
+        "BS in Economics with MBA (IIM Bodh Gaya)",
+        "Chemical Engineering",
+        "Chemical Science and Technology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Economics",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "IIT Roorkee": [
+        "Biosciences and Bioengineering",
+        "Chemical Engineering",
+        "Chemical Sciences",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Data Science and Artificial Intelligence",
+        "Economics",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Energy Engineering",
+        "Engineering Physics",
+        "Geological Technology",
+        "Geophysical Technology",
+        "Mathematics & Computing",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Physics",
+        "Production and Industrial Engineering"
+      ],
+      "IIT Ropar": [
+        "Artificial Intelligence and Data Engineering",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Engineering Physics",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "IIT Tirupati": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Engineering Physics",
+        "Mechanical Engineering"
+      ]
+    }
+  },
+  "NIT": {
+    "branchesByCollege": {
+      "Dr. B R Ambedkar National Institute of Technology, Jalandhar": [
+        "Bio Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Industrial and Production Engineering",
+        "Information Technology",
+        "Instrumentation and Control Engineering",
+        "Mechanical Engineering",
+        "Textile Technology"
+      ],
+      "Malaviya National Institute of Technology, Jaipur": [
+        "Architecture",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "Maulana Azad National Institute of Technology, Bhopal": [
+        "Architecture",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Materials Science and Metallurgical Engineering",
+        "Mechanical Engineering",
+        "Planning"
+      ],
+      "Motilal Nehru National Institute of Technology, Allahabad": [
+        "Bio Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Production and Industrial Engineering"
+      ],
+      "National Institute of Technology, Agartala": [
+        "Biotechnology and Biochemical Engineering",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering",
+        "Production Engineering"
+      ],
+      "National Institute of Technology, Andhra Pradesh": [
+        "Bio Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "National Institute of Technology, Arunachal Pradesh": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Calicut": [
+        "Architecture",
+        "Bio Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Materials Science and Engineering",
+        "Mechanical Engineering",
+        "Production Engineering"
+      ],
+      "National Institute of Technology, Delhi": [
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "National Institute of Technology, Durgapur": [
+        "Bio Technology",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "National Institute of Technology, Goa": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Hamirpur": [
+        "Architecture",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Materials Science and Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Jamshedpur": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Production and Industrial Engineering"
+      ],
+      "National Institute of Technology, Kurukshetra": [
+        "Civil Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Production and Industrial Engineering"
+      ],
+      "National Institute of Technology, Manipur": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Meghalaya": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Mizoram": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Nagaland": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Patna": [
+        "Architecture",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Puducherry": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Raipur": [
+        "Architecture",
+        "Bio Medical Engineering",
+        "Bio Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Mining Engineering"
+      ],
+      "National Institute of Technology, Rourkela": [
+        "Architecture",
+        "Bio Medical Engineering",
+        "Bio Technology",
+        "Ceramic Engineering",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Food Process Engineering",
+        "Industrial Design",
+        "Life Science",
+        "Mathematics",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Mining Engineering",
+        "Physics"
+      ],
+      "National Institute of Technology, Sikkim": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Silchar": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Srinagar": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering"
+      ],
+      "National Institute of Technology, Tiruchirappalli": [
+        "Architecture",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Instrumentation and Control Engineering",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Production Engineering"
+      ],
+      "National Institute of Technology, Uttarakhand": [
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "National Institute of Technology, Warangal": [
+        "Bio Technology",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mathematics",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Physics"
+      ],
+      "Sardar Vallabhbhai National Institute of Technology, Surat": [
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mathematics",
+        "Mechanical Engineering",
+        "Physics"
+      ],
+      "Visvesvaraya National Institute of Technology, Nagpur": [
+        "Architecture",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Metallurgical and Materials Engineering",
+        "Mining Engineering"
+      ]
+    }
+  },
+  "IIIT": {
+    "branchesByCollege": {
+      "Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior": [
+        "Computer Science and Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT) Dharwad": [
+        "Computer Science and Engineering",
+        "Data Science and Artificial Intelligence",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT) Kalyani, West Bengal": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT) Kilohrad, Sonepat, Haryana": [
+        "Computer Science and Engineering",
+        "Information Technology"
+      ],
+      "Indian Institute of Information Technology (IIIT) Kottayam": [
+        "Computer Science and Engineering",
+        "Computer Science and Engineering with specialization in Cyber Security",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT) Nagpur": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT) Pune": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT) Ranchi": [
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (with Specialization of Data Science and Artificial Intelligence)",
+        "Electronics and Communication Engineering",
+        "Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things)"
+      ],
+      "Indian Institute of Information Technology (IIIT) Una, Himachal Pradesh": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology"
+      ],
+      "Indian Institute of Information Technology (IIIT), Sri City, Chittoor": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology (IIIT), Vadodara, Gujrat": [
+        "Computer Science and Engineering",
+        "Information Technology"
+      ],
+      "Indian Institute of Information Technology (IIIT)Kota, Rajasthan": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology Bhagalpur": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering",
+        "Mechatronics Engineering"
+      ],
+      "Indian Institute of Information Technology Bhopal": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology"
+      ],
+      "Indian Institute of Information Technology Design & Manufacturing Kurnool, Andhra Pradesh": [
+        "Artificial Intelligence and Data Science",
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering with specialization in Design and Manufacturing",
+        "Mechanical Engineering with specialization in Design and Manufacturing"
+      ],
+      "Indian Institute of Information Technology Guwahati": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology Lucknow": [
+        "Computer Science",
+        "Computer Science and Artificial Intelligence",
+        "Computer Science and Business",
+        "Information Technology"
+      ],
+      "Indian Institute of Information Technology Manipur": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology Surat": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology Tiruchirappalli": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering"
+      ],
+      "Indian Institute of Information Technology, Agartala": [
+        "Computer Science and Engineering"
+      ],
+      "Indian Institute of Information Technology, Allahabad": [
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Information Technology-Business Informatics"
+      ],
+      "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram": [
+        "Computer Science and Engineering",
+        "Computer Science and Engineering with Major in Artificial Intelligence",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Smart Manufacturing"
+      ],
+      "Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)": [
+        "Computer Science and Engineering"
+      ],
+      "Pt. Dwarka Prasad Mishra Indian Institute of Information Technology, Design & Manufacture Jabalpur": [
+        "Computer Science and Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Smart Manufacturing"
+      ]
+    }
+  },
+  "BITS": {
+    "branchesByCollege": {
+      "BITS Pilani": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Manufacturing Engineering",
+        "Mechanical Engineering"
+      ],
+      "BITS Goa": [
+        "Chemical Engineering",
+        "Computer Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering"
+      ],
+      "BITS Hyderabad": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering"
+      ]
+    }
+  },
+  "VIT": {
+    "branchesByCollege": {
+      "VIT Vellore": [
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electrical and Electronics Engineering",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "VIT Chennai": [
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electrical and Electronics Engineering",
+        "Mechanical Engineering",
+        "Mechatronics and Automation"
+      ],
+      "VIT AP": [
+        "Biotechnology",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Analytics)",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electrical and Electronics Engineering",
+        "Mechanical Engineering"
+      ],
+      "VIT Bhopal": [
+        "Aerospace Engineering",
+        "Bioengineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ]
+    }
+  },
+  "SRM": {
+    "branchesByCollege": {
+      "SRM Kattankulathur": [
+        "Artificial Intelligence",
+        "Automation and Robotics",
+        "Biomedical Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Data Science)",
+        "Computer Science and Engineering (AI and ML)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "SRM Ramapuram": [
+        "Artificial Intelligence",
+        "Biomedical Engineering",
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (AI and ML)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "SRM AP": [
+        "Artificial Intelligence",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (AI and ML)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Quantum Engineering"
+      ]
+    }
+  },
+  "Amrita": {
+    "branchesByCollege": {
+      "Amrita Coimbatore": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science",
+        "Electrical and Electronics Engineering",
+        "Chemical Engineering",
+        "Electronics and Communication Engineering",
+        "Civil Engineering",
+        "Aerospace Engineering",
+        "Automation and Robotics Engineering"
+      ],
+      "Amrita Bengaluru": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Robotics and Artificial Intelligence"
+      ],
+      "Amrita Chennai": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science",
+        "Electronics and Communication Engineering",
+        "Robotics and Artificial Intelligence"
+      ],
+      "Amrita Amaravati": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science"
+      ]
+    }
+  },
+  "Other top colleges": {
+    "branchesByCollege": {
+      "Jadavpur University, Kolkata": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Construction Engineering",
+        "Electrical Engineering",
+        "Electronics and Telecommunication Engineering",
+        "Food Technology and Biochemical Engineering",
+        "Information Technology",
+        "Instrumentation and Electronics Engineering",
+        "Mechanical Engineering",
+        "Metallurgical Engineering",
+        "Power Engineering",
+        "Production Engineering",
+        "Printing Engineering"
+      ],
+      "Anna University, Chennai": [
+        "Aeronautical Engineering",
+        "Agricultural and Irrigation Engineering",
+        "Biotechnology",
+        "Ceramic Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Industrial Engineering",
+        "Information Technology",
+        "Manufacturing Engineering",
+        "Materials Science and Engineering",
+        "Mechanical Engineering",
+        "Mining Engineering",
+        "Printing Technology",
+        "Production Engineering",
+        "Textile Technology"
+      ],
+      "Jamia Millia Islamia, New Delhi": [
+        "Civil Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "Delhi Technological University (DTU), New Delhi": [
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Environmental Engineering",
+        "Information Technology",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Mechanical Engineering with specialization in Automotive Engineering",
+        "Production and Industrial Engineering",
+        "Software Engineering"
+      ],
+      "Chandigarh University, Mohali": [
+        "Aerospace Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Internet of Things)",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Food Technology",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "Kalasalingam Academy of Research and Education, Krishnankoil": [
+        "Agricultural Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Food Technology",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "KL University (K L College of Engineering), Vaddeswaram": [
+        "Artificial Intelligence and Data Science",
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Information Technology",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Science",
+        "Internet of Things (IoT)",
+        "Mechanical Engineering"
+      ],
+      "Amity University, Noida": [
+        "Aerospace Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "Manipal Academy of Higher Education (MAHE), Manipal": [
+        "Aeronautical Engineering",
+        "Automobile Engineering",
+        "Biomedical Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer and Communication Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Data Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Industrial and Production Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "GITAM University, Visakhapatnam": [
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Computer Science and Business Systems",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ]
+    }
+  },
+  "Private": {
+    "branchesByCollege": {
+      "BITS Pilani": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Manufacturing Engineering",
+        "Mechanical Engineering"
+      ],
+      "BITS Goa": [
+        "Chemical Engineering",
+        "Computer Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering"
+      ],
+      "BITS Hyderabad": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mechanical Engineering"
+      ],
+      "VIT Vellore": [
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electrical and Electronics Engineering",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "VIT Chennai": [
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electrical and Electronics Engineering",
+        "Mechanical Engineering",
+        "Mechatronics and Automation"
+      ],
+      "VIT AP": [
+        "Biotechnology",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Analytics)",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electrical and Electronics Engineering",
+        "Mechanical Engineering"
+      ],
+      "VIT Bhopal": [
+        "Aerospace Engineering",
+        "Bioengineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "SRM Kattankulathur": [
+        "Artificial Intelligence",
+        "Automation and Robotics",
+        "Biomedical Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Data Science)",
+        "Computer Science and Engineering (AI and ML)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "SRM Ramapuram": [
+        "Artificial Intelligence",
+        "Biomedical Engineering",
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (AI and ML)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "SRM AP": [
+        "Artificial Intelligence",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (AI and ML)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering",
+        "Quantum Engineering"
+      ],
+      "Amrita Coimbatore": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science",
+        "Electrical and Electronics Engineering",
+        "Chemical Engineering",
+        "Electronics and Communication Engineering",
+        "Civil Engineering",
+        "Aerospace Engineering",
+        "Automation and Robotics Engineering"
+      ],
+      "Amrita Bengaluru": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Robotics and Artificial Intelligence"
+      ],
+      "Amrita Chennai": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science",
+        "Electronics and Communication Engineering",
+        "Robotics and Artificial Intelligence"
+      ],
+      "Amrita Amaravati": [
+        "Computer Science and Engineering",
+        "Artificial Intelligence and Data Science"
+      ],
+      "Jadavpur University, Kolkata": [
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Construction Engineering",
+        "Electrical Engineering",
+        "Electronics and Telecommunication Engineering",
+        "Food Technology and Biochemical Engineering",
+        "Information Technology",
+        "Instrumentation and Electronics Engineering",
+        "Mechanical Engineering",
+        "Metallurgical Engineering",
+        "Power Engineering",
+        "Production Engineering",
+        "Printing Engineering"
+      ],
+      "Anna University, Chennai": [
+        "Aeronautical Engineering",
+        "Agricultural and Irrigation Engineering",
+        "Biotechnology",
+        "Ceramic Technology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Industrial Engineering",
+        "Information Technology",
+        "Manufacturing Engineering",
+        "Materials Science and Engineering",
+        "Mechanical Engineering",
+        "Mining Engineering",
+        "Printing Technology",
+        "Production Engineering",
+        "Textile Technology"
+      ],
+      "Jamia Millia Islamia, New Delhi": [
+        "Civil Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ],
+      "Delhi Technological University (DTU), New Delhi": [
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Engineering Physics",
+        "Environmental Engineering",
+        "Information Technology",
+        "Mathematics and Computing",
+        "Mechanical Engineering",
+        "Mechanical Engineering with specialization in Automotive Engineering",
+        "Production and Industrial Engineering",
+        "Software Engineering"
+      ],
+      "Chandigarh University, Mohali": [
+        "Aerospace Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Internet of Things)",
+        "Electrical Engineering",
+        "Electronics and Communication Engineering",
+        "Food Technology",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "Kalasalingam Academy of Research and Education, Krishnankoil": [
+        "Agricultural Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Food Technology",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "KL University (K L College of Engineering), Vaddeswaram": [
+        "Artificial Intelligence and Data Science",
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Information Technology",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Computer Science",
+        "Internet of Things (IoT)",
+        "Mechanical Engineering"
+      ],
+      "Amity University, Noida": [
+        "Aerospace Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Information Technology",
+        "Mechanical Engineering"
+      ],
+      "Manipal Academy of Higher Education (MAHE), Manipal": [
+        "Aeronautical Engineering",
+        "Automobile Engineering",
+        "Biomedical Engineering",
+        "Biotechnology",
+        "Chemical Engineering",
+        "Civil Engineering",
+        "Computer and Communication Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Data Science and Engineering",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Electronics and Instrumentation Engineering",
+        "Industrial and Production Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Mechatronics Engineering"
+      ],
+      "GITAM University, Visakhapatnam": [
+        "Biotechnology",
+        "Civil Engineering",
+        "Computer Science and Engineering",
+        "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "Computer Science and Engineering (Cyber Security)",
+        "Computer Science and Engineering (Data Science)",
+        "Computer Science and Business Systems",
+        "Electrical and Electronics Engineering",
+        "Electronics and Communication Engineering",
+        "Mechanical Engineering"
+      ]
+    }
+  }
+}
