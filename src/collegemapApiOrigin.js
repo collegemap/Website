@@ -4,7 +4,7 @@
  * REACT_APP_COLLEGEMAP_API_URL must be the server that serves /api/* — not the static React host.
  * If it is mistakenly set to collegemap.in (static only), we ignore it and fall back to the default API.
  */
-const DEFAULT_PROD_API = 'https://collegemapseminarpage.vercel.app';
+const DEFAULT_PROD_API = 'https://backend-college-map.vercel.app';
 
 const INVALID_API_HOSTS = new Set(['collegemap.in', 'www.collegemap.in']);
 

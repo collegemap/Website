@@ -25,7 +25,7 @@ import "./JEEDailyTarget.css";
 // Use the production API configured for the site before legacy fallbacks.
 // The Vercel frontend defines REACT_APP_COLLEGEMAP_API_URL; ignoring it sent
 // Daily Target requests to the stale collegemapbackend deployment instead.
-const API_BASE_URL = process.env.REACT_APP_COLLEGEMAP_API_URL || process.env.REACT_APP_API_URL || process.env.REACT_APP_URL || (typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:4000' : 'https://collegemapbackend.vercel.app');
+const API_BASE_URL = process.env.REACT_APP_COLLEGEMAP_API_URL || process.env.REACT_APP_API_URL || process.env.REACT_APP_URL || 'https://backend-college-map.vercel.app';
 const SPREADSHEET_ID = "1xm32z1Gqd5qKpX98wPxj7ToXTjF_9pU6h2CFbZzDx8o";
 
 // Subject Sheet Tab GIDs (Update GIDs here when splitting into separate subject tabs in Google Sheets)
@@ -314,11 +314,20 @@ const JEEDailyTarget = () => {
 
             if (data.userSubmission) {
               setAttemptedToday(true);
-              setSubmissionResult(data.userSubmission);
-              if (data.userSubmission.answers) {
+              const sub = data.userSubmission;
+              setSubmissionResult({
+                score: sub.score ?? sub.total_marks ?? 0,
+                correctAnswers: sub.correctAnswers ?? sub.correct_answers ?? 0,
+                incorrectAnswers: sub.incorrectAnswers ?? sub.incorrect_answers ?? 0,
+                unattempted: sub.unattempted ?? 0,
+                accuracy: sub.accuracy ?? sub.percentage ?? 0,
+                timeTakenSeconds: sub.timeTakenSeconds ?? sub.time_taken_seconds ?? 0,
+                answers: sub.answers || sub.question_details || {}
+              });
+              if (sub.answers) {
                 const ansObj = {};
-                Object.keys(data.userSubmission.answers).forEach(qId => {
-                  ansObj[qId] = data.userSubmission.answers[qId].selectedOption;
+                Object.keys(sub.answers).forEach(qId => {
+                  ansObj[qId] = sub.answers[qId]?.selectedOption !== undefined ? sub.answers[qId].selectedOption : sub.answers[qId];
                 });
                 setUserAnswers(ansObj);
               }
@@ -528,10 +537,11 @@ const JEEDailyTarget = () => {
     return `${hrs.toString().padStart(2, "0")}:${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
-  // Format elapsed time MM:SS
+  // Format elapsed time MM:SS (guards against NaN/undefined)
   const formatElapsed = (seconds) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
+    const s = Math.max(0, parseInt(seconds, 10) || 0);
+    const mins = Math.floor(s / 60);
+    const secs = s % 60;
     return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
@@ -889,29 +899,29 @@ const JEEDailyTarget = () => {
 
                     <div className="jdt-metrics-grid">
                       <div className="jdt-metric-card score">
-                        <div className="jdt-metric-val">{submissionResult.score} / 12</div>
+                        <div className="jdt-metric-val">{submissionResult.score ?? submissionResult.total_marks ?? 0} / 12</div>
                         <div className="jdt-metric-lbl">Total Score</div>
                       </div>
 
                       <div className="jdt-metric-card accuracy">
-                        <div className="jdt-metric-val">{submissionResult.accuracy}%</div>
+                        <div className="jdt-metric-val">{submissionResult.accuracy ?? submissionResult.percentage ?? 0}%</div>
                         <div className="jdt-metric-lbl">Accuracy</div>
                       </div>
 
                       <div className="jdt-metric-card time">
-                        <div className="jdt-metric-val">{formatElapsed(submissionResult.timeTakenSeconds)}</div>
+                        <div className="jdt-metric-val">{formatElapsed(submissionResult.timeTakenSeconds ?? submissionResult.time_taken_seconds ?? 0)}</div>
                         <div className="jdt-metric-lbl">Time Taken</div>
                       </div>
 
                       <div className="jdt-metric-card breakdown">
                         <div className="jdt-breakdown-row">
-                          <span className="dot correct"></span> Correct: <strong>{submissionResult.correctAnswers}</strong>
+                          <span className="dot correct"></span> Correct: <strong>{submissionResult.correctAnswers ?? submissionResult.correct_answers ?? 0}</strong>
                         </div>
                         <div className="jdt-breakdown-row">
-                          <span className="dot incorrect"></span> Incorrect: <strong>{submissionResult.incorrectAnswers}</strong>
+                          <span className="dot incorrect"></span> Incorrect: <strong>{submissionResult.incorrectAnswers ?? submissionResult.incorrect_answers ?? 0}</strong>
                         </div>
                         <div className="jdt-breakdown-row">
-                          <span className="dot unattempted"></span> Skipped: <strong>{submissionResult.unattempted}</strong>
+                          <span className="dot unattempted"></span> Skipped: <strong>{submissionResult.unattempted ?? 0}</strong>
                         </div>
                       </div>
                     </div>
@@ -995,10 +1005,10 @@ const JEEDailyTarget = () => {
                 <div className="jdt-user-rank-banner">
                   <div className="jdt-user-rank-info">
                     <span className="jdt-user-rank-badge">Your Rank: #{currentUserRank.rank}</span>
-                    <span className="jdt-user-name-text"><strong>{currentUserRank.user_name}</strong></span>
+                    <span className="jdt-user-name-text"><strong>{currentUserRank.user_name || currentUserRank.name || user.name || "You"}</strong></span>
                   </div>
                   <div className="jdt-user-rank-stats">
-                    <span>Score: <strong>{currentUserRank.score} pts</strong></span>
+                    <span>Score: <strong>{currentUserRank.score ?? currentUserRank.total_marks ?? 0} pts</strong></span>
                     <span>Streak: <strong>🔥 {currentUserRank.streak || userStreak.currentStreak || 1}d</strong></span>
                   </div>
                 </div>
@@ -1028,7 +1038,10 @@ const JEEDailyTarget = () => {
                     </thead>
                     <tbody>
                       {leaderboard.map((row) => {
-                        const isCurrentUser = user && row.user_email?.toLowerCase() === user.email?.toLowerCase();
+                        const rowEmail = (row.user_email || row.email || "").toLowerCase();
+                        const isCurrentUser = user && rowEmail === user.email?.toLowerCase();
+                        const studentName = row.user_name || row.name || (rowEmail ? rowEmail.split('@')[0] : "Student");
+                        const accuracyVal = row.accuracy ?? row.percentage ?? 0;
                         let rankBadge = null;
                         let rankRowClass = isCurrentUser ? "jdt-row-current" : "";
 
@@ -1046,11 +1059,11 @@ const JEEDailyTarget = () => {
                         }
 
                         return (
-                          <tr key={row.rank} className={rankRowClass}>
+                          <tr key={row.rank || row.id || rowEmail} className={rankRowClass}>
                             <td className="jdt-col-rank">{rankBadge}</td>
                             <td className="jdt-col-name">
                               <div className="jdt-name-cell">
-                                <span className="jdt-student-name" title={row.user_name}>{row.user_name}</span>
+                                <span className="jdt-student-name" title={studentName}>{studentName}</span>
                                 {isCurrentUser && <span className="jdt-you-pill">YOU</span>}
                               </div>
                             </td>
@@ -1058,9 +1071,9 @@ const JEEDailyTarget = () => {
                               <span className="jdt-streak-pill">🔥 {row.streak || 1}d</span>
                             </td>
                             <td className="jdt-col-score">
-                              <strong className="jdt-score-text">{row.score} pts</strong>
+                              <strong className="jdt-score-text">{row.score ?? row.total_marks ?? 0} pts</strong>
                             </td>
-                            <td className="jdt-col-accuracy">{row.accuracy}%</td>
+                            <td className="jdt-col-accuracy">{accuracyVal}%</td>
                           </tr>
                         );
                       })}

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Addmentor from "../../components/Addmentor/Addmentor";
 import "./TalkToIITian.css";
 
-const BASE_URL = process.env.REACT_APP_API_URL || "https://collegemapbackend.vercel.app";
+const BASE_URL = process.env.REACT_APP_API_URL || "https://backend-college-map.vercel.app";
 const RAZORPAY_KEY = process.env.REACT_APP_RAZORPAY_KEY_ID;
 const PAYMENT_AMOUNT = 50000; // ₹500
 

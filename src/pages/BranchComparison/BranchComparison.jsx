@@ -12,7 +12,7 @@ import { checkBranchComparisonAccess, trackBranchComparisonInput } from '../../s
 
 
 const RAZORPAY_KEY = process.env.REACT_APP_RAZORPAY_KEY_ID;
-const BASE_URL = process.env.REACT_APP_API_URL || "https://collegemapbackend.vercel.app";
+const BASE_URL = process.env.REACT_APP_API_URL || "https://backend-college-map.vercel.app";
 const PAYMENT_AMOUNT = 30000; // ₹300 in paise
 
 const INSTITUTION_TYPES = ['IIT', 'NIT', 'IIIT', 'Private'];
